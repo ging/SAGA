@@ -1,5 +1,4 @@
-# platosaga
-Plató SAGA
+# Plató SAGA
 
 The studio set 'SAGA' (Advanced recording automated system) allows teachers to record high quality videos for MOOCs, video tutorials, flipped classroom, etc. The teacher can record videos autonomously with no support personnel, once the audiovisual staff configures a custom preset for him. The video at the bottom shows how this process is done. Recorded videos require no post-production and are ready to be uploaded to YouTube, Moodle, etc.
 
