@@ -5,3 +5,5 @@ The studio set 'SAGA' (Advanced recording automated system) allows teachers to r
 By using custom presets, the studio set integrates the teacher video image together with a laptop screen capture (showing a demo, a PowerPoint presentation, ...), a tablet, a mobile phone, etc. The system can also integrate the initial and final video bumpers.
 
 The video below shows the studio set usage on most typical recording scenarios, as well as the steps to be followed by teachers in order to use the studio autonomously, with no need for other person support.
+
+https://www.youtube.com/watch?v=oU3wAuKvNro
