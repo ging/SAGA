@@ -117,616 +117,181 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>221, 20</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="pic2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>417, 73</value>
+  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lbl_parada.AutoSize" type="System.Boolean, mscorlib">
+  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="lbl_parada.Location" type="System.Drawing.Point, System.Drawing">
     <value>323, 27</value>
   </data>
-  <data name="lbl_parada.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 13</value>
-  </data>
-  <data name="lbl_parada.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="lbl_parada.Text" xml:space="preserve">
-    <value>No detectado</value>
-  </data>
-  <data name="&gt;&gt;lbl_parada.Name" xml:space="preserve">
-    <value>lbl_parada</value>
-  </data>
-  <data name="&gt;&gt;lbl_parada.Type" xml:space="preserve">
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lbl_parada.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;lbl_parada.ZOrder" xml:space="preserve">
-    <value>19</value>
-  </data>
-  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 360</value>
-  </data>
   <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
     <value>438, 23</value>
-  </data>
-  <data name="button1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="button1.Text" xml:space="preserve">
-    <value>Cerrar ventana</value>
-  </data>
-  <data name="&gt;&gt;button1.Name" xml:space="preserve">
-    <value>button1</value>
-  </data>
-  <data name="&gt;&gt;button1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
-    <value>18</value>
-  </data>
-  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 24</value>
-  </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 20</value>
-  </data>
-  <data name="label3.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Pedal de parada de grabación</value>
-  </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
-  </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <metadata name="imgl.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="imgl.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
-        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
-        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABe
-        EwAAAk1TRnQBSQFMAgEBAgEAAWABAAFgAQABGAEAARgBAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAFg
-        AwABGAMAAQEBAAEgBgABJI4AAwgBCwMzAlICUwGoAVgBZAFoAd0BPwF5AY0B8AE/AXkBjQHwAVYBZAFo
-        Ad4BUgJTAagDMwFSAwkBDP8AUQADBAEFA0IBdQFZAV0BXwHSAQABsgL/AQABsgL/AQABtAL/AQABtQL/
-        AQABugL/AQABtwH+Af8BAAGZAe8B/wEAAY8B6gH/AVoBXQFeAdMDQgF1AwQBBfgAAUkBSgFJAYkDPwFs
-        RAADFgEeAVcCWQHCAQABrgL/AQABtQL/AQABtwL/AQABtgL/AQABtQL/AQABugL/AQABugL/AQABnAHu
-        Af8BAAGUAeoB/wEAAZwB7wH/AQABmAHuAf8BAAGMAesB/wFXAloBxQMfASzwAAM+AWoBEQFeATgB/wE5
-        AVoBQQH9AxwBJzwAASECIgExAVoBXwFiAdUBAAGzAv8BAAG3Av8BAAG2Av8BAAG2Av8BAAG1Av8BAAG7
-        Av8BAAG6Av8BAAGcAe4B/wEAAZQB6gH/AQABmwHuAf8BAAGaAe4B/wEAAZoB7gH/AQABnAHuAf8BAAGV
-        Ae0B/wFTAWEBbgHkAyMBNOgAAzgBXQEAATYBDAH/ARwB/wGJAf8BCgHNAVsB/wE3AT4BMgH4AxQBHDQA
-        AxwBJwFTAWUBbwHjAQABtgL/AQABtgL/AQABtgL/AQABtgL/AQABtwL/AQABuQL/AQABpwH7Af8BAAGJ
-        AewB/wEAAYEB5wH/AQABkgHtAf8BAAGdAe8B/wEAAZoB7gH/AQABmgHuAf8BAAGaAe4B/wEAAZsB7gH/
-        AQABmAHuAf8BUwFhAW4B5AMcASjgAAMzAVMBAAE5AQoB/wEWAeQBbAH/AQAB8wFNAf8BDAH/AWAB/wEQ
-        AbYBVgH/AT4BRQE7AfQDFQEdLAADAwEEAlkBWgHHAQABsgL/AQABtwL/AQABtgL/AQABtgL/AQABtgL/
-        AQABtAL/AQABuQL/AVgBwgH3Af8BYwG7AfEB/wFkAcMB9QH/ASkBrAHxAf8BAAGSAe0B/wEAAZoB7gH/
-        AQABmgHuAf8BAAGaAe4B/wEAAZoB7gH/AQABmwHuAf8BAAGUAe0B/wJbAVwByAMEAQXYAAMwAUwBBAFB
-        AQwB/wEPAcwBWwH/AQMB5AFLAf8BBwHRAUcB/wEDAdIBQgH/AQoB7QFYAf8BCwGmAUkB/wFQAVgBUAHt
-        AxABFigAAz8BbQEAAakC/wEAAbgC/wEAAbYC/wEAAbYC/wEAAbYC/wEAAbYC/wEAAbEC/wEAAbQO/wGG
-        Ac0B9gH/AQABhQHrAf8BAAGbAe4B/wEAAZoB7gH/AQABmgHuAf8BAAGaAe4B/wEAAZoB7gH/AQABnAHu
-        Af8BAAGIAeoB/wE/AkABbtQAAy4BRwEDAUcBCgH/AQMBtAFGAf8BAAHPAT8B/wEAAb8BOwH/AQIBxQFB
-        Af8BBQHFAUMB/wEAAcEBOgH/AQgB2gFQAf8BBAGXAToB/wFYAV4BWAHlAwoBDSAAAwUBBwFaAWEBYgHV
-        AQABtAL/AQABtgL/AQABtgL/AQABtgL/AQABtgL/AQABtgL/AQABsQL/AQABtA7/AYUBzQH2Af8BAAGF
-        AeoB/wEAAZsB7gH/AQABmgHuAf8BAAGaAe4B/wEAAZoB7gH/AQABmgHuAf8BAAGaAe4B/wEAAZgB7QH/
-        AVoBXgFiAdUDBQEHzAADKAE9AQIBTQEGAf8BFAGsAUsB/wEPAcIBRwH/AQ4BtAE/Af8BDwG6AUQB/wEM
-        Ab4BQgH/AQgBuwE/Af8BAQG0AToB/wEAAakBJwH/AQABuwE4Af8BAAGFASEB/wFbAV8BWwHgAwIBAxwA
-        AzABSwEAAa4C/wEAAbcC/wEAAbYC/wEAAbYC/wEAAbYC/wEAAbYC/wEAAbYC/wEAAbMC/wEAAbkC/wFw
-        AdEB/AH/AYUBxwH1Af8BhgHJAfUB/wE2AbEB8gH/AQABkQHtAf8BAAGaAe4B/wEAAZoB7gH/AQABmgHu
-        Af8BAAGaAe4B/wEAAZoB7gH/AQABmgHuAf8BAAGdAe8B/wEAAYwB6gH/AzABTMgAAyMBNAEAAVUBBQH/
-        ASgBrwFTAf8BPwHJAWQB/wE7Ab0BWQH/AT4BwgFfAf8BQQHLAWQB/wFHAcwBcwH/AUYBywFvAf8BPgHF
-        AWAB/wE7Ab0BXwH/AS8BtAFQAf8BKwG7AVoB/wEMAYkBMAH/AVoBXgFaAdgDBAEFGAABUQJSAacBAAGw
-        Av8BAAG2Av8BAAG2Av8BAAG2Av8BAAG2Av8BAAG2Av8BAAG2Av8BAAG2Av8BAAG4Av8BPgG7AfgB/wFS
-        AbEB8AH/AVEBtAHyAf8BBQGaAe0B/wEAAZQB7QH/AQABmwHuAf8BAAGaAe4B/wEAAZoB7gH/AQABmgHu
-        Af8BAAGaAe4B/wEAAZsB7gH/AQABmAHtAf8BAAGNAeoB/wFSAlMBqMQAAx8BLQEVAVMBGAH9AScBpAFI
-        Af8BSQHDAWUB/wE9AbYBVgH/AT8BuwFaAf8BRAHIAWIB/wFHAcsBbgH/ARABWgEbAf8BIAGBATMB/wFQ
-        AdcBgAH/AUoBxQFjAf8BVAHEAWwB/wFWAcABagH/AWYBzgGMAf8BOgGbAUsB/wFYAVwBWAHRAwEBAhQA
-        AVkBZgFsAeABAAG0Av8BAAG2Av8BAAG2Av8BAAG2Av8BAAG2Av8BAAG2Av8BAAG2Av8BAAGzAv8BAAGw
-        Av8B8Av/AZUB0AH3Af8BAAFvAegB/wEAAZkB7gH/AQABmwHuAf8BAAGaAe4B/wEAAZoB7gH/AQABmwHu
-        Af8BAAGYAe0B/wEAAZMB6gH/AQABqwH4Af8BVgFoAW8B4sAAAx8BLAEkAWoBJQH5ASMBmwE9Af8BWgHA
-        AW8B/wFKAbQBXAH/AUoBuAFeAf8BUwHGAWoB/wFQAccBbwH/ARUBaAEfAf8DQAFvA1ABmwEfAYkBMwH/
-        AVsB0QGCAf8BSwG+AWEB/wFFAbYBWgH/ATwBrwFQAf8BcAHMAY8B/wE2AZgBQgH/AVgBWwFYAcsUAAFB
-        AYABlQHxAQABtgL/AQABtgL/AQABtgL/AQABtgL/AQABtgL/AQABtgL/AQABtQL/AQABuwL/AQABpwH9
-        Af8BiQHSAfgN/wFdAbwB8wH/AQABggHpAf8BAAGYAe4B/wEAAZsB7gH/AQABmwHuAf8BAAGYAe0B/wEA
-        AZMB6gH/AQABrQH4Af8BAAG+Av8BQQGAAZUB8cAAARwBdAEcAf8BOwGlAU0B/wFtAcMBhgH/AVQBswFg
-        Af8BVQG4AWUB/wFhAcUBcgH/AVsBwwFxAf8BFwFvAR0B/wM9AWkIAAFTAVUBUwGtASMBjQExAf8BaAHM
-        AYcB/wFaAb4BaQH/AVgBuQFnAf8BTgGxAVsB/wFzAcYBjQH/ATIBmAE9Af8BWAFcAVgB0RAAAT8BeQGN
-        AfABAAG2Av8BAAG2Av8BAAG2Av8BAAG2Av8BAAG2Av8BAAG2Av8BAAG6Av8BAAG6Av8BAAGSAe0B/wEA
-        AYMB5wH/AbkB4wH6Df8BcwHDAfQB/wEAAYgB6wH/AQABnAHvAf8BAAGXAe0B/wEAAZMB6gH/AQABrQH4
-        Af8BAAG+Av8BAAG2Av8BQQGAAZUB8cAAA0cBggERAYcBFgH/AWsBvgF1Af8BagG/AXMB/wFpAcMBdQH/
-        AWsByAGEAf8BGgGDAR8B/wNCAXQQAANWAbYBKAGTATIB/wGBAc4BkAH/AWQBvwFvAf8BYwG6AW0B/wFc
-        AbQBZAH/AYoBxwGTAf8BKAGUATAB/wFbAV4BWwHQDAABWQFmAWwB4AEAAbQC/wEAAbYC/wEAAbYC/wEA
-        AbYC/wEAAbYC/wEAAboC/wEAAbAB/AH/AQABkwHuAf8BCAGXAeoB/wEAAZIB7QH/AQABhgHqAf8BowHY
-        AfgN/wFCAbQB8gH/AQABiQHqAf8BAAGTAeoB/wEAAa0B+AH/AQABvgL/AQABtgL/AQABtAL/AVgBZwFt
-        AeHEAANJAYcBCQGFAQwB/wGFAcoBjgH/AYABygGJAf8BGAGLARoB/wNFAXwYAAFVAVcBVQG6ASwBnAEy
-        Af8BkgHTAZwB/wFwAcIBgQH/AW4BvgF0Af8BbAG6AXAB/wGWAcoBmwH/ARcBjAEbAf8BWgFdAVoByggA
-        AVECUgGnAQABsAL/AQABtgL/AQABtgL/AQABtgL/AQABtgL/AQABrgL/AWoBzgH7Af8ByAHiAfgB/wHt
-        AfYB/gH/AbEB3gH5Af8BAAFpAecB/wEAAWsB5wH/Ac0B6AH7Cf8BsgHbAfgB/wEAAXUB5gH/AQABrgH4
-        Af8BAAG+Av8BAAG2Av8BAAG2Av8BAAGwAv8BUgJTAajIAANMAZIBUgGzAVQB/wFVAbMBVgH/A0cBgiAA
-        AVkBWwFZAcQBMwGjATYB/wGiAdkBpwH/AYYByAGJAf8BgwHEAYYB/wGGAcMBhwH/AaYB0gGoAf8BDwGK
-        ARAB/wFZAVsBWQHEBAADMAFLAQABrgL/AQABtwL/AQABtgL/AQABtgL/AQABtwL/AQABpQL/AYUB3A7/
-        AWEBvwH0Af8BRAGrAfEB/wHjAfMB/Qn/AaMB0QH0Af8BAAGZAfQB/wEAAb4C/wEAAbYC/wEAAbYC/wEA
-        AbcC/wEAAa4C/wMwAUzMAANIAYYDRgF+KAABWgFcAVoBzQE8AaoBPQH/AbAB4gGyAf8BkQHRAZIB/wGP
-        AcwBjwH/AZUBzgGUAf8BpQHXAaUB/wEnAZwBKAH/AVUBVwFVAboDBAEGAVoBYQFiAdUBAAG0Av8BAAG2
-        Av8BAAG2Av8BAAG2Av8BAAGyAv8BAgGxAv8B6wH4HP8B/gH/ASsBugH7Af8BAAGxAv8BAAG2Av8BAAG2
-        Av8BAAG2Av8BAAG0Av8BWgFhAWIB1QMFAQf/AAEAAVoBXgFaAdgBQAGwAUAB/wHEAe8BxAH/AZ0B2wGc
-        Af8BlQHXAZUB/wHFAfEBxQH/AYkB0gGJAf8BIQGYASEB/wQAAz8BbQEAAakC/wEAAbgC/wEAAbYC/wEA
-        AbYC/wEAAbgC/wEAAawC/wEgAbkC/wHQAe4B/hH/AeAB9AH+Af8BRwHFAf4B/wEAAawC/wEAAbgC/wEA
-        AbYC/wEAAbYC/wEAAbgC/wEAAakC/wE/AkABbv8ABQADAgEDAVgBXgFYAdkBSAG5AUcB/wHPAf0BzwH/
-        AcsB/QHLAf8BhgHWAYYB/wEAAXEBAAH/AycBOgQAAwMBBAJZAVoBxwEAAbIC/wEAAbcC/wEAAbYC/wEA
-        AbYC/wEAAbgC/wEAAawC/wEAAa8B/gH/ATIBwwL/AV0B0gL/AWAB0wL/AT8BxwL/AQABsgH+Af8BAAGq
-        Av8BAAG3Av8BAAG2Av8BAAG2Av8BAAG3Av8BAAGyAv8CWQFaAccDBAEF/wAJAAMIAQsBWQFjAVkB4AFo
-        Ac8BaAH/AbcB8QG3Af8BAAFzAQAB/wMrAUIMAAMbASYBUwFlAW8B4wEAAbUC/wEAAbcC/wEAAbYC/wEA
-        AbYC/wEAAbgC/wEAAbQC/wEAAawC/wEAAakC/wEAAakC/wEAAasC/wEAAbMC/wEAAbgC/wEAAbYC/wEA
-        AbYC/wEAAbcC/wEAAbUC/wFTAWcBcAHkAxwBJ/8AEQADDQERAV0BcgFdAe0BZgG/AWYB/wMuAUcUAAMj
-        ATMBUwFnAXAB5AEAAbIC/wEAAbgC/wEAAbYC/wEAAbYC/wEAAbYC/wEAAbYC/wEAAbcC/wEAAbcC/wEA
-        AbYC/wEAAbYC/wEAAbYC/wEAAbYC/wEAAbcC/wEAAbMC/wFTAWcBcAHkAyMBNP8AGQADNQFXA0IBdBwA
-        Ax4BKwFZAlsBxAEAAa0C/wEAAbUC/wEAAbcC/wEAAbYC/wEAAbYC/wEAAbYC/wEAAbYC/wEAAbYC/wEA
-        AbYC/wEAAbcC/wEAAbUC/wEAAa0C/wFXAloBxQMeASv/AEUAAwMBBANCAXQBWQFdAV8B0gEAAbIC/wEA
-        AbIC/wEAAbQC/wEAAbYC/wEAAbYC/wEAAbQC/wEAAbIC/wEAAbEC/wFZAV0BXwHSA0IBdAMDAQT/AFEA
-        AwgBCwMyAlECUgGnAVgBYgFnAdwBQgF1AYwB7wFCAXUBjAHvAVgBYgFnAdwBUQJSAacDMwFSAwgBC9wA
-        AUIBTQE+BwABPgMAASgDAAFgAwABGAMAAQEBAAEBBQABIAEBFgAD/wEAA/8B/gEAAX8GAAP/AfgBAAEf
-        BgAB/wGfAf8B8AEAAQ8GAAH/AQ8B/wHgAQABBwYAAf4BBwH/AcABAAEDBgAB/AEDAf8BgAEAAQEGAAH4
-        AQEB/wGAAQABAQYAAfABAAH/CQAB4AEAAX8JAAHAAQABPwkAAYABAAEfCwABHwoAAWABDwoAAfABBwkA
-        AYEB+AEDCQABwwH8AQEJAAHnAf4KAAL/AQABgAEAAQEGAAL/AQABgAEAAQEGAAL/AYEBwAEAAQMGAAL/
-        AcMB4AEAAQcGAAL/AecB8AEAAQ8GAAP/AfgBAAEfBgAD/wH+AQABfwYACw==
-</value>
-  </data>
-  <data name="pic.Location" type="System.Drawing.Point, System.Drawing">
-    <value>417, 24</value>
-  </data>
-  <data name="pic.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 26</value>
-  </data>
-  <data name="pic.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;pic.Name" xml:space="preserve">
-    <value>pic</value>
-  </data>
-  <data name="&gt;&gt;pic.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pic.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pic.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 77</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>148, 20</value>
-  </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Botón solo ponente</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 123</value>
-  </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 20</value>
-  </data>
-  <data name="label4.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>Botón ponente + presentación</value>
-  </data>
-  <data name="&gt;&gt;label4.Name" xml:space="preserve">
-    <value>label4</value>
-  </data>
-  <data name="&gt;&gt;label4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label5.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 171</value>
-  </data>
-  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 20</value>
-  </data>
-  <data name="label5.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="label5.Text" xml:space="preserve">
-    <value>Botón solo presentación</value>
-  </data>
-  <data name="&gt;&gt;label5.Name" xml:space="preserve">
-    <value>label5</value>
-  </data>
-  <data name="&gt;&gt;label5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="pic2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>417, 73</value>
-  </data>
-  <data name="pic2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 26</value>
-  </data>
-  <data name="pic2.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;pic2.Name" xml:space="preserve">
-    <value>pic2</value>
-  </data>
-  <data name="&gt;&gt;pic2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pic2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pic2.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="lbl_ponente.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbl_ponente.Location" type="System.Drawing.Point, System.Drawing">
-    <value>323, 79</value>
-  </data>
-  <data name="lbl_ponente.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 13</value>
-  </data>
-  <data name="lbl_ponente.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="lbl_ponente.Text" xml:space="preserve">
-    <value>No detectado</value>
-  </data>
-  <data name="&gt;&gt;lbl_ponente.Name" xml:space="preserve">
-    <value>lbl_ponente</value>
-  </data>
-  <data name="&gt;&gt;lbl_ponente.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_ponente.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbl_ponente.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="pic3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>417, 121</value>
-  </data>
-  <data name="pic3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 26</value>
   </data>
   <data name="pic3.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
-  <data name="&gt;&gt;pic3.Name" xml:space="preserve">
-    <value>pic3</value>
-  </data>
-  <data name="&gt;&gt;pic3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pic3.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pic3.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="lbl_1v_pres.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="lbl_1v_pres.Location" type="System.Drawing.Point, System.Drawing">
     <value>323, 127</value>
   </data>
-  <data name="lbl_1v_pres.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 13</value>
+  <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>492, 2</value>
   </data>
-  <data name="lbl_1v_pres.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="lbl_1v_pres.Text" xml:space="preserve">
-    <value>No detectado</value>
-  </data>
-  <data name="&gt;&gt;lbl_1v_pres.Name" xml:space="preserve">
-    <value>lbl_1v_pres</value>
-  </data>
-  <data name="&gt;&gt;lbl_1v_pres.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_1v_pres.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbl_1v_pres.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="pic4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>417, 169</value>
-  </data>
-  <data name="pic4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 26</value>
-  </data>
-  <data name="pic4.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;pic4.Name" xml:space="preserve">
-    <value>pic4</value>
-  </data>
-  <data name="&gt;&gt;pic4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pic4.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pic4.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="lbl_solo_pres.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbl_solo_pres.Location" type="System.Drawing.Point, System.Drawing">
-    <value>323, 175</value>
-  </data>
-  <data name="lbl_solo_pres.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 13</value>
-  </data>
-  <data name="lbl_solo_pres.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="lbl_solo_pres.Text" xml:space="preserve">
-    <value>No detectado</value>
-  </data>
-  <data name="&gt;&gt;lbl_solo_pres.Name" xml:space="preserve">
-    <value>lbl_solo_pres</value>
-  </data>
-  <data name="&gt;&gt;lbl_solo_pres.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_solo_pres.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbl_solo_pres.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 231</value>
-  </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>283, 13</value>
-  </data>
-  <data name="label2.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Pulse el pedal deseado para comprobar su funcionamiento</value>
-  </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+  <data name="label5.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>25, 271</value>
-  </data>
-  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>373, 13</value>
-  </data>
-  <data name="label6.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
+  <data name="lbl_parada.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 13</value>
   </data>
   <data name="label6.Text" xml:space="preserve">
     <value>Si los pedales no responden, pruebe a desconectarlos y volver a conectarlos.</value>
   </data>
-  <data name="&gt;&gt;label6.Name" xml:space="preserve">
-    <value>label6</value>
+  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
   </data>
-  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label6.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>25, 296</value>
-  </data>
-  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>370, 13</value>
-  </data>
-  <data name="label7.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="label7.Text" xml:space="preserve">
-    <value>Si los pedeales son detectados pero no responden en OBS Studio, quizá sea</value>
-  </data>
-  <data name="&gt;&gt;label7.Name" xml:space="preserve">
-    <value>label7</value>
-  </data>
-  <data name="&gt;&gt;label7.Type" xml:space="preserve">
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
+  <data name="lbl_solo_pres.Text" xml:space="preserve">
+    <value>No detectado</value>
+  </data>
+  <data name="pic3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 26</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
     <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl_1v_pres.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 13</value>
+  </data>
+  <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="&gt;&gt;lbl_solo_pres.Name" xml:space="preserve">
+    <value>lbl_solo_pres</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>489, 393</value>
   </data>
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="label8.AutoSize" type="System.Boolean, mscorlib">
+  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>25, 311</value>
-  </data>
-  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>392, 13</value>
-  </data>
-  <data name="label8.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="label8.Text" xml:space="preserve">
-    <value>necesario restaurar un backup de su perfil, o restaurar la configuración de fábrica.</value>
-  </data>
-  <data name="&gt;&gt;label8.Name" xml:space="preserve">
-    <value>label8</value>
-  </data>
-  <data name="&gt;&gt;label8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-1, 347</value>
-  </data>
-  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>492, 2</value>
-  </data>
-  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 62</value>
-  </data>
-  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>492, 2</value>
-  </data>
-  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Probar pedales del plató</value>
   </data>
-  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 213</value>
+  <data name="button1.Text" xml:space="preserve">
+    <value>Cerrar ventana</value>
   </data>
-  <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>492, 2</value>
+  <data name="lbl_1v_pres.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
+  <data name="&gt;&gt;lbl_ponente.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
   </data>
   <data name="&gt;&gt;groupBox3.Name" xml:space="preserve">
     <value>groupBox3</value>
   </data>
-  <data name="&gt;&gt;groupBox3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox3.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+  <data name="pic3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>417, 121</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>489, 393</value>
+  <data name="label7.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;pic3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_parada.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lbl_solo_pres.Location" type="System.Drawing.Point, System.Drawing">
+    <value>323, 175</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 20</value>
+  </data>
+  <data name="pic2.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Pedal de parada de grabación</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Botón solo presentación</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;lbl_ponente.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_solo_pres.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl_1v_pres.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;lbl_parada.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 360</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2560,19 +2125,454 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
 </value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Probar pedales del plató</value>
+  <data name="&gt;&gt;pic.Name" xml:space="preserve">
+    <value>pic</value>
   </data>
-  <data name="&gt;&gt;imgl.Name" xml:space="preserve">
-    <value>imgl</value>
+  <data name="label8.Text" xml:space="preserve">
+    <value>necesario restaurar un backup de su perfil, o restaurar la configuración de fábrica.</value>
   </data>
-  <data name="&gt;&gt;imgl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;pic2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>370, 13</value>
+  </data>
+  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pic2.Name" xml:space="preserve">
+    <value>pic2</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 123</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_1v_pres.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 13</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 77</value>
+  </data>
+  <data name="lbl_1v_pres.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>392, 13</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Form4</value>
   </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pic2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 26</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;lbl_1v_pres.Name" xml:space="preserve">
+    <value>lbl_1v_pres</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_parada.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;pic4.Name" xml:space="preserve">
+    <value>pic4</value>
+  </data>
+  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>25, 311</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 171</value>
+  </data>
+  <data name="&gt;&gt;lbl_ponente.Name" xml:space="preserve">
+    <value>lbl_ponente</value>
+  </data>
+  <data name="&gt;&gt;lbl_parada.Name" xml:space="preserve">
+    <value>lbl_parada</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="pic4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 26</value>
+  </data>
+  <data name="lbl_ponente.Location" type="System.Drawing.Point, System.Drawing">
+    <value>323, 79</value>
+  </data>
+  <data name="pic4.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="lbl_ponente.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;lbl_solo_pres.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pic2.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;pic.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pic.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-1, 347</value>
+  </data>
+  <data name="&gt;&gt;lbl_solo_pres.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="lbl_solo_pres.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;imgl.Name" xml:space="preserve">
+    <value>imgl</value>
+  </data>
+  <data name="lbl_ponente.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Si los pedeales son detectados pero no responden en OBS Studio, quizá sea</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 24</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 213</value>
+  </data>
+  <data name="&gt;&gt;lbl_parada.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="label6.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;pic3.Name" xml:space="preserve">
+    <value>pic3</value>
+  </data>
+  <data name="imgl.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABO
+        EwAAAk1TRnQBSQFMAgEBAgEAAWgBAAFsAQABGAEAARgBAAT/ASEBEAj/AUIBTQE2BwABNgMAASgDAAFg
+        AwABGAMAAQEBAAEgBgABJI4AAwgBCwMzAlICUwGoAVgBYwFlAd0BQQF2AYgB8AFBAXYBiAHwAVgBYQFm
+        Ad4BUgJTAagDMwFSAwkBDP8AUQADBAEFA0IBdQFZAl0B0gEAAbIC/wEAAbIC/wEAAbQC/wEAAbUC/wEA
+        AboC/wEAAbcB/gH/AQABmQHvAf8BAAGPAeoB/wFaAl0B0wNCAXUDBAEF+AABSQFKAUkBiQM/AWxEAAMW
+        AR4BVwJZAcIBAAGuAv8BAAG1Av8BAAG3Av8BAAG2Av8BAAG1Av8BAAG6Av8BAAG6Av8BAAGcAe4B/wEA
+        AZQB6gH/AQABnAHvAf8BAAGYAe4B/wEAAYwB6wH/AVcCWgHFAx8BLPAAAz4BagEQAV0BNwH/AToBWAFA
+        Af0DHAEnPAABIQIiATEBWgFeAWEB1QEAAbMC/wEAAbcC/wEAAbYC/wEAAbYC/wEAAbUC/wEAAbsC/wEA
+        AboC/wEAAZwB7gH/AQABlAHqAf8BAAGbAe4B/wEAAZoB7gH/AQABmgHuAf8BAAGcAe4B/wEAAZUB7QH/
+        AVQBYQFpAeQDIwE06AADOAFdAQABNQELAf8BGwH/AYkB/wEJAc0BWgH/ATkBPgE1AfgDFAEcNAADHAEn
+        AVYBZAFsAeMBAAG2Av8BAAG2Av8BAAG2Av8BAAG2Av8BAAG3Av8BAAG5Av8BAAGnAfsB/wEAAYkB7AH/
+        AQABgQHnAf8BAAGSAe0B/wEAAZ0B7wH/AQABmgHuAf8BAAGaAe4B/wEAAZoB7gH/AQABmwHuAf8BAAGY
+        Ae4B/wFUAWEBaQHkAxwBKOAAAzMBUwEAATgBCQH/ARUB5AFrAf8BAAHzAUwB/wELAf8BXwH/AQ8BtgFV
+        Af8BPwFGAT0B9AMVAR0sAAMDAQQDWQHHAQABsgL/AQABtwL/AQABtgL/AQABtgL/AQABtgL/AQABtAL/
+        AQABuQL/AVcBwgH3Af8BYgG7AfEB/wFjAcMB9QH/ASgBrAHxAf8BAAGSAe0B/wEAAZoB7gH/AQABmgHu
+        Af8BAAGaAe4B/wEAAZoB7gH/AQABmwHuAf8BAAGUAe0B/wNbAcgDBAEF2AADMAFMAQMBQAELAf8BDgHM
+        AVoB/wECAeQBSgH/AQYB0QFGAf8BAgHSAUEB/wEJAe0BVwH/AQoBpgFIAf8BUQFZAVEB7QMQARYoAAM/
+        AW0BAAGpAv8BAAG4Av8BAAG2Av8BAAG2Av8BAAG2Av8BAAG2Av8BAAGxAv8BAAG0Dv8BhgHNAfYB/wEA
+        AYUB6wH/AQABmwHuAf8BAAGaAe4B/wEAAZoB7gH/AQABmgHuAf8BAAGaAe4B/wEAAZwB7gH/AQABiAHq
+        Af8BPwJAAW7UAAMuAUcBAgFGAQkB/wECAbQBRQH/AQABzwE+Af8BAAG/AToB/wEBAcUBQAH/AQQBxQFC
+        Af8BAAHBATkB/wEHAdoBTwH/AQMBlwE5Af8BWQFeAVkB5QMKAQ0gAAMFAQcBWgFfAWEB1QEAAbQC/wEA
+        AbYC/wEAAbYC/wEAAbYC/wEAAbYC/wEAAbYC/wEAAbEC/wEAAbQO/wGFAc0B9gH/AQABhQHqAf8BAAGb
+        Ae4B/wEAAZoB7gH/AQABmgHuAf8BAAGaAe4B/wEAAZoB7gH/AQABmgHuAf8BAAGYAe0B/wFaAV4BYQHV
+        AwUBB8wAAygBPQEBAUwBBQH/ARMBrAFKAf8BDgHCAUYB/wENAbQBPgH/AQ4BugFDAf8BCwG+AUEB/wEH
+        AbsBPgH/AQABtAE5Af8BAAGpASYB/wEAAbsBNwH/AQABhQEgAf8BXAFfAVwB4AMCAQMcAAMwAUsBAAGu
+        Av8BAAG3Av8BAAG2Av8BAAG2Av8BAAG2Av8BAAG2Av8BAAG2Av8BAAGzAv8BAAG5Av8BbwHRAfwB/wGF
+        AccB9QH/AYYByQH1Af8BNQGxAfIB/wEAAZEB7QH/AQABmgHuAf8BAAGaAe4B/wEAAZoB7gH/AQABmgHu
+        Af8BAAGaAe4B/wEAAZoB7gH/AQABnQHvAf8BAAGMAeoB/wMwAUzIAAMjATQBAAFUAQQB/wEnAa8BUgH/
+        AT4ByQFjAf8BOgG9AVgB/wE9AcIBXgH/AUABywFjAf8BRgHMAXIB/wFFAcsBbgH/AT0BxQFfAf8BOgG9
+        AV4B/wEuAbQBTwH/ASoBuwFZAf8BCwGJAS8B/wFaAV4BWgHYAwQBBRgAAVECUgGnAQABsAL/AQABtgL/
+        AQABtgL/AQABtgL/AQABtgL/AQABtgL/AQABtgL/AQABtgL/AQABuAL/AT0BuwH4Af8BUQGxAfAB/wFQ
+        AbQB8gH/AQQBmgHtAf8BAAGUAe0B/wEAAZsB7gH/AQABmgHuAf8BAAGaAe4B/wEAAZoB7gH/AQABmgHu
+        Af8BAAGbAe4B/wEAAZgB7QH/AQABjQHqAf8BUgJTAajEAAMfAS0BFgFSARkB/QEmAaQBRwH/AUgBwwFk
+        Af8BPAG2AVUB/wE+AbsBWQH/AUMByAFhAf8BRgHLAW0B/wEPAVkBGgH/AR8BgQEyAf8BTwHXAYAB/wFJ
+        AcUBYgH/AVMBxAFrAf8BVQHAAWkB/wFlAc4BjAH/ATkBmwFKAf8BWAFcAVgB0QMBAQIUAAFaAWUBaQHg
+        AQABtAL/AQABtgL/AQABtgL/AQABtgL/AQABtgL/AQABtgL/AQABtgL/AQABswL/AQABsAL/AfAL/wGV
+        AdAB9wH/AQABbgHoAf8BAAGZAe4B/wEAAZsB7gH/AQABmgHuAf8BAAGaAe4B/wEAAZsB7gH/AQABmAHt
+        Af8BAAGTAeoB/wEAAasB+AH/AVcBZQFqAeLAAAMfASwBJQFqASYB+QEiAZsBPAH/AVkBwAFuAf8BSQG0
+        AVsB/wFJAbgBXQH/AVIBxgFpAf8BTwHHAW4B/wEUAWcBHgH/A0ABbwNQAZsBHgGJATIB/wFaAdEBggH/
+        AUoBvgFgAf8BRAG2AVkB/wE7Aa8BTwH/AW8BzAGPAf8BNQGYAUEB/wFYAVsBWAHLFAABQwF+AZAB8QEA
+        AbYC/wEAAbYC/wEAAbYC/wEAAbYC/wEAAbYC/wEAAbYC/wEAAbUC/wEAAbsC/wEAAacB/QH/AYkB0gH4
+        Df8BXAG8AfMB/wEAAYIB6QH/AQABmAHuAf8BAAGbAe4B/wEAAZsB7gH/AQABmAHtAf8BAAGTAeoB/wEA
+        Aa0B+AH/AQABvgL/AUMBfgGQAfHAAAEbAXMBGwH/AToBpQFMAf8BbAHDAYYB/wFTAbMBXwH/AVQBuAFk
+        Af8BYAHFAXEB/wFaAcMBcAH/ARYBbgEcAf8DPQFpCAABUwFVAVMBrQEiAY0BMAH/AWcBzAGHAf8BWQG+
+        AWgB/wFXAbkBZgH/AU0BsQFaAf8BcgHGAY0B/wExAZgBPAH/AVgBXAFYAdEQAAFBAXYBiAHwAQABtgL/
+        AQABtgL/AQABtgL/AQABtgL/AQABtgL/AQABtgL/AQABugL/AQABugL/AQABkgHtAf8BAAGDAecB/wG5
+        AeMB+g3/AXIBwwH0Af8BAAGIAesB/wEAAZwB7wH/AQABlwHtAf8BAAGTAeoB/wEAAa0B+AH/AQABvgL/
+        AQABtgL/AUMBfgGQAfHAAANHAYIBEAGHARUB/wFqAb4BdAH/AWkBvwFyAf8BaAHDAXQB/wFqAcgBhAH/
+        ARkBgwEeAf8DQgF0EAADVgG2AScBkwExAf8BgQHOAZAB/wFjAb8BbgH/AWIBugFsAf8BWwG0AWMB/wGK
+        AccBkwH/AScBlAEvAf8BWwFeAVsB0AwAAVoBZQFpAeABAAG0Av8BAAG2Av8BAAG2Av8BAAG2Av8BAAG2
+        Av8BAAG6Av8BAAGwAfwB/wEAAZMB7gH/AQcBlwHqAf8BAAGSAe0B/wEAAYYB6gH/AaMB2AH4Df8BQQG0
+        AfIB/wEAAYkB6gH/AQABkwHqAf8BAAGtAfgB/wEAAb4C/wEAAbYC/wEAAbQC/wFaAWUBaQHhxAADSQGH
+        AQgBhQELAf8BhQHKAY4B/wGAAcoBiQH/ARcBiwEZAf8DRQF8GAABVQFXAVUBugErAZwBMQH/AZIB0wGc
+        Af8BbwHCAYEB/wFtAb4BcwH/AWsBugFvAf8BlgHKAZsB/wEWAYwBGgH/AVoBXQFaAcoIAAFRAlIBpwEA
+        AbAC/wEAAbYC/wEAAbYC/wEAAbYC/wEAAbYC/wEAAa4C/wFpAc4B+wH/AcgB4gH4Af8B7QH2Af4B/wGx
+        Ad4B+QH/AQABaAHnAf8BAAFqAecB/wHNAegB+wn/AbIB2wH4Af8BAAF0AeYB/wEAAa4B+AH/AQABvgL/
+        AQABtgL/AQABtgL/AQABsAL/AVICUwGoyAADTAGSAVEBswFTAf8BVAGzAVUB/wNHAYIgAAFZAVsBWQHE
+        ATIBowE1Af8BogHZAacB/wGGAcgBiQH/AYMBxAGGAf8BhgHDAYcB/wGmAdIBqAH/AQ4BigEPAf8BWQFb
+        AVkBxAQAAzABSwEAAa4C/wEAAbcC/wEAAbYC/wEAAbYC/wEAAbcC/wEAAaUC/wGFAdwO/wFgAb8B9AH/
+        AUMBqwHxAf8B4wHzAf0J/wGjAdEB9AH/AQABmQH0Af8BAAG+Av8BAAG2Av8BAAG2Av8BAAG3Av8BAAGu
+        Av8DMAFMzAADSAGGA0YBfigAAVoBXAFaAc0BOwGqATwB/wGwAeIBsgH/AZEB0QGSAf8BjwHMAY8B/wGV
+        Ac4BlAH/AaUB1wGlAf8BJgGcAScB/wFVAVcBVQG6AwQBBgFaAV8BYQHVAQABtAL/AQABtgL/AQABtgL/
+        AQABtgL/AQABsgL/AQEBsQL/AesB+Bz/Af4B/wEqAboB+wH/AQABsQL/AQABtgL/AQABtgL/AQABtgL/
+        AQABtAL/AVoBXwFhAdUDBQEH/wABAAFaAV4BWgHYAT8BsAE/Af8BxAHvAcQB/wGdAdsBnAH/AZUB1wGV
+        Af8BxQHxAcUB/wGJAdIBiQH/ASABmAEgAf8EAAM/AW0BAAGpAv8BAAG4Av8BAAG2Av8BAAG2Av8BAAG4
+        Av8BAAGsAv8BHwG5Av8B0AHuAf4R/wHgAfQB/gH/AUYBxQH+Af8BAAGsAv8BAAG4Av8BAAG2Av8BAAG2
+        Av8BAAG4Av8BAAGpAv8BPwJAAW7/AAUAAwIBAwFZAV4BWQHZAUcBuQFGAf8BzwH9Ac8B/wHLAf0BywH/
+        AYYB1gGGAf8BAAFwAQAB/wMnAToEAAMDAQQDWQHHAQABsgL/AQABtwL/AQABtgL/AQABtgL/AQABuAL/
+        AQABrAL/AQABrwH+Af8BMQHDAv8BXAHSAv8BXwHTAv8BPgHHAv8BAAGyAf4B/wEAAaoC/wEAAbcC/wEA
+        AbYC/wEAAbYC/wEAAbcC/wEAAbIC/wNZAccDBAEF/wAJAAMIAQsBWgFiAVoB4AFnAc8BZwH/AbcB8QG3
+        Af8BAAFyAQAB/wMrAUIMAAMbASYBVgFkAWwB4wEAAbUC/wEAAbcC/wEAAbYC/wEAAbYC/wEAAbgC/wEA
+        AbQC/wEAAawC/wEAAakC/wEAAakC/wEAAasC/wEAAbMC/wEAAbgC/wEAAbYC/wEAAbYC/wEAAbcC/wEA
+        AbUC/wFUAWQBawHkAxwBJ/8AEQADDQERAV0BcAFdAe0BZQG/AWUB/wMuAUcUAAMjATMBVAFkAWsB5AEA
+        AbIC/wEAAbgC/wEAAbYC/wEAAbYC/wEAAbYC/wEAAbYC/wEAAbcC/wEAAbcC/wEAAbYC/wEAAbYC/wEA
+        AbYC/wEAAbYC/wEAAbcC/wEAAbMC/wFUAWQBawHkAyMBNP8AGQADNQFXA0IBdBwAAx4BKwFZAlsBxAEA
+        Aa0C/wEAAbUC/wEAAbcC/wEAAbYC/wEAAbYC/wEAAbYC/wEAAbYC/wEAAbYC/wEAAbYC/wEAAbcC/wEA
+        AbUC/wEAAa0C/wFXAloBxQMeASv/AEUAAwMBBANCAXQBWQJdAdIBAAGyAv8BAAGyAv8BAAG0Av8BAAG2
+        Av8BAAG2Av8BAAG0Av8BAAGyAv8BAAGxAv8BWQJdAdIDQgF0AwMBBP8AUQADCAELAzICUQJSAacBWgFh
+        AWUB3AFGAXIBhgHvAUYBcgGGAe8BWgFhAWUB3AFRAlIBpwMzAVIDCAEL3AABQgFNAT4HAAE+AwABKAMA
+        AWADAAEYAwABAQEAAQEFAAEgAQEWAAP/AQAD/wH+AQABfwYAA/8B+AEAAR8GAAH/AZ8B/wHwAQABDwYA
+        Af8BDwH/AeABAAEHBgAB/gEHAf8BwAEAAQMGAAH8AQMB/wGAAQABAQYAAfgBAQH/AYABAAEBBgAB8AEA
+        Af8JAAHgAQABfwkAAcABAAE/CQABgAEAAR8LAAEfCgABYAEPCgAB8AEHCQABgQH4AQMJAAHDAfwBAQkA
+        AecB/goAAv8BAAGAAQABAQYAAv8BAAGAAQABAQYAAv8BgQHAAQABAwYAAv8BwwHgAQABBwYAAv8B5wHw
+        AQABDwYAA/8B+AEAAR8GAAP/Af4BAAF/HAAL
+</value>
+  </data>
+  <data name="lbl_ponente.Text" xml:space="preserve">
+    <value>No detectado</value>
+  </data>
+  <data name="&gt;&gt;pic4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="pic4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>417, 169</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pic2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Pulse el pedal deseado para comprobar su funcionamiento</value>
+  </data>
+  <data name="label8.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;button1.Name" xml:space="preserve">
+    <value>button1</value>
+  </data>
+  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>25, 296</value>
+  </data>
+  <data name="lbl_solo_pres.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;pic3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 20</value>
+  </data>
+  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 62</value>
+  </data>
+  <data name="&gt;&gt;label8.Name" xml:space="preserve">
+    <value>label8</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;pic.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Botón solo ponente</value>
+  </data>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="label8.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>373, 13</value>
+  </data>
+  <data name="pic.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 26</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 231</value>
+  </data>
+  <data name="lbl_1v_pres.Text" xml:space="preserve">
+    <value>No detectado</value>
+  </data>
+  <data name="label5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="&gt;&gt;label7.Name" xml:space="preserve">
+    <value>label7</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>492, 2</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="pic.Location" type="System.Drawing.Point, System.Drawing">
+    <value>417, 24</value>
+  </data>
+  <data name="lbl_ponente.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 13</value>
+  </data>
+  <data name="&gt;&gt;pic.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl_1v_pres.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_solo_pres.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 13</value>
+  </data>
+  <data name="&gt;&gt;pic3.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;pic4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pic4.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 20</value>
+  </data>
+  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>492, 2</value>
+  </data>
+  <data name="lbl_parada.Text" xml:space="preserve">
+    <value>No detectado</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>25, 271</value>
+  </data>
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Botón ponente + presentación</value>
+  </data>
+  <data name="&gt;&gt;imgl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_ponente.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="imgl.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

@@ -118,170 +118,38 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lbl_parada.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 13</value>
-  </data>
-  <data name="lbl_parada.Text" xml:space="preserve">
-    <value>Not detected</value>
-  </data>
-  <data name="button1.Text" xml:space="preserve">
-    <value>Close window</value>
-  </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 20</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Start/stop foot switch</value>
-  </data>
-  <data name="imgl.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
-        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
-        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABO
-        EwAAAk1TRnQBSQFMAgEBAgEAAVgBAAFYAQABGAEAARgBAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAFg
-        AwABGAMAAQEBAAEgBgABJI4AAwgBCwMzAlICUwGoAVgBYwFlAd0BQQF2AYgB8AFBAXYBiAHwAVgBYQFm
-        Ad4BUgJTAagDMwFSAwkBDP8AUQADBAEFA0IBdQFZAl0B0gEAAbIC/wEAAbIC/wEAAbQC/wEAAbUC/wEA
-        AboC/wEAAbcB/gH/AQABmQHvAf8BAAGPAeoB/wFaAl0B0wNCAXUDBAEF+AABSQFKAUkBiQM/AWxEAAMW
-        AR4BVwJZAcIBAAGuAv8BAAG1Av8BAAG3Av8BAAG2Av8BAAG1Av8BAAG6Av8BAAG6Av8BAAGcAe4B/wEA
-        AZQB6gH/AQABnAHvAf8BAAGYAe4B/wEAAYwB6wH/AVcCWgHFAx8BLPAAAz4BagEQAV0BNwH/AToBWAFA
-        Af0DHAEnPAABIQIiATEBWgFeAWEB1QEAAbMC/wEAAbcC/wEAAbYC/wEAAbYC/wEAAbUC/wEAAbsC/wEA
-        AboC/wEAAZwB7gH/AQABlAHqAf8BAAGbAe4B/wEAAZoB7gH/AQABmgHuAf8BAAGcAe4B/wEAAZUB7QH/
-        AVQBYQFpAeQDIwE06AADOAFdAQABNQELAf8BGwH/AYkB/wEJAc0BWgH/ATkBPgE1AfgDFAEcNAADHAEn
-        AVYBZAFsAeMBAAG2Av8BAAG2Av8BAAG2Av8BAAG2Av8BAAG3Av8BAAG5Av8BAAGnAfsB/wEAAYkB7AH/
-        AQABgQHnAf8BAAGSAe0B/wEAAZ0B7wH/AQABmgHuAf8BAAGaAe4B/wEAAZoB7gH/AQABmwHuAf8BAAGY
-        Ae4B/wFUAWEBaQHkAxwBKOAAAzMBUwEAATgBCQH/ARUB5AFrAf8BAAHzAUwB/wELAf8BXwH/AQ8BtgFV
-        Af8BPwFGAT0B9AMVAR0sAAMDAQQDWQHHAQABsgL/AQABtwL/AQABtgL/AQABtgL/AQABtgL/AQABtAL/
-        AQABuQL/AVcBwgH3Af8BYgG7AfEB/wFjAcMB9QH/ASgBrAHxAf8BAAGSAe0B/wEAAZoB7gH/AQABmgHu
-        Af8BAAGaAe4B/wEAAZoB7gH/AQABmwHuAf8BAAGUAe0B/wNbAcgDBAEF2AADMAFMAQMBQAELAf8BDgHM
-        AVoB/wECAeQBSgH/AQYB0QFGAf8BAgHSAUEB/wEJAe0BVwH/AQoBpgFIAf8BUQFZAVEB7QMQARYoAAM/
-        AW0BAAGpAv8BAAG4Av8BAAG2Av8BAAG2Av8BAAG2Av8BAAG2Av8BAAGxAv8BAAG0Dv8BhgHNAfYB/wEA
-        AYUB6wH/AQABmwHuAf8BAAGaAe4B/wEAAZoB7gH/AQABmgHuAf8BAAGaAe4B/wEAAZwB7gH/AQABiAHq
-        Af8BPwJAAW7UAAMuAUcBAgFGAQkB/wECAbQBRQH/AQABzwE+Af8BAAG/AToB/wEBAcUBQAH/AQQBxQFC
-        Af8BAAHBATkB/wEHAdoBTwH/AQMBlwE5Af8BWQFeAVkB5QMKAQ0gAAMFAQcBWgFfAWEB1QEAAbQC/wEA
-        AbYC/wEAAbYC/wEAAbYC/wEAAbYC/wEAAbYC/wEAAbEC/wEAAbQO/wGFAc0B9gH/AQABhQHqAf8BAAGb
-        Ae4B/wEAAZoB7gH/AQABmgHuAf8BAAGaAe4B/wEAAZoB7gH/AQABmgHuAf8BAAGYAe0B/wFaAV4BYQHV
-        AwUBB8wAAygBPQEBAUwBBQH/ARMBrAFKAf8BDgHCAUYB/wENAbQBPgH/AQ4BugFDAf8BCwG+AUEB/wEH
-        AbsBPgH/AQABtAE5Af8BAAGpASYB/wEAAbsBNwH/AQABhQEgAf8BXAFfAVwB4AMCAQMcAAMwAUsBAAGu
-        Av8BAAG3Av8BAAG2Av8BAAG2Av8BAAG2Av8BAAG2Av8BAAG2Av8BAAGzAv8BAAG5Av8BbwHRAfwB/wGF
-        AccB9QH/AYYByQH1Af8BNQGxAfIB/wEAAZEB7QH/AQABmgHuAf8BAAGaAe4B/wEAAZoB7gH/AQABmgHu
-        Af8BAAGaAe4B/wEAAZoB7gH/AQABnQHvAf8BAAGMAeoB/wMwAUzIAAMjATQBAAFUAQQB/wEnAa8BUgH/
-        AT4ByQFjAf8BOgG9AVgB/wE9AcIBXgH/AUABywFjAf8BRgHMAXIB/wFFAcsBbgH/AT0BxQFfAf8BOgG9
-        AV4B/wEuAbQBTwH/ASoBuwFZAf8BCwGJAS8B/wFaAV4BWgHYAwQBBRgAAVECUgGnAQABsAL/AQABtgL/
-        AQABtgL/AQABtgL/AQABtgL/AQABtgL/AQABtgL/AQABtgL/AQABuAL/AT0BuwH4Af8BUQGxAfAB/wFQ
-        AbQB8gH/AQQBmgHtAf8BAAGUAe0B/wEAAZsB7gH/AQABmgHuAf8BAAGaAe4B/wEAAZoB7gH/AQABmgHu
-        Af8BAAGbAe4B/wEAAZgB7QH/AQABjQHqAf8BUgJTAajEAAMfAS0BFgFSARkB/QEmAaQBRwH/AUgBwwFk
-        Af8BPAG2AVUB/wE+AbsBWQH/AUMByAFhAf8BRgHLAW0B/wEPAVkBGgH/AR8BgQEyAf8BTwHXAYAB/wFJ
-        AcUBYgH/AVMBxAFrAf8BVQHAAWkB/wFlAc4BjAH/ATkBmwFKAf8BWAFcAVgB0QMBAQIUAAFaAWUBaQHg
-        AQABtAL/AQABtgL/AQABtgL/AQABtgL/AQABtgL/AQABtgL/AQABtgL/AQABswL/AQABsAL/AfAL/wGV
-        AdAB9wH/AQABbgHoAf8BAAGZAe4B/wEAAZsB7gH/AQABmgHuAf8BAAGaAe4B/wEAAZsB7gH/AQABmAHt
-        Af8BAAGTAeoB/wEAAasB+AH/AVcBZQFqAeLAAAMfASwBJQFqASYB+QEiAZsBPAH/AVkBwAFuAf8BSQG0
-        AVsB/wFJAbgBXQH/AVIBxgFpAf8BTwHHAW4B/wEUAWcBHgH/A0ABbwNQAZsBHgGJATIB/wFaAdEBggH/
-        AUoBvgFgAf8BRAG2AVkB/wE7Aa8BTwH/AW8BzAGPAf8BNQGYAUEB/wFYAVsBWAHLFAABQwF+AZAB8QEA
-        AbYC/wEAAbYC/wEAAbYC/wEAAbYC/wEAAbYC/wEAAbYC/wEAAbUC/wEAAbsC/wEAAacB/QH/AYkB0gH4
-        Df8BXAG8AfMB/wEAAYIB6QH/AQABmAHuAf8BAAGbAe4B/wEAAZsB7gH/AQABmAHtAf8BAAGTAeoB/wEA
-        Aa0B+AH/AQABvgL/AUMBfgGQAfHAAAEbAXMBGwH/AToBpQFMAf8BbAHDAYYB/wFTAbMBXwH/AVQBuAFk
-        Af8BYAHFAXEB/wFaAcMBcAH/ARYBbgEcAf8DPQFpCAABUwFVAVMBrQEiAY0BMAH/AWcBzAGHAf8BWQG+
-        AWgB/wFXAbkBZgH/AU0BsQFaAf8BcgHGAY0B/wExAZgBPAH/AVgBXAFYAdEQAAFBAXYBiAHwAQABtgL/
-        AQABtgL/AQABtgL/AQABtgL/AQABtgL/AQABtgL/AQABugL/AQABugL/AQABkgHtAf8BAAGDAecB/wG5
-        AeMB+g3/AXIBwwH0Af8BAAGIAesB/wEAAZwB7wH/AQABlwHtAf8BAAGTAeoB/wEAAa0B+AH/AQABvgL/
-        AQABtgL/AUMBfgGQAfHAAANHAYIBEAGHARUB/wFqAb4BdAH/AWkBvwFyAf8BaAHDAXQB/wFqAcgBhAH/
-        ARkBgwEeAf8DQgF0EAADVgG2AScBkwExAf8BgQHOAZAB/wFjAb8BbgH/AWIBugFsAf8BWwG0AWMB/wGK
-        AccBkwH/AScBlAEvAf8BWwFeAVsB0AwAAVoBZQFpAeABAAG0Av8BAAG2Av8BAAG2Av8BAAG2Av8BAAG2
-        Av8BAAG6Av8BAAGwAfwB/wEAAZMB7gH/AQcBlwHqAf8BAAGSAe0B/wEAAYYB6gH/AaMB2AH4Df8BQQG0
-        AfIB/wEAAYkB6gH/AQABkwHqAf8BAAGtAfgB/wEAAb4C/wEAAbYC/wEAAbQC/wFaAWUBaQHhxAADSQGH
-        AQgBhQELAf8BhQHKAY4B/wGAAcoBiQH/ARcBiwEZAf8DRQF8GAABVQFXAVUBugErAZwBMQH/AZIB0wGc
-        Af8BbwHCAYEB/wFtAb4BcwH/AWsBugFvAf8BlgHKAZsB/wEWAYwBGgH/AVoBXQFaAcoIAAFRAlIBpwEA
-        AbAC/wEAAbYC/wEAAbYC/wEAAbYC/wEAAbYC/wEAAa4C/wFpAc4B+wH/AcgB4gH4Af8B7QH2Af4B/wGx
-        Ad4B+QH/AQABaAHnAf8BAAFqAecB/wHNAegB+wn/AbIB2wH4Af8BAAF0AeYB/wEAAa4B+AH/AQABvgL/
-        AQABtgL/AQABtgL/AQABsAL/AVICUwGoyAADTAGSAVEBswFTAf8BVAGzAVUB/wNHAYIgAAFZAVsBWQHE
-        ATIBowE1Af8BogHZAacB/wGGAcgBiQH/AYMBxAGGAf8BhgHDAYcB/wGmAdIBqAH/AQ4BigEPAf8BWQFb
-        AVkBxAQAAzABSwEAAa4C/wEAAbcC/wEAAbYC/wEAAbYC/wEAAbcC/wEAAaUC/wGFAdwO/wFgAb8B9AH/
-        AUMBqwHxAf8B4wHzAf0J/wGjAdEB9AH/AQABmQH0Af8BAAG+Av8BAAG2Av8BAAG2Av8BAAG3Av8BAAGu
-        Av8DMAFMzAADSAGGA0YBfigAAVoBXAFaAc0BOwGqATwB/wGwAeIBsgH/AZEB0QGSAf8BjwHMAY8B/wGV
-        Ac4BlAH/AaUB1wGlAf8BJgGcAScB/wFVAVcBVQG6AwQBBgFaAV8BYQHVAQABtAL/AQABtgL/AQABtgL/
-        AQABtgL/AQABsgL/AQEBsQL/AesB+Bz/Af4B/wEqAboB+wH/AQABsQL/AQABtgL/AQABtgL/AQABtgL/
-        AQABtAL/AVoBXwFhAdUDBQEH/wABAAFaAV4BWgHYAT8BsAE/Af8BxAHvAcQB/wGdAdsBnAH/AZUB1wGV
-        Af8BxQHxAcUB/wGJAdIBiQH/ASABmAEgAf8EAAM/AW0BAAGpAv8BAAG4Av8BAAG2Av8BAAG2Av8BAAG4
-        Av8BAAGsAv8BHwG5Av8B0AHuAf4R/wHgAfQB/gH/AUYBxQH+Af8BAAGsAv8BAAG4Av8BAAG2Av8BAAG2
-        Av8BAAG4Av8BAAGpAv8BPwJAAW7/AAUAAwIBAwFZAV4BWQHZAUcBuQFGAf8BzwH9Ac8B/wHLAf0BywH/
-        AYYB1gGGAf8BAAFwAQAB/wMnAToEAAMDAQQDWQHHAQABsgL/AQABtwL/AQABtgL/AQABtgL/AQABuAL/
-        AQABrAL/AQABrwH+Af8BMQHDAv8BXAHSAv8BXwHTAv8BPgHHAv8BAAGyAf4B/wEAAaoC/wEAAbcC/wEA
-        AbYC/wEAAbYC/wEAAbcC/wEAAbIC/wNZAccDBAEF/wAJAAMIAQsBWgFiAVoB4AFnAc8BZwH/AbcB8QG3
-        Af8BAAFyAQAB/wMrAUIMAAMbASYBVgFkAWwB4wEAAbUC/wEAAbcC/wEAAbYC/wEAAbYC/wEAAbgC/wEA
-        AbQC/wEAAawC/wEAAakC/wEAAakC/wEAAasC/wEAAbMC/wEAAbgC/wEAAbYC/wEAAbYC/wEAAbcC/wEA
-        AbUC/wFUAWQBawHkAxwBJ/8AEQADDQERAV0BcAFdAe0BZQG/AWUB/wMuAUcUAAMjATMBVAFkAWsB5AEA
-        AbIC/wEAAbgC/wEAAbYC/wEAAbYC/wEAAbYC/wEAAbYC/wEAAbcC/wEAAbcC/wEAAbYC/wEAAbYC/wEA
-        AbYC/wEAAbYC/wEAAbcC/wEAAbMC/wFUAWQBawHkAyMBNP8AGQADNQFXA0IBdBwAAx4BKwFZAlsBxAEA
-        Aa0C/wEAAbUC/wEAAbcC/wEAAbYC/wEAAbYC/wEAAbYC/wEAAbYC/wEAAbYC/wEAAbYC/wEAAbcC/wEA
-        AbUC/wEAAa0C/wFXAloBxQMeASv/AEUAAwMBBANCAXQBWQJdAdIBAAGyAv8BAAGyAv8BAAG0Av8BAAG2
-        Av8BAAG2Av8BAAG0Av8BAAGyAv8BAAGxAv8BWQJdAdIDQgF0AwMBBP8AUQADCAELAzICUQJSAacBWgFh
-        AWUB3AFGAXIBhgHvAUYBcgGGAe8BWgFhAWUB3AFRAlIBpwMzAVIDCAEL3AABQgFNAT4HAAE+AwABKAMA
-        AWADAAEYAwABAQEAAQEFAAEgAQEWAAP/AQAD/wH+AQABfwYAA/8B+AEAAR8GAAH/AZ8B/wHwAQABDwYA
-        Af8BDwH/AeABAAEHBgAB/gEHAf8BwAEAAQMGAAH8AQMB/wGAAQABAQYAAfgBAQH/AYABAAEBBgAB8AEA
-        Af8JAAHgAQABfwkAAcABAAE/CQABgAEAAR8LAAEfCgABYAEPCgAB8AEHCQABgQH4AQMJAAHDAfwBAQkA
-        AecB/goAAv8BAAGAAQABAQYAAv8BAAGAAQABAQYAAv8BgQHAAQABAwYAAv8BwwHgAQABBwYAAv8B5wHw
-        AQABDwYAA/8B+AEAAR8GAAP/Af4BAAF/BgAL
-</value>
-  </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>153, 20</value>
+    <value>89, 13</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>Button Only speaker</value>
-  </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>228, 20</value>
-  </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>Button Speaker + Presentation</value>
-  </data>
-  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>183, 20</value>
-  </data>
-  <data name="label5.Text" xml:space="preserve">
-    <value>Button Presentation only</value>
-  </data>
-  <data name="lbl_ponente.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 13</value>
-  </data>
-  <data name="lbl_ponente.Text" xml:space="preserve">
-    <value>Not detected</value>
-  </data>
-  <data name="lbl_1v_pres.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 13</value>
-  </data>
-  <data name="lbl_1v_pres.Text" xml:space="preserve">
-    <value>Not detected</value>
-  </data>
-  <data name="lbl_solo_pres.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 13</value>
-  </data>
-  <data name="lbl_solo_pres.Text" xml:space="preserve">
-    <value>Not detected</value>
+    <value>Current password</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>256, 13</value>
+    <value>77, 13</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>Press the foot switch or button you wish to be tested.</value>
+    <value>New password</value>
   </data>
-  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>417, 13</value>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 13</value>
   </data>
-  <data name="label6.Text" xml:space="preserve">
-    <value>If foot switch of buttons do not respond, try unplugging the usb cable and pluggin again</value>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Repeat password</value>
   </data>
-  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>428, 13</value>
+  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>290, 172</value>
   </data>
-  <data name="label7.Text" xml:space="preserve">
-    <value>If foot switch or buttons are detected here but they do not respond in OBS Studio, may be</value>
+  <data name="button1.Text" xml:space="preserve">
+    <value>Save</value>
   </data>
-  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>360, 13</value>
+  <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>209, 172</value>
   </data>
-  <data name="label8.Text" xml:space="preserve">
-    <value>necessary to restore factory settings or a previously working profile backup.</value>
+  <data name="button2.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>378, 209</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2114,5 +1982,8 @@
         qZsz/aWeN/2goTr9m6Q9/ZanQv2Qq0b9i65K/YSxTP18tE78AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
 </value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Change access password</value>
   </data>
 </root>

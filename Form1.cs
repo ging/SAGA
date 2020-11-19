@@ -80,9 +80,13 @@ namespace plato_saga
         MMDevice device;
         ComboBox Combo_scene = new ComboBox();
         String last_file = String.Empty;
-        String base_update_server = "https://files.videohelp.com/u/273695/";
+        String base_update_server = "https://github.com/eibol/platosaga/releases/download";
         Boolean download_progressing = false;
-
+        String passwd_access = "";
+        ToolTip T00 = new ToolTip();
+        ToolTip T01 = new ToolTip();
+        ToolTip T02 = new ToolTip();
+        
         private bool headOnly;
         public bool HeadOnly
         {
@@ -618,9 +622,19 @@ namespace plato_saga
             {
                 String item = System.IO.Path.GetExtension(file);
                 String name = System.IO.Path.GetFileNameWithoutExtension(file);
-                if (item == ".json" && name != "Por_defecto" && name != "Escenas" && name != "Intro" && name != "Default" && name != "Scenes")
+                if (language == "es")
                 {
-                    combo_scenes.Items.Add(System.IO.Path.GetFileNameWithoutExtension(file));
+                    if (item == ".json" && name != "Por_defecto" && name != "Escenas_1" && name != "Escenas_2" && name != "Escenas_3")
+                    {
+                        combo_scenes.Items.Add(System.IO.Path.GetFileNameWithoutExtension(file));
+                    }
+                }
+                if (language == "en")
+                {
+                    if (item == ".json" && name != "Default" && name != "Scenes_1" && name != "Scenes_2" && name != "Scenes_3")
+                    {
+                        combo_scenes.Items.Add(System.IO.Path.GetFileNameWithoutExtension(file));
+                    }
                 }
             }
             if (combo_scenes.Items.Count > 0) combo_scenes.SelectedIndex = 0;
@@ -634,11 +648,20 @@ namespace plato_saga
             combo_scenes.Items.Insert(0, "---------------------");
             foreach (String file in Directory.GetFiles(obs_prof_or_2))
             {
-                if (System.IO.Path.GetFileNameWithoutExtension(file) == "Intro") combo_scenes.Items.Insert(0, System.IO.Path.GetFileNameWithoutExtension(file));
-                if (System.IO.Path.GetFileNameWithoutExtension(file) == "Escenas") combo_scenes.Items.Insert(0, System.IO.Path.GetFileNameWithoutExtension(file));
-                if (System.IO.Path.GetFileNameWithoutExtension(file) == "Scenes") combo_scenes.Items.Insert(0, System.IO.Path.GetFileNameWithoutExtension(file));
-                if (System.IO.Path.GetFileNameWithoutExtension(file) == "Por_defecto") combo_scenes.Items.Insert(0, System.IO.Path.GetFileNameWithoutExtension(file));
-                if (System.IO.Path.GetFileNameWithoutExtension(file) == "Default") combo_scenes.Items.Insert(0, System.IO.Path.GetFileNameWithoutExtension(file));
+                if (language == "es")
+                {
+                    if (System.IO.Path.GetFileNameWithoutExtension(file) == "Escenas_1") combo_scenes.Items.Insert(0, System.IO.Path.GetFileNameWithoutExtension(file));
+                    if (System.IO.Path.GetFileNameWithoutExtension(file) == "Escenas_2") combo_scenes.Items.Insert(0, System.IO.Path.GetFileNameWithoutExtension(file));
+                    if (System.IO.Path.GetFileNameWithoutExtension(file) == "Escenas_3") combo_scenes.Items.Insert(0, System.IO.Path.GetFileNameWithoutExtension(file));
+                    if (System.IO.Path.GetFileNameWithoutExtension(file) == "Por_defecto") combo_scenes.Items.Insert(0, System.IO.Path.GetFileNameWithoutExtension(file));
+                }
+                if (language == "en")
+                {
+                    if (System.IO.Path.GetFileNameWithoutExtension(file) == "Scenes_1") combo_scenes.Items.Insert(0, System.IO.Path.GetFileNameWithoutExtension(file));
+                    if (System.IO.Path.GetFileNameWithoutExtension(file) == "Scenes_2") combo_scenes.Items.Insert(0, System.IO.Path.GetFileNameWithoutExtension(file));
+                    if (System.IO.Path.GetFileNameWithoutExtension(file) == "Scenes_3") combo_scenes.Items.Insert(0, System.IO.Path.GetFileNameWithoutExtension(file));
+                    if (System.IO.Path.GetFileNameWithoutExtension(file) == "Default") combo_scenes.Items.Insert(0, System.IO.Path.GetFileNameWithoutExtension(file));
+                }
             }
             //Fin cargar escenas obs
         }
@@ -758,23 +781,6 @@ namespace plato_saga
 
             //End monitor audio
 
-
-            ToolTip T01 = new ToolTip();
-            T01.AutoPopDelay = 5000;
-            T01.InitialDelay = 1000;
-            T01.ReshowDelay = 500;
-            T01.ShowAlways = true;
-            if (language == "es") T01.SetToolTip(this.btn_clone, "Clonar colección de escenas");
-            if (language == "en") T01.SetToolTip(this.btn_clone, "Clone scene collection");
-
-            ToolTip T02 = new ToolTip();
-            T02.AutoPopDelay = 5000;
-            T02.InitialDelay = 1000;
-            T02.ReshowDelay = 500;
-            T02.ShowAlways = true;
-            if (language == "es") T02.SetToolTip(this.btn_del, "Eliminar colección de escenas");
-            if (language == "en") T02.SetToolTip(this.btn_del, "Remove scene collection");
-
             fd1.ShowNewFolderButton = true;
 
             if (language == "es")
@@ -801,10 +807,21 @@ namespace plato_saga
             {
                 String item = System.IO.Path.GetExtension(file);
                 String name = System.IO.Path.GetFileNameWithoutExtension(file);
-                if (item == ".json" && name != "Por_defecto" && name != "Escenas" && name != "Intro" && name != "Default" && name != "Scenes")
+                if (language == "es")
                 {
-                    combo_scenes.Items.Add(System.IO.Path.GetFileNameWithoutExtension(file));
+                    if (item == ".json" && name != "Por_defecto" && name != "Escenas_1" && name != "Escenas_2" && name != "Escenas_3")
+                    {
+                        combo_scenes.Items.Add(System.IO.Path.GetFileNameWithoutExtension(file));
+                    }
                 }
+                if (language == "en")
+                {
+                    if (item == ".json" && name != "Default" && name != "Scenes_1" && name != "Scenes_2" && name != "Scenes_3")
+                    {
+                        combo_scenes.Items.Add(System.IO.Path.GetFileNameWithoutExtension(file));
+                    }
+                }
+         
             }
             if (combo_scenes.Items.Count > 0) combo_scenes.SelectedIndex = 0;
             else
@@ -817,25 +834,40 @@ namespace plato_saga
             combo_scenes.Items.Insert(0, "---------------------");
             foreach (String file in Directory.GetFiles(obs_prof_or_2))
             {
-                if (System.IO.Path.GetFileNameWithoutExtension(file) == "Intro") combo_scenes.Items.Insert(0, System.IO.Path.GetFileNameWithoutExtension(file));
-                if (System.IO.Path.GetFileNameWithoutExtension(file) == "Escenas") combo_scenes.Items.Insert(0, System.IO.Path.GetFileNameWithoutExtension(file));
-                if (System.IO.Path.GetFileNameWithoutExtension(file) == "Scenes") combo_scenes.Items.Insert(0, System.IO.Path.GetFileNameWithoutExtension(file));
-                if (System.IO.Path.GetFileNameWithoutExtension(file) == "Por_defecto") combo_scenes.Items.Insert(0, System.IO.Path.GetFileNameWithoutExtension(file));
-                if (System.IO.Path.GetFileNameWithoutExtension(file) == "Default") combo_scenes.Items.Insert(0, System.IO.Path.GetFileNameWithoutExtension(file));
+                if (language == "es")
+                {
+                    if (System.IO.Path.GetFileNameWithoutExtension(file) == "Por_defecto") combo_scenes.Items.Insert(0, System.IO.Path.GetFileNameWithoutExtension(file));
+                    if (System.IO.Path.GetFileNameWithoutExtension(file) == "Escenas_1") combo_scenes.Items.Insert(0, System.IO.Path.GetFileNameWithoutExtension(file));
+                    if (System.IO.Path.GetFileNameWithoutExtension(file) == "Escenas_2") combo_scenes.Items.Insert(0, System.IO.Path.GetFileNameWithoutExtension(file));
+                    if (System.IO.Path.GetFileNameWithoutExtension(file) == "Escenas_3") combo_scenes.Items.Insert(0, System.IO.Path.GetFileNameWithoutExtension(file));
+
+                }
+                if (language == "en")
+                {
+                    if (System.IO.Path.GetFileNameWithoutExtension(file) == "Default") combo_scenes.Items.Insert(0, System.IO.Path.GetFileNameWithoutExtension(file));
+                    if (System.IO.Path.GetFileNameWithoutExtension(file) == "Scenes_1") combo_scenes.Items.Insert(0, System.IO.Path.GetFileNameWithoutExtension(file));
+                    if (System.IO.Path.GetFileNameWithoutExtension(file) == "Scenes_2") combo_scenes.Items.Insert(0, System.IO.Path.GetFileNameWithoutExtension(file));
+                    if (System.IO.Path.GetFileNameWithoutExtension(file) == "Scenes_3") combo_scenes.Items.Insert(0, System.IO.Path.GetFileNameWithoutExtension(file));
+                }
             }
             //Fin cargar escenas obs
             
             init_audio_devs();
             track_silence.Value = silence_level;
             get_silence();
-
-            btn_update.Text = "Version " + Application.ProductVersion;
-            if (chk_updates.CheckState == CheckState.Checked) check_back_updates();
-
+                        
             is_locked();
+            create_tips();
+            check_pass();
 
         }
 
+        private void check_pass()
+        {
+            String pass_file = System.IO.Path.Combine(Environment.GetEnvironmentVariable("appdata"), "platosaga") + "\\" + "pass_file";
+            if (!File.Exists(pass_file)) File.WriteAllText(pass_file, "carrito");
+            passwd_access = File.ReadAllText(pass_file);            
+        }
 
         private void is_locked()
         {
@@ -1132,7 +1164,7 @@ namespace plato_saga
         private void frmInfo_FormClosed(object sender, FormClosedEventArgs e)
         {
             bad_pass = true;
-            if (passwd.Text != "carrito")
+            if (passwd.Text != passwd_access)
             {
                 if (language == "es") MessageBox.Show("Contraseña incorrecta. Contacte con soporte audiovisual.", "Acceso a función no autorizado", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 if (language == "en") MessageBox.Show("Invalid password. Please contact support.", "Protected feature", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -1529,6 +1561,9 @@ namespace plato_saga
             {
                 Combo_scene.Items.Add(item);
             }
+            
+            btn_update.Text = "Version " + Application.ProductVersion;
+            if (chk_updates.CheckState == CheckState.Checked) check_back_updates();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -2461,7 +2496,7 @@ namespace plato_saga
         {
             if (combo_scenes.SelectedItem == null) return;
             String sel = combo_scenes.SelectedItem.ToString();
-            if (sel == "Por_defecto" || sel == "Escenas" || sel == "Scenes" || sel == "Default" || sel == "Intro")
+            if (sel == "Por_defecto" || sel == "Escenas_1" || sel == "Escenas_2" || sel == "Escenas_3" || sel == "Scenes_1" || sel == "Scenes_2" || sel == "Scenes_3" || sel == "Default")
             {
                 if (language == "es") MessageBox.Show("No se puede eliminar una escena básica.");
                 if (language == "en") MessageBox.Show("A basic scene cannot be removed");
@@ -2580,9 +2615,19 @@ namespace plato_saga
             {
                 String item = System.IO.Path.GetExtension(file);
                 String name = System.IO.Path.GetFileNameWithoutExtension(file);
-                if (item == ".json" && name != "Por_defecto" && name != "Escenas" && name != "Intro" && name != "Default" && name != "Scenes")
+                if (language == "es")
                 {
-                    combo_scenes.Items.Add(System.IO.Path.GetFileNameWithoutExtension(file));
+                    if (item == ".json" && name != "Por_defecto" && name != "Escenas_1" && name != "Escenas_2" && name != "Escenas_3")
+                    {
+                        combo_scenes.Items.Add(System.IO.Path.GetFileNameWithoutExtension(file));
+                    }
+                }
+                if (language == "en")
+                {
+                    if (item == ".json" && name != "Default" && name != "Scenes_1" && name != "Scenes_2" && name != "Scenes_3")
+                    {
+                        combo_scenes.Items.Add(System.IO.Path.GetFileNameWithoutExtension(file));
+                    }
                 }
             }
             if (combo_scenes.Items.Count > 0) combo_scenes.SelectedIndex = 0;
@@ -2596,11 +2641,21 @@ namespace plato_saga
             combo_scenes.Items.Insert(0, "---------------------");
             foreach (String file in Directory.GetFiles(obs_prof_or_2))
             {
-                if (System.IO.Path.GetFileNameWithoutExtension(file) == "Intro") combo_scenes.Items.Insert(0, System.IO.Path.GetFileNameWithoutExtension(file));
-                if (System.IO.Path.GetFileNameWithoutExtension(file) == "Escenas") combo_scenes.Items.Insert(0, System.IO.Path.GetFileNameWithoutExtension(file));
-                if (System.IO.Path.GetFileNameWithoutExtension(file) == "Scenes") combo_scenes.Items.Insert(0, System.IO.Path.GetFileNameWithoutExtension(file));
-                if (System.IO.Path.GetFileNameWithoutExtension(file) == "Por_defecto") combo_scenes.Items.Insert(0, System.IO.Path.GetFileNameWithoutExtension(file));
-                if (System.IO.Path.GetFileNameWithoutExtension(file) == "Default") combo_scenes.Items.Insert(0, System.IO.Path.GetFileNameWithoutExtension(file));
+                if (language == "es")
+                {
+                    if (System.IO.Path.GetFileNameWithoutExtension(file) == "Escenas_1") combo_scenes.Items.Insert(0, System.IO.Path.GetFileNameWithoutExtension(file));
+                    if (System.IO.Path.GetFileNameWithoutExtension(file) == "Escenas_2") combo_scenes.Items.Insert(0, System.IO.Path.GetFileNameWithoutExtension(file));
+                    if (System.IO.Path.GetFileNameWithoutExtension(file) == "Escenas_3") combo_scenes.Items.Insert(0, System.IO.Path.GetFileNameWithoutExtension(file));
+                    if (System.IO.Path.GetFileNameWithoutExtension(file) == "Por_defecto") combo_scenes.Items.Insert(0, System.IO.Path.GetFileNameWithoutExtension(file));
+
+                }
+                if (language == "en")
+                {
+                    if (System.IO.Path.GetFileNameWithoutExtension(file) == "Scenes_1") combo_scenes.Items.Insert(0, System.IO.Path.GetFileNameWithoutExtension(file));
+                    if (System.IO.Path.GetFileNameWithoutExtension(file) == "Scenes_2") combo_scenes.Items.Insert(0, System.IO.Path.GetFileNameWithoutExtension(file));
+                    if (System.IO.Path.GetFileNameWithoutExtension(file) == "Scenes_3") combo_scenes.Items.Insert(0, System.IO.Path.GetFileNameWithoutExtension(file));
+                    if (System.IO.Path.GetFileNameWithoutExtension(file) == "Default") combo_scenes.Items.Insert(0, System.IO.Path.GetFileNameWithoutExtension(file));
+                }
             }
             //Fin cargar escenas obs      
 
@@ -2782,7 +2837,7 @@ namespace plato_saga
         }
 
         private void combo_lang_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        {            
             if (combo_lang.SelectedIndex == 0)
             {
                 plato_saga.Properties.Settings.Default.app_lang = "es";
@@ -2801,7 +2856,33 @@ namespace plato_saga
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             RefreshResources(this, resources);
             is_locked();
+            create_tips();
             btn_update.Text = "Version " + Application.ProductVersion;
+
+        }
+
+        void create_tips()
+        {            
+            T00.AutoPopDelay = 5000;
+            T00.InitialDelay = 1000;
+            T00.ReshowDelay = 500;
+            T00.ShowAlways = true;
+            if (language == "es") T00.SetToolTip(this.btn_settings, "Cambiar configuración");
+            if (language == "en") T00.SetToolTip(this.btn_settings, "Change settings");
+
+            T01.AutoPopDelay = 5000;
+            T01.InitialDelay = 1000;
+            T01.ReshowDelay = 500;
+            T01.ShowAlways = true;
+            if (language == "es") T01.SetToolTip(this.btn_clone, "Clonar colección de escenas");
+            if (language == "en") T01.SetToolTip(this.btn_clone, "Clone scene collection");
+                        
+            T02.AutoPopDelay = 5000;
+            T02.InitialDelay = 1000;
+            T02.ReshowDelay = 500;
+            T02.ShowAlways = true;
+            if (language == "es") T02.SetToolTip(this.btn_del, "Eliminar colección de escenas");
+            if (language == "en") T02.SetToolTip(this.btn_del, "Remove scene collection");
         }
 
 
@@ -3046,7 +3127,7 @@ namespace plato_saga
         {
             String current_ver = btn_update.Text;
             btn_update.Refresh();
-            String content1 = String.Empty;
+            String content1 = String.Empty;            
             Disable_controls();
             new System.Threading.Thread(() =>
             {
@@ -3092,15 +3173,20 @@ namespace plato_saga
                         String downloadsPath = KnownFolders.GetPath(KnownFolder.Downloads);
                         dest_update = downloadsPath + "\\" + "Setup_saga_" + content1.Substring(0, 5) + ".exe";
 
-                        String res = RemoteFileExists(base_update_server + "Setup_saga_" + content1.Substring(0, 5) + ".exe").ToString();
+
+                            //base_update_server + "/" + content1.Substring(0, 5) + "/" + "Setup_saga_" + content1.Substring(0, 5) + ".exe");
+
+                            String down_link = base_update_server + "/" + content1.Substring(0, 5) + "/" + "Setup_saga_" + content1.Substring(0, 5) + ".exe";
+                            String res = RemoteFileExists(down_link).ToString();
+                            
                         {
-                            if (res != "True")
-                            {
-                                if (language == "es") MessageBox.Show("No se pudo iniciar la descarga. Contacte con soporte técnico.", "Error de descarga", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                if (language == "en") MessageBox.Show("Download failed. Please contact technical support.", "Download error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                Enable_Controls();
-                                return;
-                            }
+                            //if (res != "True")
+                            //{
+                            //    if (language == "es") MessageBox.Show("No se pudo iniciar la descarga. Contacte con soporte técnico.", "Error de descarga", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            //    if (language == "en") MessageBox.Show("Download failed. Please contact technical support.", "Download error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            //    Enable_Controls();
+                            //    return;
+                            //}
                         }
 
                         pg_download.Invoke(new MethodInvoker(delegate
@@ -3117,7 +3203,7 @@ namespace plato_saga
                         }));
                         
             
-                    cli.DownloadFileAsync(new Uri(base_update_server + "Setup_saga_" + content1.Substring(0, 5) + ".exe"), dest_update);
+                    cli.DownloadFileAsync(new Uri(down_link), dest_update);
                         update_file = dest_update;
                         cli.DownloadProgressChanged += new DownloadProgressChangedEventHandler(DownloadProgressCallback);
                         cli.DownloadFileCompleted += new AsyncCompletedEventHandler(DownloadFileCallback2);
@@ -3214,12 +3300,25 @@ namespace plato_saga
             DialogResult a = DialogResult.None;
             Thread.Sleep(500);
             
-            if (!File.Exists( update_file))
+            if (!File.Exists(update_file))
             {
                 if (language == "es") MessageBox.Show("Se produjo un error al descargar la actualización. No se encontró el archivo solicitado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 if (language == "en") MessageBox.Show("An error ocurred downloading update. File not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            FileInfo fi = new FileInfo(update_file);
+            if (fi.Length == 0)
+            {
+                if (language == "es") MessageBox.Show("Se produjo un error al descargar la actualización. No se encontró el archivo solicitado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (language == "en") MessageBox.Show("An error ocurred downloading update. File not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                try
+                {
+                    File.Delete(update_file);
+                }
+                catch { }
+                return;
+            }
+
             if (language == "es") a = MessageBox.Show("Descarga completada. ¿Instalar actualización?", "Confirmar instalación", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
             if (language == "en") a = MessageBox.Show("Download complete. Install update now?", "Confirm installation", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
             cli.Dispose();
@@ -3244,96 +3343,7 @@ namespace plato_saga
 
         private void check_back_updates()
         {
-            String current_ver = btn_update.Text;
-
-            String content1 = String.Empty;
-            new System.Threading.Thread(() =>
-            {
-                System.Threading.Thread.CurrentThread.IsBackground = true;
-                //Disable_controls();
-                btn_update.Invoke(new MethodInvoker(delegate
-                {
-                    btn_update.Text = current_ver;
-                }));
-
-                try
-                {
-
-                    WebClient client = new WebClientWithTimeout();
-                    String lang_check_update = "";
-                    if (language == "es") lang_check_update = "https://drive.upm.es/index.php/s/dIfk1LM0rYkVoBF/download";
-                    if (language == "en") lang_check_update = "https://drive.upm.es/index.php/s/BIRLKz7kbLokLqg/download";
-                    Stream stream = client.OpenRead(lang_check_update);
-                    
-                    StreamReader reader = new StreamReader(stream);
-                    String content = reader.ReadToEnd();
-                    content1 = content;
-
-                }
-                catch (Exception excpt)
-                {
-                    if (language == "es") MessageBox.Show("Hubo un error al conectar al servidor de actualizaciones." + Environment.NewLine + Environment.NewLine + excpt.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    if (language == "en") MessageBox.Show("An error occurred conecting to update service." + Environment.NewLine + Environment.NewLine + excpt.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    btn_update.Invoke(new MethodInvoker(delegate
-                    {
-                        btn_update.Text = current_ver;
-                    }));
-                    Enable_Controls();
-                    return;                }
-
-                try
-                {
-                    if (Convert.ToInt16(content1.Replace(".", String.Empty).Substring(0, 3)) > Convert.ToInt16(Application.ProductVersion.Replace(".", String.Empty)))
-                    {
-                        DialogResult a = DialogResult.None;
-                        if (language == "es") a = MessageBox.Show("Una nueva versión está disponible: " + content1.Substring(0, 5) + Environment.NewLine + content1.Substring(6, content1.Length - 6) + Environment.NewLine + Environment.NewLine + "¿Desea descargarla?", "Nueva versión disponible", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        if (language == "en") a = MessageBox.Show("A new version was found: " + content1.Substring(0, 5) + Environment.NewLine + content1.Substring(6, content1.Length - 6) + Environment.NewLine + Environment.NewLine + "Download it now?", "New version found", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        if (a == DialogResult.Yes)
-                        {
-                            String downloadsPath = KnownFolders.GetPath(KnownFolder.Downloads);
-                            dest_update = downloadsPath + "\\" + "Setup_saga_" + content1.Substring(0, 5) + ".exe";
-
-                            String res = RemoteFileExists(base_update_server + "Setup_saga_" + content1.Substring(0, 5) + ".exe").ToString();
-                            {
-                                if (res != "True")
-                                {
-                                    if (language == "es") MessageBox.Show("No se pudo iniciar la descarga. Contacte con soporte técnico.", "Error de descarga", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                    if (language == "en") MessageBox.Show("Download failed. Please contact technical support.", "Download error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                    Enable_Controls();
-                                    return;
-                                }
-                            }
-
-
-                            pg_download.Invoke(new MethodInvoker(delegate { pg_download.Visible = true; }));
-                            lbl_dowload.Invoke(new MethodInvoker(delegate { 
-                                lbl_dowload.Visible = true;
-                                lbl_dowload.Text = "0 MB/s";
-                            }));
-                            cli.DownloadFileAsync(new Uri("https://files.videohelp.com/u/273695/" + "Setup_saga_" + content1.Substring(0, 5) + ".exe"), dest_update);
-                            cli.DownloadProgressChanged += new DownloadProgressChangedEventHandler(DownloadProgressCallback);
-                            cli.DownloadFileCompleted += new AsyncCompletedEventHandler(DownloadFileCallback2);
-                            download_progressing = false;
-                        }
-                    }
-                    else
-                    {
-                        //MessageBox.Show("Está usando la versión más reciente.", "Aplicación está actualizada", MessageBoxButtons.OK);
-                    }
-                }
-                catch (Exception excpt)
-                {
-                    if (language == "es") MessageBox.Show("Se produjo un error al buscar actualizaciones." + Environment.NewLine + Environment.NewLine + excpt.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    if (language == "en") MessageBox.Show("An error ocurred searching for updates." + Environment.NewLine + Environment.NewLine + excpt.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-                //Enable_Controls();
-                btn_update.Invoke(new MethodInvoker(delegate
-                {
-                    btn_update.Text = current_ver;
-                }));
-
-            }).Start();
+            btn_update.PerformClick();
         }
 
         //END CODE
@@ -3789,6 +3799,13 @@ namespace plato_saga
             {
                 Process.Start(join);
             }
+        }
+
+        private void btn_settings_Click(object sender, EventArgs e)
+        {
+            Form10 frm10 = new Form10();
+            frm10.ShowDialog();
+            if (frm10.cancel == false) check_pass();
         }
     }
 }

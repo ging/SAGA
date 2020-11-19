@@ -40,6 +40,7 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btn_joiner = new System.Windows.Forms.Button();
             this.btn_pedal = new System.Windows.Forms.Button();
             this.btn_lock = new System.Windows.Forms.Button();
             this.imgs = new System.Windows.Forms.ImageList(this.components);
@@ -100,7 +101,7 @@
             this.timer_startup = new System.Windows.Forms.Timer(this.components);
             this.lbl_thr = new System.Windows.Forms.Label();
             this.BG_rec = new System.ComponentModel.BackgroundWorker();
-            this.btn_joiner = new System.Windows.Forms.Button();
+            this.btn_settings = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pic_title)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -192,6 +193,14 @@
             resources.ApplyResources(this.groupBox3, "groupBox3");
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.TabStop = false;
+            // 
+            // btn_joiner
+            // 
+            this.btn_joiner.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btn_joiner, "btn_joiner");
+            this.btn_joiner.Name = "btn_joiner";
+            this.btn_joiner.UseVisualStyleBackColor = true;
+            this.btn_joiner.Click += new System.EventHandler(this.btn_joiner_Click);
             // 
             // btn_pedal
             // 
@@ -625,18 +634,19 @@
             this.BG_rec.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BG_rec_DoWork);
             this.BG_rec.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BG_rec_RunWorkerCompleted);
             // 
-            // btn_joiner
+            // btn_settings
             // 
-            this.btn_joiner.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.btn_joiner, "btn_joiner");
-            this.btn_joiner.Name = "btn_joiner";
-            this.btn_joiner.UseVisualStyleBackColor = true;
-            this.btn_joiner.Click += new System.EventHandler(this.btn_joiner_Click);
+            this.btn_settings.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btn_settings, "btn_settings");
+            this.btn_settings.Name = "btn_settings";
+            this.btn_settings.UseVisualStyleBackColor = true;
+            this.btn_settings.Click += new System.EventHandler(this.btn_settings_Click);
             // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btn_settings);
             this.Controls.Add(this.lbl_obs_running);
             this.Controls.Add(this.lbl_thr);
             this.Controls.Add(this.lbl_silence);
@@ -763,6 +773,7 @@
         private System.Windows.Forms.Label lbl_scenes;
         private System.ComponentModel.BackgroundWorker BG_rec;
         private System.Windows.Forms.Button btn_joiner;
+        private System.Windows.Forms.Button btn_settings;
     }
 }
 

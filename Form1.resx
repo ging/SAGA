@@ -331,7 +331,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pic_title.ZOrder" xml:space="preserve">
-    <value>28</value>
+    <value>29</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -355,7 +355,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>32</value>
+    <value>33</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="button1.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
@@ -726,54 +726,6 @@
   <data name="&gt;&gt;button4.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;button7.Name" xml:space="preserve">
-    <value>button7</value>
-  </data>
-  <data name="&gt;&gt;button7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button7.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;button7.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;button8.Name" xml:space="preserve">
-    <value>button8</value>
-  </data>
-  <data name="&gt;&gt;button8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button8.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;button8.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>454, 80</value>
-  </data>
-  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>337, 113</value>
-  </data>
-  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>36</value>
-  </data>
-  <data name="groupBox2.Text" xml:space="preserve">
-    <value>Ayuda y soporte</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
-    <value>31</value>
-  </data>
   <data name="button7.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
@@ -946,6 +898,30 @@
   </data>
   <data name="&gt;&gt;button8.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>454, 80</value>
+  </data>
+  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>337, 113</value>
+  </data>
+  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>Ayuda y soporte</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
+    <value>32</value>
   </data>
   <data name="btn_joiner.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -1257,7 +1233,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
-    <value>30</value>
+    <value>31</value>
   </data>
   <data name="btn_lock.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -1344,7 +1320,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btn_lock.ZOrder" xml:space="preserve">
-    <value>29</value>
+    <value>30</value>
   </data>
   <metadata name="imgs.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>106, 17</value>
@@ -1354,7 +1330,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABm
-        ZgAAAk1TRnQBSQFMAgEBAgEAAVABBQFQAQUBQAEAAUABAAT/ARkBAAj/AUIBTQE2BwABNgMAASgEAAEB
+        ZgAAAk1TRnQBSQFMAgEBAgEAAWABBQFgAQUBQAEAAUABAAT/ARkBAAj/AUIBTQE2BwABNgMAASgEAAEB
         AgABQAMAAQEBAAEYBgABwCoAA/QDuQOKfn0DigO5A/QqAAHfAe0B6QGUAdMBwAFvAcgBrQFyAcgBrgFy
         AcgBrwFyAcgBrwFyAcgBrwFyAcgBrwFyAcgBrwFyAcgBrwFyAcgBrwFyAcgBrwFyAcgBrwFyAcgBrwFy
         AcgBrwFyAcgBrwFyAcgBrwFyAcgBrwFyAcgBrwFyAcgBrwFyAcgBrwFyAcgBrwFyAcgBrwFyAcgBrwFy
@@ -3510,7 +3486,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button5.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="btn_del.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -3652,114 +3628,6 @@
   <metadata name="fd1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>184, 17</value>
   </metadata>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
-    <value>textBox1</value>
-  </data>
-  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;btn_export.Name" xml:space="preserve">
-    <value>btn_export</value>
-  </data>
-  <data name="&gt;&gt;btn_export.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btn_export.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;btn_export.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;btn_import.Name" xml:space="preserve">
-    <value>btn_import</value>
-  </data>
-  <data name="&gt;&gt;btn_import.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btn_import.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;btn_import.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;n_delay.Name" xml:space="preserve">
-    <value>n_delay</value>
-  </data>
-  <data name="&gt;&gt;n_delay.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;n_delay.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;n_delay.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;btn_refresh.Name" xml:space="preserve">
-    <value>btn_refresh</value>
-  </data>
-  <data name="&gt;&gt;btn_refresh.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btn_refresh.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;btn_refresh.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;lbl_scenes.Name" xml:space="preserve">
-    <value>lbl_scenes</value>
-  </data>
-  <data name="&gt;&gt;lbl_scenes.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_scenes.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;lbl_scenes.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 305</value>
-  </data>
-  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>771, 272</value>
-  </data>
-  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>55</value>
-  </data>
-  <data name="groupBox1.Text" xml:space="preserve">
-    <value>Colección de escenas</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
-    <value>27</value>
-  </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -4096,6 +3964,30 @@
   <data name="&gt;&gt;lbl_scenes.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 305</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>771, 272</value>
+  </data>
+  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>55</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Colección de escenas</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
   <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>253, 17</value>
   </metadata>
@@ -4118,7 +4010,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;progressBar1.ZOrder" xml:space="preserve">
-    <value>26</value>
+    <value>27</value>
   </data>
   <data name="combo_audio.Location" type="System.Drawing.Point, System.Drawing">
     <value>473, 221</value>
@@ -4139,7 +4031,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;combo_audio.ZOrder" xml:space="preserve">
-    <value>25</value>
+    <value>26</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -4166,7 +4058,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>24</value>
+    <value>25</value>
   </data>
   <metadata name="timer2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>340, 17</value>
@@ -4196,7 +4088,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>24</value>
   </data>
   <metadata name="timer3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>427, 17</value>
@@ -4263,7 +4155,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btn_aud_dev.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>23</value>
   </data>
   <data name="lbl_obs_running.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
@@ -4290,7 +4182,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbl_obs_running.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="chk_mon_audio.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -4317,7 +4209,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;chk_mon_audio.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>22</value>
   </data>
   <data name="combo_lang.Items" xml:space="preserve">
     <value>Español</value>
@@ -4344,7 +4236,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;combo_lang.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>21</value>
   </data>
   <data name="lbl_lang.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -4371,7 +4263,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbl_lang.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>20</value>
   </data>
   <data name="pic_mute.Location" type="System.Drawing.Point, System.Drawing">
     <value>633, 245</value>
@@ -4392,7 +4284,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pic_mute.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>19</value>
   </data>
   <metadata name="img_audio_2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>514, 17</value>
@@ -4402,7 +4294,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABA
-        BwAAAk1TRnQBSQFMAgEBAgEAAdQBAwHUAQMBFQEAARUBAAT/ARkBAAj/AUIBTQE2BwABNgMAASgDAAFU
+        BwAAAk1TRnQBSQFMAgEBAgEAAeQBAwHkAQMBFQEAARUBAAT/ARkBAAj/AUIBTQE2BwABNgMAASgDAAFU
         AwABFQMAAQEBAAEYBQABrAEU/wD/ACoAA7gD3DkAAbMBuAHVAdwB3gHmtAAD0AMLA3oMAAPNA0MkAAHP
         AdEB3gEAARYBtAF1AX4BrrEAA7UDAgMNA5YMAAPuAwADwx4AAbIBtwHQAQABFAGsAQEBHwG7AY8BlQG4
         rgADkAMBAw8DEQOXBgAD7wYAA8kDAAP7GAABjAGVAcQBAAEUAawBCAEhAaMBAwEhAbYBigGRAbaoAAP6
@@ -4500,7 +4392,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btn_video_prop.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>18</value>
   </data>
   <data name="Camera1Combo.Location" type="System.Drawing.Point, System.Drawing">
     <value>21, 221</value>
@@ -4521,7 +4413,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Camera1Combo.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -4551,7 +4443,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="btn_preview_camera.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -4614,7 +4506,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btn_preview_camera.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <metadata name="timer_cam.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>634, 17</value>
@@ -4641,7 +4533,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;videoSourcePlayer1.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="btn_stop_cam.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -4702,7 +4594,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btn_stop_cam.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 72</value>
@@ -4726,7 +4618,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="btn_refresh_audio.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -4776,7 +4668,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btn_refresh_audio.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <metadata name="proc.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>742, 17</value>
@@ -4792,6 +4684,58 @@
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>806, 665</value>
+  </data>
+  <data name="btn_settings.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btn_settings.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAAIGNIUk0AAHolAACAgwAA+f8AAIDoAABS
+        CAABFVgAADqXAAAXb9daH5AAAAAJcEhZcwAACxMAAAsTAQCanBgAAARnSURBVDhPjZVdaBxVFMePNRS1
+        IIpgX0ojaCSgIIgiWj/ysdkEjQnJts1+zO7M7Mwkm90kVfPBJtmPmd1sdndmP5Lig9VqWkgtfRBElPog
+        KPhkEYQ+5EWlINSPJxWliBGv/3M3SYtW6MOfO/fec3/33HPPnEsjk2/SSAJCq2U90vMeabkaqfk61CA1
+        V7O1bPUDLetuQu/DpqJnYMfK1kgrVElNNyhsblDYekfq5lAYqzmPtQ9jP0LiBv2pZ717INKx+a1DM4Di
+        W826bRj7N/Rv6BAEaP3m0NHkKeiNFjTjPaXb3gM6oFrGJTVTfRqL/4jbDWHYTcEtPBTYcJA33YEeBLQ7
+        bJyhkLEhRc8Pf0hHXvyY/JELHUahLPS8+wtiNQvorOE0fzWcNaFmXBFdKsuW+9Bv2GwZsU9pOe8nNeMJ
+        fbFxJJX2aGbRJQqcOEXHZk6Tkl77CMC9Y5qFdRFdLIsh61Xhj1jCF4zLdsh6BeOrcl7aAojY4xTVr2ac
+        Is3YRSKtUtg/vroaNB32pLYHDM06ohegrqNR0TumSyi3XQH08R2cc66DIYRCqMvufDhdvpuMRa8D6fEF
+        jiEncWTpIS/sOa6Jvogp+sJS27JFn8d7g7q0Y/vYUl1YRXi/UvpdyXhDNDe91ja1VH00arsXkUpy96GJ
+        1+Ch0gKGrG1/2Ez0K/ojgE5Cf/F4V0CRdgbszWJJjKbeujSc3HhGdep30MLUGs2kq6Q4Lul28z32tl+Z
+        ED1j8JI9C1kzgNJAVKe+kEm+4PgJHuf5fmUcIauLpLtyKZA6fbtfvUBK0SNKzjfIWmolO9ImjTQSvpAh
+        jyehYeMhf8QgvxInH+C+sNXB4zzvC5kitswZ0XjbKq2Q4VTITNcJCV6nWK6BpK8dMPKNT5Amoj8KTzme
+        rRg6fYC2ZLIc6Snm+6MJXFANaVi/HMm692pwcDp1kii+3LhPy9QHcVFbuzc/MjkvukZ3Yiq9NcuADiIM
+        lZ2+nGe73QyI5t2v9YWGf2p6/U78FeVnUSh+4EviyTj+HE5yXth9NLYLvS7kKo8jFNKO7TlX5dqc96WZ
+        rbeT5tj7tFwlAG/lRMvbNaGkSxLwAm6557gqc5RbeYKwJSKYN2DH9pzf48iAhFfonqhz8js2qXaJNLty
+        UeYq/yESjGOhP5JaEAOxhPDjpgfUSTGSnN/beNeJuF0RofnXz7yc2KTh5FmiyGxDSplrdqI6XdPy3mVc
+        1ks4WgwF5KpVXOeLkJtxaxZP8m1/i8ISQOE5Fs+7VxJl5+fHez4/eP/h7+lw5zdEY+F3aSx0nsaC5ymW
+        bnZoxWqbhuoDKJfC59gThsUhCc9611C0O7mW6suQ7R6wVgvtT/g+o0MPX6EHH9sCVNmkscg5wM8xlNRi
+        FZUfJQ2lDWqHthl8g67qOXe/LNIS6hGg9GTfp/8DXQS0UMFTAWNelPHuAgRljqvXrrzv4OVt0lPkODy9
+        VagESgFSar1N/EbhrcrVslq+SRreLy7S/4Vu0T+Xbiap8z3oNgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btn_settings.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btn_settings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>93, 27</value>
+  </data>
+  <data name="btn_settings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 24</value>
+  </data>
+  <data name="btn_settings.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="&gt;&gt;btn_settings.Name" xml:space="preserve">
+    <value>btn_settings</value>
+  </data>
+  <data name="&gt;&gt;btn_settings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_settings.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btn_settings.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="lbl_thr.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -4815,7 +4759,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbl_thr.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="lbl_silence.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -4842,7 +4786,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbl_silence.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="track_silence.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -4869,7 +4813,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;track_silence.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="lbl_dowload.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -4893,7 +4837,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbl_dowload.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="pg_download.Location" type="System.Drawing.Point, System.Drawing">
     <value>611, 53</value>
@@ -4917,7 +4861,25 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pg_download.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
+  </data>
+  <data name="chk_validate.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chk_validate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chk_validate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>293, 22</value>
+  </data>
+  <data name="chk_validate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 17</value>
+  </data>
+  <data name="chk_validate.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="chk_validate.Text" xml:space="preserve">
+    <value>No validar escena</value>
   </data>
   <data name="&gt;&gt;chk_validate.Name" xml:space="preserve">
     <value>chk_validate</value>
@@ -4931,6 +4893,24 @@
   <data name="&gt;&gt;chk_validate.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="chk_auto_close_obs.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chk_auto_close_obs.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chk_auto_close_obs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>603, 22</value>
+  </data>
+  <data name="chk_auto_close_obs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 17</value>
+  </data>
+  <data name="chk_auto_close_obs.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="chk_auto_close_obs.Text" xml:space="preserve">
+    <value>Cerrar OBS al parar grabación</value>
+  </data>
   <data name="&gt;&gt;chk_auto_close_obs.Name" xml:space="preserve">
     <value>chk_auto_close_obs</value>
   </data>
@@ -4942,6 +4922,24 @@
   </data>
   <data name="&gt;&gt;chk_auto_close_obs.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="chk_show_keep.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chk_show_keep.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chk_show_keep.Location" type="System.Drawing.Point, System.Drawing">
+    <value>445, 22</value>
+  </data>
+  <data name="chk_show_keep.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 17</value>
+  </data>
+  <data name="chk_show_keep.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="chk_show_keep.Text" xml:space="preserve">
+    <value>Guardar sin preguntar</value>
   </data>
   <data name="&gt;&gt;chk_show_keep.Name" xml:space="preserve">
     <value>chk_show_keep</value>
@@ -4955,6 +4953,24 @@
   <data name="&gt;&gt;chk_show_keep.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="chk_updates.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chk_updates.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chk_updates.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 22</value>
+  </data>
+  <data name="chk_updates.Size" type="System.Drawing.Size, System.Drawing">
+    <value>135, 17</value>
+  </data>
+  <data name="chk_updates.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="chk_updates.Text" xml:space="preserve">
+    <value>Buscar actualizaciones</value>
+  </data>
   <data name="&gt;&gt;chk_updates.Name" xml:space="preserve">
     <value>chk_updates</value>
   </data>
@@ -4966,6 +4982,21 @@
   </data>
   <data name="&gt;&gt;chk_updates.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="chk_crono.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chk_crono.Location" type="System.Drawing.Point, System.Drawing">
+    <value>174, 22</value>
+  </data>
+  <data name="chk_crono.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 17</value>
+  </data>
+  <data name="chk_crono.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="chk_crono.Text" xml:space="preserve">
+    <value>Sin contador</value>
   </data>
   <data name="&gt;&gt;chk_crono.Name" xml:space="preserve">
     <value>chk_crono</value>
@@ -5001,7 +5032,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;gr_settings.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="btn_update.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -5080,7 +5111,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btn_update.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="btn_refres_vid.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -5130,7 +5161,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btn_refres_vid.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -7054,153 +7085,6 @@
   <metadata name="FileD.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>151, 56</value>
   </metadata>
-  <data name="chk_validate.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="chk_validate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="chk_validate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>293, 22</value>
-  </data>
-  <data name="chk_validate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 17</value>
-  </data>
-  <data name="chk_validate.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="chk_validate.Text" xml:space="preserve">
-    <value>No validar escena</value>
-  </data>
-  <data name="&gt;&gt;chk_validate.Name" xml:space="preserve">
-    <value>chk_validate</value>
-  </data>
-  <data name="&gt;&gt;chk_validate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chk_validate.Parent" xml:space="preserve">
-    <value>gr_settings</value>
-  </data>
-  <data name="&gt;&gt;chk_validate.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="chk_auto_close_obs.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="chk_auto_close_obs.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="chk_auto_close_obs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>603, 22</value>
-  </data>
-  <data name="chk_auto_close_obs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 17</value>
-  </data>
-  <data name="chk_auto_close_obs.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="chk_auto_close_obs.Text" xml:space="preserve">
-    <value>Cerrar OBS al parar grabación</value>
-  </data>
-  <data name="&gt;&gt;chk_auto_close_obs.Name" xml:space="preserve">
-    <value>chk_auto_close_obs</value>
-  </data>
-  <data name="&gt;&gt;chk_auto_close_obs.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chk_auto_close_obs.Parent" xml:space="preserve">
-    <value>gr_settings</value>
-  </data>
-  <data name="&gt;&gt;chk_auto_close_obs.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="chk_show_keep.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="chk_show_keep.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="chk_show_keep.Location" type="System.Drawing.Point, System.Drawing">
-    <value>445, 22</value>
-  </data>
-  <data name="chk_show_keep.Size" type="System.Drawing.Size, System.Drawing">
-    <value>128, 17</value>
-  </data>
-  <data name="chk_show_keep.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="chk_show_keep.Text" xml:space="preserve">
-    <value>Guardar sin preguntar</value>
-  </data>
-  <data name="&gt;&gt;chk_show_keep.Name" xml:space="preserve">
-    <value>chk_show_keep</value>
-  </data>
-  <data name="&gt;&gt;chk_show_keep.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chk_show_keep.Parent" xml:space="preserve">
-    <value>gr_settings</value>
-  </data>
-  <data name="&gt;&gt;chk_show_keep.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="chk_updates.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="chk_updates.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="chk_updates.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 22</value>
-  </data>
-  <data name="chk_updates.Size" type="System.Drawing.Size, System.Drawing">
-    <value>135, 17</value>
-  </data>
-  <data name="chk_updates.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="chk_updates.Text" xml:space="preserve">
-    <value>Buscar actualizaciones</value>
-  </data>
-  <data name="&gt;&gt;chk_updates.Name" xml:space="preserve">
-    <value>chk_updates</value>
-  </data>
-  <data name="&gt;&gt;chk_updates.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chk_updates.Parent" xml:space="preserve">
-    <value>gr_settings</value>
-  </data>
-  <data name="&gt;&gt;chk_updates.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="chk_crono.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="chk_crono.Location" type="System.Drawing.Point, System.Drawing">
-    <value>174, 22</value>
-  </data>
-  <data name="chk_crono.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 17</value>
-  </data>
-  <data name="chk_crono.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="chk_crono.Text" xml:space="preserve">
-    <value>Sin contador</value>
-  </data>
-  <data name="&gt;&gt;chk_crono.Name" xml:space="preserve">
-    <value>chk_crono</value>
-  </data>
-  <data name="&gt;&gt;chk_crono.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chk_crono.Parent" xml:space="preserve">
-    <value>gr_settings</value>
-  </data>
-  <data name="&gt;&gt;chk_crono.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
   <metadata name="timer_startup.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>230, 56</value>
   </metadata>
