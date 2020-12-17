@@ -32,15 +32,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pic_title = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btn_blackm = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btn_joiner = new System.Windows.Forms.Button();
+            this.btn_set_advanced = new System.Windows.Forms.Button();
             this.btn_pedal = new System.Windows.Forms.Button();
             this.btn_lock = new System.Windows.Forms.Button();
             this.imgs = new System.Windows.Forms.ImageList(this.components);
@@ -53,13 +48,14 @@
             this.btn_del = new System.Windows.Forms.Button();
             this.fd1 = new System.Windows.Forms.FolderBrowserDialog();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lbl_obs_running = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btn_export = new System.Windows.Forms.Button();
-            this.btn_import = new System.Windows.Forms.Button();
             this.n_delay = new System.Windows.Forms.NumericUpDown();
             this.btn_refresh = new System.Windows.Forms.Button();
             this.lbl_scenes = new System.Windows.Forms.Label();
+            this.btn_export = new System.Windows.Forms.Button();
+            this.btn_import = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.combo_audio = new System.Windows.Forms.ComboBox();
@@ -68,10 +64,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.btn_aud_dev = new System.Windows.Forms.Button();
-            this.lbl_obs_running = new System.Windows.Forms.TextBox();
             this.chk_mon_audio = new System.Windows.Forms.CheckBox();
-            this.combo_lang = new System.Windows.Forms.ComboBox();
-            this.lbl_lang = new System.Windows.Forms.Label();
             this.pic_mute = new System.Windows.Forms.PictureBox();
             this.img_audio_2 = new System.Windows.Forms.ImageList(this.components);
             this.btn_video_prop = new System.Windows.Forms.Button();
@@ -81,19 +74,11 @@
             this.timer_cam = new System.Windows.Forms.Timer(this.components);
             this.videoSourcePlayer1 = new AForge.Controls.VideoSourcePlayer();
             this.btn_stop_cam = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
             this.btn_refresh_audio = new System.Windows.Forms.Button();
             this.proc = new System.Diagnostics.Process();
             this.process2 = new System.Diagnostics.Process();
             this.btn_refres_vid = new System.Windows.Forms.Button();
             this.FileD = new System.Windows.Forms.OpenFileDialog();
-            this.btn_update = new System.Windows.Forms.Button();
-            this.gr_settings = new System.Windows.Forms.GroupBox();
-            this.chk_validate = new System.Windows.Forms.CheckBox();
-            this.chk_auto_close_obs = new System.Windows.Forms.CheckBox();
-            this.chk_show_keep = new System.Windows.Forms.CheckBox();
-            this.chk_updates = new System.Windows.Forms.CheckBox();
-            this.chk_crono = new System.Windows.Forms.CheckBox();
             this.pg_download = new System.Windows.Forms.ProgressBar();
             this.lbl_dowload = new System.Windows.Forms.Label();
             this.track_silence = new System.Windows.Forms.TrackBar();
@@ -101,15 +86,15 @@
             this.timer_startup = new System.Windows.Forms.Timer(this.components);
             this.lbl_thr = new System.Windows.Forms.Label();
             this.BG_rec = new System.ComponentModel.BackgroundWorker();
-            this.btn_settings = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.chk_panel_dev = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pic_title)).BeginInit();
-            this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.n_delay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_mute)).BeginInit();
-            this.gr_settings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.track_silence)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pic_title
@@ -126,22 +111,6 @@
             this.label2.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.label2.Name = "label2";
             // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // btn_blackm
-            // 
-            this.btn_blackm.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.btn_blackm, "btn_blackm");
-            this.btn_blackm.Name = "btn_blackm";
-            this.btn_blackm.UseVisualStyleBackColor = true;
-            this.btn_blackm.Click += new System.EventHandler(this.button2_Click);
-            // 
             // button3
             // 
             this.button3.FlatAppearance.BorderSize = 0;
@@ -149,32 +118,6 @@
             this.button3.Name = "button3";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button4
-            // 
-            this.button4.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.button4, "button4");
-            this.button4.Name = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.button7);
-            this.groupBox2.Controls.Add(this.button8);
-            this.groupBox2.Controls.Add(this.button4);
-            this.groupBox2.Controls.Add(this.button1);
-            resources.ApplyResources(this.groupBox2, "groupBox2");
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.TabStop = false;
-            // 
-            // button7
-            // 
-            this.button7.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.button7, "button7");
-            this.button7.Name = "button7";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click_1);
             // 
             // button8
             // 
@@ -186,21 +129,21 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.btn_joiner);
-            this.groupBox3.Controls.Add(this.btn_pedal);
+            this.groupBox3.Controls.Add(this.btn_set_advanced);
+            this.groupBox3.Controls.Add(this.button8);
             this.groupBox3.Controls.Add(this.button3);
-            this.groupBox3.Controls.Add(this.btn_blackm);
+            this.groupBox3.Controls.Add(this.btn_pedal);
             resources.ApplyResources(this.groupBox3, "groupBox3");
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.TabStop = false;
             // 
-            // btn_joiner
+            // btn_set_advanced
             // 
-            this.btn_joiner.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.btn_joiner, "btn_joiner");
-            this.btn_joiner.Name = "btn_joiner";
-            this.btn_joiner.UseVisualStyleBackColor = true;
-            this.btn_joiner.Click += new System.EventHandler(this.btn_joiner_Click);
+            this.btn_set_advanced.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btn_set_advanced, "btn_set_advanced");
+            this.btn_set_advanced.Name = "btn_set_advanced";
+            this.btn_set_advanced.UseVisualStyleBackColor = true;
+            this.btn_set_advanced.Click += new System.EventHandler(this.btn_set_advanced_Click);
             // 
             // btn_pedal
             // 
@@ -283,10 +226,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lbl_obs_running);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.btn_export);
-            this.groupBox1.Controls.Add(this.btn_import);
             this.groupBox1.Controls.Add(this.n_delay);
             this.groupBox1.Controls.Add(this.btn_refresh);
             this.groupBox1.Controls.Add(this.combo_scenes);
@@ -299,6 +241,14 @@
             resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
+            // 
+            // lbl_obs_running
+            // 
+            this.lbl_obs_running.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.lbl_obs_running, "lbl_obs_running");
+            this.lbl_obs_running.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lbl_obs_running.Name = "lbl_obs_running";
+            this.lbl_obs_running.ReadOnly = true;
             // 
             // label1
             // 
@@ -313,22 +263,6 @@
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
             this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
-            // 
-            // btn_export
-            // 
-            this.btn_export.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.btn_export, "btn_export");
-            this.btn_export.Name = "btn_export";
-            this.btn_export.UseVisualStyleBackColor = true;
-            this.btn_export.Click += new System.EventHandler(this.btn_export_Click);
-            // 
-            // btn_import
-            // 
-            this.btn_import.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.btn_import, "btn_import");
-            this.btn_import.Name = "btn_import";
-            this.btn_import.UseVisualStyleBackColor = true;
-            this.btn_import.Click += new System.EventHandler(this.btn_import_Click);
             // 
             // n_delay
             // 
@@ -354,6 +288,22 @@
             resources.ApplyResources(this.lbl_scenes, "lbl_scenes");
             this.lbl_scenes.ForeColor = System.Drawing.Color.SteelBlue;
             this.lbl_scenes.Name = "lbl_scenes";
+            // 
+            // btn_export
+            // 
+            this.btn_export.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btn_export, "btn_export");
+            this.btn_export.Name = "btn_export";
+            this.btn_export.UseVisualStyleBackColor = true;
+            this.btn_export.Click += new System.EventHandler(this.btn_export_Click);
+            // 
+            // btn_import
+            // 
+            this.btn_import.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btn_import, "btn_import");
+            this.btn_import.Name = "btn_import";
+            this.btn_import.UseVisualStyleBackColor = true;
+            this.btn_import.Click += new System.EventHandler(this.btn_import_Click);
             // 
             // timer1
             // 
@@ -402,39 +352,13 @@
             this.btn_aud_dev.UseVisualStyleBackColor = true;
             this.btn_aud_dev.Click += new System.EventHandler(this.btn_aud_dev_Click);
             // 
-            // lbl_obs_running
-            // 
-            this.lbl_obs_running.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.lbl_obs_running, "lbl_obs_running");
-            this.lbl_obs_running.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lbl_obs_running.Name = "lbl_obs_running";
-            this.lbl_obs_running.ReadOnly = true;
-            // 
             // chk_mon_audio
             // 
             resources.ApplyResources(this.chk_mon_audio, "chk_mon_audio");
-            this.chk_mon_audio.Checked = true;
-            this.chk_mon_audio.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chk_mon_audio.Name = "chk_mon_audio";
             this.chk_mon_audio.UseVisualStyleBackColor = true;
             this.chk_mon_audio.CheckedChanged += new System.EventHandler(this.chk_mon_audio_CheckedChanged);
             this.chk_mon_audio.MouseClick += new System.Windows.Forms.MouseEventHandler(this.chk_mon_audio_MouseClick);
-            // 
-            // combo_lang
-            // 
-            this.combo_lang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combo_lang.FormattingEnabled = true;
-            this.combo_lang.Items.AddRange(new object[] {
-            resources.GetString("combo_lang.Items"),
-            resources.GetString("combo_lang.Items1")});
-            resources.ApplyResources(this.combo_lang, "combo_lang");
-            this.combo_lang.Name = "combo_lang";
-            this.combo_lang.SelectedIndexChanged += new System.EventHandler(this.combo_lang_SelectedIndexChanged);
-            // 
-            // lbl_lang
-            // 
-            resources.ApplyResources(this.lbl_lang, "lbl_lang");
-            this.lbl_lang.Name = "lbl_lang";
             // 
             // pic_mute
             // 
@@ -495,12 +419,6 @@
             this.btn_stop_cam.UseVisualStyleBackColor = true;
             this.btn_stop_cam.Click += new System.EventHandler(this.btn_stop_cam_Click);
             // 
-            // label6
-            // 
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            resources.ApplyResources(this.label6, "label6");
-            this.label6.Name = "label6";
-            // 
             // btn_refresh_audio
             // 
             this.btn_refresh_audio.FlatAppearance.BorderSize = 0;
@@ -542,61 +460,6 @@
             this.FileD.RestoreDirectory = true;
             this.FileD.FileOk += new System.ComponentModel.CancelEventHandler(this.FileD_FileOk);
             // 
-            // btn_update
-            // 
-            this.btn_update.FlatAppearance.BorderSize = 0;
-            this.btn_update.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            resources.ApplyResources(this.btn_update, "btn_update");
-            this.btn_update.Name = "btn_update";
-            this.btn_update.UseVisualStyleBackColor = true;
-            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
-            // 
-            // gr_settings
-            // 
-            this.gr_settings.Controls.Add(this.chk_validate);
-            this.gr_settings.Controls.Add(this.chk_auto_close_obs);
-            this.gr_settings.Controls.Add(this.chk_show_keep);
-            this.gr_settings.Controls.Add(this.chk_updates);
-            this.gr_settings.Controls.Add(this.chk_crono);
-            resources.ApplyResources(this.gr_settings, "gr_settings");
-            this.gr_settings.Name = "gr_settings";
-            this.gr_settings.TabStop = false;
-            // 
-            // chk_validate
-            // 
-            resources.ApplyResources(this.chk_validate, "chk_validate");
-            this.chk_validate.Name = "chk_validate";
-            this.chk_validate.UseVisualStyleBackColor = true;
-            this.chk_validate.CheckedChanged += new System.EventHandler(this.chk_validate_CheckedChanged);
-            // 
-            // chk_auto_close_obs
-            // 
-            resources.ApplyResources(this.chk_auto_close_obs, "chk_auto_close_obs");
-            this.chk_auto_close_obs.Name = "chk_auto_close_obs";
-            this.chk_auto_close_obs.UseVisualStyleBackColor = true;
-            this.chk_auto_close_obs.CheckedChanged += new System.EventHandler(this.chk_auto_close_obs_CheckedChanged);
-            // 
-            // chk_show_keep
-            // 
-            resources.ApplyResources(this.chk_show_keep, "chk_show_keep");
-            this.chk_show_keep.Name = "chk_show_keep";
-            this.chk_show_keep.UseVisualStyleBackColor = true;
-            this.chk_show_keep.CheckedChanged += new System.EventHandler(this.chk_show_keep_CheckedChanged);
-            // 
-            // chk_updates
-            // 
-            resources.ApplyResources(this.chk_updates, "chk_updates");
-            this.chk_updates.Name = "chk_updates";
-            this.chk_updates.UseVisualStyleBackColor = true;
-            this.chk_updates.CheckedChanged += new System.EventHandler(this.chk_updates_CheckedChanged);
-            // 
-            // chk_crono
-            // 
-            resources.ApplyResources(this.chk_crono, "chk_crono");
-            this.chk_crono.Name = "chk_crono";
-            this.chk_crono.UseVisualStyleBackColor = true;
-            this.chk_crono.CheckedChanged += new System.EventHandler(this.chk_crono_CheckedChanged);
-            // 
             // pg_download
             // 
             resources.ApplyResources(this.pg_download, "pg_download");
@@ -634,51 +497,53 @@
             this.BG_rec.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BG_rec_DoWork);
             this.BG_rec.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BG_rec_RunWorkerCompleted);
             // 
-            // btn_settings
+            // panel1
             // 
-            this.btn_settings.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.btn_settings, "btn_settings");
-            this.btn_settings.Name = "btn_settings";
-            this.btn_settings.UseVisualStyleBackColor = true;
-            this.btn_settings.Click += new System.EventHandler(this.btn_settings_Click);
+            this.panel1.Controls.Add(this.chk_panel_dev);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.progressBar1);
+            this.panel1.Controls.Add(this.btn_stop_cam);
+            this.panel1.Controls.Add(this.combo_audio);
+            this.panel1.Controls.Add(this.btn_refresh_audio);
+            this.panel1.Controls.Add(this.lbl_thr);
+            this.panel1.Controls.Add(this.btn_preview_camera);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.btn_refres_vid);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.Camera1Combo);
+            this.panel1.Controls.Add(this.lbl_silence);
+            this.panel1.Controls.Add(this.btn_video_prop);
+            this.panel1.Controls.Add(this.btn_aud_dev);
+            this.panel1.Controls.Add(this.pic_mute);
+            this.panel1.Controls.Add(this.track_silence);
+            this.panel1.Controls.Add(this.chk_mon_audio);
+            resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.Name = "panel1";
+            this.panel1.Tag = "Dispositivos";
+            // 
+            // chk_panel_dev
+            // 
+            resources.ApplyResources(this.chk_panel_dev, "chk_panel_dev");
+            this.chk_panel_dev.FlatAppearance.BorderSize = 0;
+            this.chk_panel_dev.Name = "chk_panel_dev";
+            this.chk_panel_dev.UseVisualStyleBackColor = true;
+            this.chk_panel_dev.CheckedChanged += new System.EventHandler(this.chk_panel_dev_CheckedChanged);
             // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.btn_settings);
-            this.Controls.Add(this.lbl_obs_running);
-            this.Controls.Add(this.lbl_thr);
-            this.Controls.Add(this.lbl_silence);
-            this.Controls.Add(this.track_silence);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.btn_export);
+            this.Controls.Add(this.btn_import);
             this.Controls.Add(this.lbl_dowload);
             this.Controls.Add(this.pg_download);
-            this.Controls.Add(this.gr_settings);
-            this.Controls.Add(this.btn_update);
-            this.Controls.Add(this.btn_refres_vid);
-            this.Controls.Add(this.btn_refresh_audio);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.btn_stop_cam);
             this.Controls.Add(this.videoSourcePlayer1);
-            this.Controls.Add(this.btn_preview_camera);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.Camera1Combo);
-            this.Controls.Add(this.btn_video_prop);
-            this.Controls.Add(this.pic_mute);
-            this.Controls.Add(this.lbl_lang);
-            this.Controls.Add(this.combo_lang);
-            this.Controls.Add(this.chk_mon_audio);
-            this.Controls.Add(this.btn_aud_dev);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.combo_audio);
-            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pic_title);
             this.Controls.Add(this.btn_lock);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -687,15 +552,14 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Shown += new System.EventHandler(this.Form1_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.pic_title)).EndInit();
-            this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.n_delay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_mute)).EndInit();
-            this.gr_settings.ResumeLayout(false);
-            this.gr_settings.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.track_silence)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -704,12 +568,8 @@
         #endregion
         private System.Windows.Forms.PictureBox pic_title;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btn_blackm;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button btn_pedal;
         private System.Windows.Forms.Button btn_lock;
@@ -726,29 +586,20 @@
         private System.Windows.Forms.Button btn_refresh;
         private System.Windows.Forms.NumericUpDown n_delay;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.ComboBox combo_audio;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.Button btn_aud_dev;
         private System.Windows.Forms.TextBox lbl_obs_running;
         private System.Windows.Forms.CheckBox chk_mon_audio;
-        private System.Windows.Forms.Label lbl_lang;
-        private System.Windows.Forms.ComboBox combo_lang;
         private System.Windows.Forms.PictureBox pic_mute;
-        private System.Windows.Forms.ImageList img_audio_2;
         private System.Windows.Forms.Button btn_video_prop;
         private System.Windows.Forms.ComboBox Camera1Combo;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btn_preview_camera;
-        private System.Windows.Forms.Timer timer_cam;
         private AForge.Controls.VideoSourcePlayer videoSourcePlayer1;
         private System.Windows.Forms.Button btn_stop_cam;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btn_refresh_audio;
         private System.Diagnostics.Process proc;
         private System.Diagnostics.Process process2;
@@ -756,24 +607,23 @@
         private System.Windows.Forms.Button btn_export;
         private System.Windows.Forms.Button btn_import;
         private System.Windows.Forms.OpenFileDialog FileD;
-        private System.Windows.Forms.Button btn_update;
-        private System.Windows.Forms.GroupBox gr_settings;
-        private System.Windows.Forms.CheckBox chk_updates;
-        private System.Windows.Forms.CheckBox chk_crono;
-        private System.Windows.Forms.CheckBox chk_show_keep;
         private System.Windows.Forms.ProgressBar pg_download;
         private System.Windows.Forms.Label lbl_dowload;
-        private System.Windows.Forms.CheckBox chk_auto_close_obs;
         private System.Windows.Forms.TrackBar track_silence;
         private System.Windows.Forms.Label lbl_silence;
         private System.Windows.Forms.Timer timer_startup;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.CheckBox chk_validate;
         private System.Windows.Forms.Label lbl_thr;
         private System.Windows.Forms.Label lbl_scenes;
         private System.ComponentModel.BackgroundWorker BG_rec;
-        private System.Windows.Forms.Button btn_joiner;
-        private System.Windows.Forms.Button btn_settings;
+        private System.Windows.Forms.Button btn_set_advanced;
+        public System.Windows.Forms.Timer timer1;
+        public System.Windows.Forms.Timer timer2;
+        public System.Windows.Forms.Timer timer3;
+        public System.Windows.Forms.Timer timer_cam;
+        public System.Windows.Forms.ImageList img_audio_2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.CheckBox chk_panel_dev;
     }
 }
 

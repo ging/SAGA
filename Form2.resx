@@ -201,30 +201,33 @@
     <value>ETS Edificación</value>
   </data>
   <data name="comboBox2.Items7" xml:space="preserve">
-    <value>INEF</value>
-  </data>
-  <data name="comboBox2.Items8" xml:space="preserve">
     <value>ETSI Diseño Industrial</value>
   </data>
-  <data name="comboBox2.Items9" xml:space="preserve">
+  <data name="comboBox2.Items8" xml:space="preserve">
     <value>ETSI Minas</value>
   </data>
-  <data name="comboBox2.Items10" xml:space="preserve">
+  <data name="comboBox2.Items9" xml:space="preserve">
     <value>ETSI Informáticos</value>
   </data>
-  <data name="comboBox2.Items11" xml:space="preserve">
+  <data name="comboBox2.Items10" xml:space="preserve">
     <value>ETSI Montes-Forestal</value>
   </data>
-  <data name="comboBox2.Items12" xml:space="preserve">
+  <data name="comboBox2.Items11" xml:space="preserve">
     <value>ETSI Arquitectura</value>
   </data>
-  <data name="comboBox2.Items13" xml:space="preserve">
+  <data name="comboBox2.Items12" xml:space="preserve">
     <value>ETSI Agronómica</value>
   </data>
-  <data name="comboBox2.Items14" xml:space="preserve">
+  <data name="comboBox2.Items13" xml:space="preserve">
     <value>ETSI Caminos</value>
   </data>
+  <data name="comboBox2.Items14" xml:space="preserve">
+    <value>ICE</value>
+  </data>
   <data name="comboBox2.Items15" xml:space="preserve">
+    <value>INEF</value>
+  </data>
+  <data name="comboBox2.Items16" xml:space="preserve">
     <value>Otros</value>
   </data>
   <data name="comboBox2.Location" type="System.Drawing.Point, System.Drawing">

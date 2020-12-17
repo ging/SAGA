@@ -49,16 +49,16 @@ namespace plato_saga
 
             if (comboBox2.SelectedIndex == 0)
             {
-                if (language == "es") MessageBox.Show("Seleccione primero la entidad a la que asociar el mensaje,", "Falta la entidad", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                if (language == "en") MessageBox.Show("Please select your organization name.", "Organization missing", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (language == "es") MessageBox.Show("Seleccione primero la entidad a la que asociar el mensaje,", "Falta la entidad", MessageBoxButtons.OK);
+                if (language == "en") MessageBox.Show("Please select your organization name.", "Organization missing", MessageBoxButtons.OK);
                 comboBox2.Focus();
                 return;
             }
 
             if (textBox5.Text == "")
             {
-                if (language == "es") MessageBox.Show("El email de respuesta está en blanco.", "Falta email", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                if (language == "en") MessageBox.Show("Reply email is blank.", "Email missing", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (language == "es") MessageBox.Show("El email de respuesta está en blanco.", "Falta email", MessageBoxButtons.OK);
+                if (language == "en") MessageBox.Show("Reply email is blank.", "Email missing", MessageBoxButtons.OK);
                 textBox5.Focus();
                 return;
             }
@@ -177,7 +177,7 @@ namespace plato_saga
 
         private void Form2_Shown(object sender, EventArgs e)
         {
-            comboBox2.SelectedIndex = 0;
+            comboBox2.SelectedIndex = -1;
             var a = System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable();
             if (a == false)
             {
@@ -199,7 +199,7 @@ namespace plato_saga
         {
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(plato_saga.Properties.Settings.Default.app_lang);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
-            RefreshResources(this, resources);
+            RefreshResources(this, resources);            
         }
 
         private void button1_Click(object sender, EventArgs e)

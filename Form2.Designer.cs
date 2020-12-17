@@ -87,7 +87,8 @@
             resources.GetString("comboBox2.Items12"),
             resources.GetString("comboBox2.Items13"),
             resources.GetString("comboBox2.Items14"),
-            resources.GetString("comboBox2.Items15")});
+            resources.GetString("comboBox2.Items15"),
+            resources.GetString("comboBox2.Items16")});
             resources.ApplyResources(this.comboBox2, "comboBox2");
             this.comboBox2.Name = "comboBox2";
             // 
