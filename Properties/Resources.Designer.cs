@@ -59,5 +59,50 @@ namespace plato_saga.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Please add some text before starting a preview..
+        /// </summary>
+        internal static string add_text {
+            get {
+                return ResourceManager.GetString("add_text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Close window.
+        /// </summary>
+        internal static string close_w {
+            get {
+                return ResourceManager.GetString("close_w", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Enable teleprompter.
+        /// </summary>
+        internal static string enable_tel {
+            get {
+                return ResourceManager.GetString("enable_tel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Startup delay.
+        /// </summary>
+        internal static string start_delay {
+            get {
+                return ResourceManager.GetString("start_delay", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Plain text files (*.txt)|*.txt|All files (*.*)|*.*.
+        /// </summary>
+        internal static string txt_filter {
+            get {
+                return ResourceManager.GetString("txt_filter", resourceCulture);
+            }
+        }
     }
 }
