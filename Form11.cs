@@ -44,6 +44,7 @@ namespace plato_saga
             {
                 btn_update.Text = "Version " + Application.ProductVersion;
             }));
+            chk_max_obs.Checked = plato_saga.Properties.Settings.Default.max_obs;
         }
 
         private void check_updates()
@@ -80,7 +81,12 @@ namespace plato_saga
                     btn_update.Invoke(new MethodInvoker(delegate
                     {
                         btn_update.Text = current_ver;
-                    }));                    
+                    }));
+                    this.Invoke(new MethodInvoker(delegate
+                    {
+                        this.Enabled = true;
+                        this.Activate();
+                    }));
                     return;
                 }
 
@@ -111,8 +117,7 @@ namespace plato_saga
                         {
                             this.Invoke(new MethodInvoker(delegate
                             {
-                                this.Enabled = true;
-                                this.Activate();
+                                this.Enabled = true;                                
                             }));
                         }
                     }
@@ -121,10 +126,17 @@ namespace plato_saga
                         if (language == "es") MessageBox.Show("Está usando la versión más reciente.");
                         if (language == "en") MessageBox.Show("You are using the latest version.");
                     }
+
+                   
                 }
                 catch {
                     if (language == "es") MessageBox.Show("Ocurrió un error al buscar actualizaciones.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     if (language == "en") MessageBox.Show("An error ocurred while obtaining updates.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    this.Invoke(new MethodInvoker(delegate
+                    {
+                        this.Enabled = true;
+                        this.Activate();
+                    }));
                 }                
 
             }).Start();
@@ -154,11 +166,11 @@ namespace plato_saga
         {
             if (chk_crono.CheckState == CheckState.Checked)
             {
-                plato_saga.Properties.Settings.Default.show_timer = true;
+                plato_saga.Properties.Settings.Default.show_timer = false;
             }
             else
             {
-                plato_saga.Properties.Settings.Default.show_timer = false;
+                plato_saga.Properties.Settings.Default.show_timer = true;
             }
             plato_saga.Properties.Settings.Default.Save();
         }
@@ -180,11 +192,11 @@ namespace plato_saga
         {
             if (chk_show_keep.CheckState == CheckState.Checked)
             {
-                plato_saga.Properties.Settings.Default.show_keep_file = true;
+                plato_saga.Properties.Settings.Default.show_keep_file = false;
             }
             else
             {
-                plato_saga.Properties.Settings.Default.show_keep_file = false;
+                plato_saga.Properties.Settings.Default.show_keep_file = true;
             }
             plato_saga.Properties.Settings.Default.Save();
         }
@@ -568,8 +580,22 @@ namespace plato_saga
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
+        {            
             this.Close();
+        }
+
+       
+        private void chk_max_obs_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chk_max_obs.CheckState == CheckState.Checked)
+            {
+                plato_saga.Properties.Settings.Default.max_obs = true;
+            }
+            else
+            {
+                plato_saga.Properties.Settings.Default.max_obs = false;
+            }
+            plato_saga.Properties.Settings.Default.Save();
         }
     }
 }

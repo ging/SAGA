@@ -32,6 +32,7 @@ namespace plato_saga
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form11));
             this.gr_settings = new System.Windows.Forms.GroupBox();
+            this.chk_max_obs = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.chk_validate = new System.Windows.Forms.CheckBox();
             this.chk_auto_close_obs = new System.Windows.Forms.CheckBox();
@@ -46,13 +47,12 @@ namespace plato_saga
             this.btn_restore = new System.Windows.Forms.Button();
             this.timer_cam = new System.Windows.Forms.Timer(this.components);
             this.btn_settings = new System.Windows.Forms.Button();
-            this.btn_joiner = new System.Windows.Forms.Button();
             this.gr_settings.SuspendLayout();
             this.SuspendLayout();
             // 
             // gr_settings
             // 
-            resources.ApplyResources(this.gr_settings, "gr_settings");
+            this.gr_settings.Controls.Add(this.chk_max_obs);
             this.gr_settings.Controls.Add(this.button1);
             this.gr_settings.Controls.Add(this.chk_validate);
             this.gr_settings.Controls.Add(this.chk_auto_close_obs);
@@ -61,8 +61,18 @@ namespace plato_saga
             this.gr_settings.Controls.Add(this.chk_show_keep);
             this.gr_settings.Controls.Add(this.chk_updates);
             this.gr_settings.Controls.Add(this.chk_crono);
+            resources.ApplyResources(this.gr_settings, "gr_settings");
             this.gr_settings.Name = "gr_settings";
             this.gr_settings.TabStop = false;
+            // 
+            // chk_max_obs
+            // 
+            resources.ApplyResources(this.chk_max_obs, "chk_max_obs");
+            this.chk_max_obs.Checked = true;
+            this.chk_max_obs.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chk_max_obs.Name = "chk_max_obs";
+            this.chk_max_obs.UseVisualStyleBackColor = true;
+            this.chk_max_obs.CheckedChanged += new System.EventHandler(this.chk_max_obs_CheckedChanged);
             // 
             // button1
             // 
@@ -74,6 +84,8 @@ namespace plato_saga
             // chk_validate
             // 
             resources.ApplyResources(this.chk_validate, "chk_validate");
+            this.chk_validate.Checked = true;
+            this.chk_validate.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chk_validate.Name = "chk_validate";
             this.chk_validate.UseVisualStyleBackColor = true;
             this.chk_validate.CheckedChanged += new System.EventHandler(this.chk_validate_CheckedChanged);
@@ -94,18 +106,20 @@ namespace plato_saga
             // 
             // combo_lang
             // 
-            resources.ApplyResources(this.combo_lang, "combo_lang");
             this.combo_lang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combo_lang.FormattingEnabled = true;
             this.combo_lang.Items.AddRange(new object[] {
             resources.GetString("combo_lang.Items"),
             resources.GetString("combo_lang.Items1")});
+            resources.ApplyResources(this.combo_lang, "combo_lang");
             this.combo_lang.Name = "combo_lang";
             this.combo_lang.SelectedIndexChanged += new System.EventHandler(this.combo_lang_SelectedIndexChanged);
             // 
             // chk_show_keep
             // 
             resources.ApplyResources(this.chk_show_keep, "chk_show_keep");
+            this.chk_show_keep.Checked = true;
+            this.chk_show_keep.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chk_show_keep.Name = "chk_show_keep";
             this.chk_show_keep.UseVisualStyleBackColor = true;
             this.chk_show_keep.CheckedChanged += new System.EventHandler(this.chk_show_keep_CheckedChanged);
@@ -122,64 +136,57 @@ namespace plato_saga
             // chk_crono
             // 
             resources.ApplyResources(this.chk_crono, "chk_crono");
+            this.chk_crono.Checked = true;
+            this.chk_crono.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chk_crono.Name = "chk_crono";
             this.chk_crono.UseVisualStyleBackColor = true;
             this.chk_crono.CheckedChanged += new System.EventHandler(this.chk_crono_CheckedChanged);
             // 
             // btn_update
             // 
-            resources.ApplyResources(this.btn_update, "btn_update");
             this.btn_update.FlatAppearance.BorderSize = 0;
             this.btn_update.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            resources.ApplyResources(this.btn_update, "btn_update");
             this.btn_update.Name = "btn_update";
             this.btn_update.UseVisualStyleBackColor = true;
             this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
             // btn_blackm
             // 
-            resources.ApplyResources(this.btn_blackm, "btn_blackm");
             this.btn_blackm.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btn_blackm, "btn_blackm");
             this.btn_blackm.Name = "btn_blackm";
             this.btn_blackm.UseVisualStyleBackColor = true;
             this.btn_blackm.Click += new System.EventHandler(this.btn_blackm_Click);
             // 
             // button4
             // 
-            resources.ApplyResources(this.button4, "button4");
             this.button4.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.button4, "button4");
             this.button4.Name = "button4";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // btn_restore
             // 
-            resources.ApplyResources(this.btn_restore, "btn_restore");
             this.btn_restore.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btn_restore, "btn_restore");
             this.btn_restore.Name = "btn_restore";
             this.btn_restore.UseVisualStyleBackColor = true;
             this.btn_restore.Click += new System.EventHandler(this.btn_restore_Click);
             // 
             // btn_settings
             // 
-            resources.ApplyResources(this.btn_settings, "btn_settings");
             this.btn_settings.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btn_settings, "btn_settings");
             this.btn_settings.Name = "btn_settings";
             this.btn_settings.UseVisualStyleBackColor = true;
             this.btn_settings.Click += new System.EventHandler(this.btn_settings_Click);
-            // 
-            // btn_joiner
-            // 
-            resources.ApplyResources(this.btn_joiner, "btn_joiner");
-            this.btn_joiner.FlatAppearance.BorderSize = 0;
-            this.btn_joiner.Name = "btn_joiner";
-            this.btn_joiner.UseVisualStyleBackColor = true;
-            this.btn_joiner.Click += new System.EventHandler(this.btn_joiner_Click_1);
             // 
             // Form11
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.btn_joiner);
             this.Controls.Add(this.btn_settings);
             this.Controls.Add(this.btn_update);
             this.Controls.Add(this.button4);
@@ -212,7 +219,7 @@ namespace plato_saga
         private System.Windows.Forms.Button btn_settings;
         private System.Windows.Forms.Label lbl_lang;
         public System.Windows.Forms.ComboBox combo_lang;
-        private System.Windows.Forms.Button btn_joiner;
         private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.CheckBox chk_max_obs;
     }
 }

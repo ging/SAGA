@@ -63,15 +63,15 @@
             // 
             // textBox1
             // 
-            resources.ApplyResources(this.textBox1, "textBox1");
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.textBox1, "textBox1");
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             // 
             // text_filename
             // 
-            resources.ApplyResources(this.text_filename, "text_filename");
             this.text_filename.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.text_filename, "text_filename");
             this.text_filename.Name = "text_filename";
             this.text_filename.ReadOnly = true;
             // 

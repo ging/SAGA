@@ -35,6 +35,8 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btn_prompter = new System.Windows.Forms.Button();
+            this.btn_joiner = new System.Windows.Forms.Button();
             this.btn_set_advanced = new System.Windows.Forms.Button();
             this.btn_pedal = new System.Windows.Forms.Button();
             this.btn_lock = new System.Windows.Forms.Button();
@@ -88,6 +90,7 @@
             this.BG_rec = new System.ComponentModel.BackgroundWorker();
             this.panel1 = new System.Windows.Forms.Panel();
             this.chk_panel_dev = new System.Windows.Forms.CheckBox();
+            this.lbl_down_2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pic_title)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -129,13 +132,30 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btn_prompter);
+            this.groupBox3.Controls.Add(this.btn_joiner);
             this.groupBox3.Controls.Add(this.btn_set_advanced);
             this.groupBox3.Controls.Add(this.button8);
             this.groupBox3.Controls.Add(this.button3);
-            this.groupBox3.Controls.Add(this.btn_pedal);
             resources.ApplyResources(this.groupBox3, "groupBox3");
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.TabStop = false;
+            // 
+            // btn_prompter
+            // 
+            this.btn_prompter.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btn_prompter, "btn_prompter");
+            this.btn_prompter.Name = "btn_prompter";
+            this.btn_prompter.UseVisualStyleBackColor = true;
+            this.btn_prompter.Click += new System.EventHandler(this.btn_prompter_Click);
+            // 
+            // btn_joiner
+            // 
+            this.btn_joiner.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btn_joiner, "btn_joiner");
+            this.btn_joiner.Name = "btn_joiner";
+            this.btn_joiner.UseVisualStyleBackColor = true;
+            this.btn_joiner.Click += new System.EventHandler(this.btn_joiner_Click_1);
             // 
             // btn_set_advanced
             // 
@@ -502,6 +522,7 @@
             this.panel1.Controls.Add(this.chk_panel_dev);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.progressBar1);
+            this.panel1.Controls.Add(this.btn_pedal);
             this.panel1.Controls.Add(this.btn_stop_cam);
             this.panel1.Controls.Add(this.combo_audio);
             this.panel1.Controls.Add(this.btn_refresh_audio);
@@ -529,10 +550,16 @@
             this.chk_panel_dev.UseVisualStyleBackColor = true;
             this.chk_panel_dev.CheckedChanged += new System.EventHandler(this.chk_panel_dev_CheckedChanged);
             // 
+            // lbl_down_2
+            // 
+            resources.ApplyResources(this.lbl_down_2, "lbl_down_2");
+            this.lbl_down_2.Name = "lbl_down_2";
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lbl_down_2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.btn_export);
@@ -624,6 +651,9 @@
         public System.Windows.Forms.ImageList img_audio_2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.CheckBox chk_panel_dev;
+        private System.Windows.Forms.Button btn_joiner;
+        private System.Windows.Forms.Label lbl_down_2;
+        private System.Windows.Forms.Button btn_prompter;
     }
 }
 

@@ -118,23 +118,32 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="chk_max_obs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 144</value>
+  </data>
+  <data name="chk_max_obs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 17</value>
+  </data>
+  <data name="chk_max_obs.Text" xml:space="preserve">
+    <value>Maximize OBS on startup</value>
+  </data>
   <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>325, 103</value>
+    <value>325, 134</value>
   </data>
   <data name="button1.Text" xml:space="preserve">
     <value>Close window</value>
   </data>
   <data name="chk_validate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 98</value>
+    <value>11, 98</value>
   </data>
   <data name="chk_validate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>146, 17</value>
+    <value>112, 17</value>
   </data>
   <data name="chk_validate.Text" xml:space="preserve">
-    <value>Do not validate collection</value>
+    <value>Validate collection</value>
   </data>
   <data name="chk_auto_close_obs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 75</value>
+    <value>11, 74</value>
   </data>
   <data name="chk_auto_close_obs.Size" type="System.Drawing.Size, System.Drawing">
     <value>141, 17</value>
@@ -155,13 +164,13 @@
     <value>355, 26</value>
   </data>
   <data name="chk_show_keep.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 121</value>
+    <value>11, 121</value>
   </data>
   <data name="chk_show_keep.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 17</value>
+    <value>126, 17</value>
   </data>
   <data name="chk_show_keep.Text" xml:space="preserve">
-    <value>Save video without prompt</value>
+    <value>Prompt to save video</value>
   </data>
   <data name="chk_updates.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 17</value>
@@ -170,16 +179,16 @@
     <value>Search for updates on startup</value>
   </data>
   <data name="chk_crono.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 52</value>
+    <value>11, 50</value>
   </data>
   <data name="chk_crono.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 17</value>
+    <value>122, 17</value>
   </data>
   <data name="chk_crono.Text" xml:space="preserve">
-    <value>Do not display elapsed time</value>
+    <value>Display elapsed time</value>
   </data>
   <data name="gr_settings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>441, 146</value>
+    <value>441, 181</value>
   </data>
   <data name="gr_settings.Text" xml:space="preserve">
     <value>Settings</value>
@@ -347,7 +356,7 @@
 </value>
   </data>
   <data name="button4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>258, 15</value>
+    <value>247, 15</value>
   </data>
   <data name="button4.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 83</value>
@@ -425,6 +434,9 @@
         3DX7LO3Rvmx+iM//6fzpAfpPfm9TasP90+IAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="btn_restore.Location" type="System.Drawing.Point, System.Drawing">
+    <value>171, 11</value>
+  </data>
   <data name="btn_restore.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 86</value>
   </data>
@@ -470,82 +482,8 @@
   <data name="btn_settings.Text" xml:space="preserve">
     <value>Change password</value>
   </data>
-  <data name="btn_joiner.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
-        QmCC
-</value>
-  </data>
-  <data name="btn_joiner.Text" xml:space="preserve">
-    <value>Join studio videos</value>
-  </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>484, 285</value>
+    <value>484, 314</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

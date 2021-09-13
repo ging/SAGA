@@ -22,6 +22,7 @@ namespace plato_saga
     public partial class Form1 : Form
     {
         // list of video devices
+        int file_n = 0;
         FilterInfoCollection videoDevices;
         // stop watch for measuring fps
         Boolean start_up = true;
@@ -61,6 +62,13 @@ namespace plato_saga
         public bool close_obs_auto = plato_saga.Properties.Settings.Default.close_obs_auto;
         public int silence_level = plato_saga.Properties.Settings.Default.silence_level;
         public bool show_devs = plato_saga.Properties.Settings.Default.show_panel;
+        public Font pr_font = plato_saga.Properties.Settings.Default.pr_font;
+        public Color pr_color = plato_saga.Properties.Settings.Default.pr_color;
+        public Boolean to_pr = plato_saga.Properties.Settings.Default.to_prompt;
+        public int pr_speed = plato_saga.Properties.Settings.Default.prompt_sp;
+        public String pr_text = plato_saga.Properties.Settings.Default.prompt_txt;
+        public Boolean pr_delay = plato_saga.Properties.Settings.Default.pr_delay;
+        public int pr_delay_val = plato_saga.Properties.Settings.Default.pr_delay_val;
 
         WebClient cli = new WebClient();
         String obs_exec = String.Empty;
@@ -75,6 +83,8 @@ namespace plato_saga
 
         plato_saga.Form5 frm_cuenta = new plato_saga.Form5();
         plato_saga.Form8 frm_timer = new plato_saga.Form8();
+        public plato_saga.Form12 frm_tele = new plato_saga.Form12();
+        plato_saga.Form13 frm_prompt = new plato_saga.Form13();
 
         List<string> previewed_scenes = new List<string>();
         String dest_update = String.Empty;
@@ -84,7 +94,7 @@ namespace plato_saga
         MMDevice device;
         ComboBox Combo_scene = new ComboBox();
         String last_file = String.Empty;
-        String base_update_server = "https://github.com/eibol/platosaga/releases/download";
+        String base_update_server = "https://github.com/ging/platosaga/releases/download";
         Boolean download_progressing = false;
         String passwd_access = "";
         ToolTip T00 = new ToolTip();
@@ -118,6 +128,16 @@ namespace plato_saga
         [DllImport("user32.dll")]
         public static extern bool GetWindowRect(IntPtr hwnd, ref Rect1 rectangle);
 
+        //Tamaño OBS
+        static readonly IntPtr HWND_TOPMOST = new IntPtr(-1);
+        static readonly IntPtr HWND_NOTOPMOST = new IntPtr(-2);
+        static readonly IntPtr HWND_TOP = new IntPtr(0);
+        static readonly IntPtr HWND_BOTTOM = new IntPtr(1);
+
+        // P/Invoke
+        [DllImport("user32.dll")]
+        static extern bool SetWindowPos(IntPtr hWnd, IntPtr hWndInsertAfter, int X,
+           int Y, int cx, int cy, uint uFlags);
 
         //Tecla global de parada ha sido pulsada
 
@@ -144,13 +164,21 @@ namespace plato_saga
         public Form1()
         {
             InitializeComponent();
+            
+
             if (language == "es") form_intro.label_intro.Text = "Cargando dispositivos, espere por favor...";
             if (language == "en") form_intro.label_intro.Text = "Loading capture devices, please wait...";
             form_intro.Show();
             form_intro.Refresh();
-            int id = 0;     // The id of the hotkey. 
-            RegisterHotKey(this.Handle, id, (int)KeyModifier.Control + (int)KeyModifier.Shift, Keys.P.GetHashCode());       // Register Shift + A as global hotkey. 
-
+            int id = 0;     // The id of the hotkey.            
+            RegisterHotKey(this.Handle, id, (int)KeyModifier.Control + (int)KeyModifier.Shift, Keys.P.GetHashCode());       // Register Shift + A as global hotkey.
+            
+            int id1 = 2;
+            int id2 = 3;
+            int id3 = 4;
+            RegisterHotKey(this.Handle, id2, (int)KeyModifier.Control, Keys.Space.GetHashCode());       // Register Shift + A as global hotkey.
+            RegisterHotKey(this.Handle, id2, (int)KeyModifier.Control + (int)KeyModifier.Shift, Keys.Up.GetHashCode());       // Register Shift + A as global hotkey.
+            RegisterHotKey(this.Handle, id3, (int)KeyModifier.Control + (int)KeyModifier.Shift, Keys.Down.GetHashCode());       // Register Shift + A as global hotkey.
         }
         protected override void WndProc(ref Message m)
         {
@@ -164,6 +192,60 @@ namespace plato_saga
                 Keys key = (Keys)(((int)m.LParam >> 16) & 0xFFFF);                  // The key of the hotkey that was pressed.
                 KeyModifier modifier = (KeyModifier)((int)m.LParam & 0xFFFF);       // The modifier of the hotkey that was pressed.
                 int id = m.WParam.ToInt32();                                        // The id of the hotkey that was pressed.
+                
+                if (modifier == KeyModifier.Control && key == Keys.Space)
+                {
+                    try
+                    {
+                        frm_tele.Invoke(new MethodInvoker(delegate
+                        {
+
+                            if (frm_tele.t_scroll.Enabled == false)
+                            {
+                                frm_tele.t_scroll.Enabled = true;
+                            }
+                            else
+                            {
+                                frm_tele.t_scroll.Enabled = false;
+                            }
+                        }));
+                    }
+                    catch { }
+                    return;
+                }
+
+                if (key == Keys.Up)
+                {
+                    if (frm_tele.t_scroll.Interval > 30)
+                    {
+                        try
+                        {
+                            frm_tele.Invoke(new MethodInvoker(delegate
+                            {
+                                frm_tele.t_scroll.Interval = frm_tele.t_scroll.Interval - 10;
+                            }));
+                        }
+                        catch { }
+                    }
+                    return;
+                }
+                if (key == Keys.Down)
+                    {
+
+                    if (frm_tele.t_scroll.Interval < 210)
+                    {
+
+                        try
+                        {
+                            frm_tele.Invoke(new MethodInvoker(delegate
+                                {
+                                    frm_tele.t_scroll.Interval = frm_tele.t_scroll.Interval + 10;
+                                }));
+                        }
+                        catch { }
+                    }
+                    return;
+                }
 
                 foreach (Form frm in Application.OpenForms)
                 {
@@ -315,7 +397,7 @@ namespace plato_saga
                     frm_pedal.pic.Image = frm_pedal.imgl.Images[0];
                 }
             }
-        }
+        }       
 
         private void get_cams()
         {
@@ -707,7 +789,7 @@ namespace plato_saga
             get_cams();
             pic_mute.Image = img_audio_2.Images[1];
             //Config
-            if (plato_saga.Properties.Settings.Default.show_timer == false)
+            if (plato_saga.Properties.Settings.Default.show_timer == true)
             {
                 frm_11.chk_crono.CheckState = CheckState.Unchecked;
             }
@@ -725,7 +807,7 @@ namespace plato_saga
                 frm_11.chk_updates.CheckState = CheckState.Checked;
             }
 
-            if (plato_saga.Properties.Settings.Default.show_keep_file == false)
+            if (plato_saga.Properties.Settings.Default.show_keep_file == true)
             {
                 frm_11.chk_show_keep.CheckState = CheckState.Unchecked;
             }
@@ -752,6 +834,18 @@ namespace plato_saga
                 frm_11.chk_validate.CheckState = CheckState.Checked;
             }
 
+            if (plato_saga.Properties.Settings.Default.max_obs == false)
+            {
+                frm_11.chk_max_obs.CheckState = CheckState.Unchecked;
+            }
+            else
+            {
+                frm_11.chk_max_obs.CheckState = CheckState.Checked;
+            }
+
+            if ((int)plato_saga.Properties.Settings.Default.rtx_height < frm_prompt.n_h_rtx.Minimum) frm_prompt.n_h_rtx.Value = 129;
+            else frm_prompt.n_h_rtx.Value = (int)plato_saga.Properties.Settings.Default.rtx_height;
+            
             //End config
 
             pic_title.Focus();
@@ -769,6 +863,10 @@ namespace plato_saga
 
             }
             else frm_11.combo_lang.SelectedIndex = 0;
+
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(plato_saga.Properties.Settings.Default.app_lang);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            RefreshResources(this, resources);
 
             //Leer escena guardada
             path_combo = System.IO.Path.Combine(Environment.GetEnvironmentVariable("appdata"), "platosaga") + "\\" + "sel_scene.ini";
@@ -1164,7 +1262,7 @@ namespace plato_saga
         {
             Process proc = new Process();
 
-            if (System.IO.File.Exists(Path.Combine(Application.StartupPath, "Soporte_Plato_UPM.pdf")))
+            if (System.IO.File.Exists(Path.Combine(Application.StartupPath, "Soporte_Plato_UPM_ES.pdf")))
             {
 
                 foreach (Control ct in this.Controls)
@@ -1172,7 +1270,7 @@ namespace plato_saga
                     ct.Enabled = false;
                 }
 
-                if (language == "es") proc.StartInfo.FileName = (Path.Combine(Application.StartupPath, "Soporte_Plato_UPM.pdf"));
+                if (language == "es") proc.StartInfo.FileName = (Path.Combine(Application.StartupPath, "Soporte_Plato_UPM_ES.pdf"));
                 if (language == "en") proc.StartInfo.FileName = (Path.Combine(Application.StartupPath, "Soporte_Plato_UPM_EN.pdf"));
                 proc.Start();
 
@@ -1186,8 +1284,8 @@ namespace plato_saga
             {
 
                 pic_title.Focus();
-                if (language == "es") MessageBox.Show("No se encontró el programa de configuración de la capturadora de vídeo Blackmagic.", "No se encontró la aplicación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                if (language == "en") MessageBox.Show("Blackmagic capture device application not found.", "Blackmagic application not found", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (language == "es") MessageBox.Show("No se encontró el manual de usuario. Reinstale la aplicación.", "No se encontró el fichero", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (language == "en") MessageBox.Show("Quick guide was not found. Please reinstall application.", "File not found", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -1455,7 +1553,7 @@ namespace plato_saga
         private void Form1_Shown(object sender, EventArgs e)
         {
             frm_timer.Top = 37;
-            frm_timer.Left = (resolution.Width - 185);
+            frm_timer.Left = (resolution.Width - 175);
             lbl_thr.Text = track_silence.Value.ToString() + " dB";
 
             if (Camera1Combo.Items.Count <= 0)
@@ -1540,8 +1638,8 @@ namespace plato_saga
             Boolean audio_captured_present = false;
             
             foreach (String file in Directory.GetFiles(obs_prof_or))
-            {
-                if (System.IO.File.ReadAllText(file).Contains('\u0022' + "name" + '\u0022' + ": " + '\u0022' + combo_scenes.SelectedItem.ToString() + '\u0022'))
+            {                
+                if (System.IO.File.ReadAllText(file).Contains('\u0022' + "name" + '\u0022' + ":" + '\u0022' + combo_scenes.SelectedItem.ToString() + '\u0022'))
                 {
                     scene_exist = true;
                     scene_global = combo_scenes.SelectedItem.ToString();
@@ -1564,13 +1662,13 @@ namespace plato_saga
                         }
                         else continue;
                     }
-
-                    if (Pre_Intro.Contains('\u0022' + "name" + '\u0022' + ": " + '\u0022' + "Pre-Intro" + '\u0022') == false) bad_col = true;
+                    
+                    if (Pre_Intro.Contains('\u0022' + "name" + '\u0022' + ":" + '\u0022' + "Pre-Intro" + '\u0022') == false) bad_col = true;
                     
                     break;
                 }
 
-                else if (System.IO.File.ReadAllText(file).Contains('\u0022' + "name" + '\u0022' + ": " + '\u0022' + combo_scenes.SelectedItem.ToString().Replace("_", " ") + '\u0022'))
+                else if (System.IO.File.ReadAllText(file).Contains('\u0022' + "name" + '\u0022' + ":" + '\u0022' + combo_scenes.SelectedItem.ToString().Replace("_", " ") + '\u0022'))
                 {
                     scene_exist = true;
                     scene_global = combo_scenes.SelectedItem.ToString().Replace("_", " ");
@@ -1674,7 +1772,8 @@ namespace plato_saga
                 if (language == "en") MessageBox.Show("An error occurred using selected collection." + Environment.NewLine + Environment.NewLine + "You may solve it by cloning the scene without blank spaces.", "Nombre de escena incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            if (bad_col == true)
+
+            if (bad_col == true && plato_saga.Properties.Settings.Default.validate_scene == true)
             {
                 DialogResult a = DialogResult.None;
                 if (language == "es") a = MessageBox.Show("La colección seleccionada no contiene una escena requerida. Los resultados pueden ser inesperados.", "Falta la escena requerida", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
@@ -1821,7 +1920,8 @@ namespace plato_saga
                 //String shortcutAddress = fd1.SelectedPath + @"\Preview_" + scene_global_name + ".lnk";
                 proc.StartInfo.FileName = obs_exec;
                 proc.StartInfo.WorkingDirectory = obs_path;
-                proc.StartInfo.WindowStyle = ProcessWindowStyle.Maximized;
+                if (Properties.Settings.Default.max_obs == true) proc.StartInfo.WindowStyle = ProcessWindowStyle.Maximized;
+                else proc.StartInfo.WindowStyle = ProcessWindowStyle.Normal;
                 proc.StartInfo.Arguments = "--profile Plato --collection " + '\u0022' + scene_global + '\u0022' + " --scene Pre-Intro";
 
                 obs_launched = true;
@@ -1862,16 +1962,108 @@ namespace plato_saga
                 }));
                 loading_obs = false;
 
-                proc.WaitForExit();
+                //Tamaño de ventana
+                if (Properties.Settings.Default.max_obs == false)
+                {
+                    int left = 0;
+                    int top = 0;
+                    int width = resolution.Width;
+                    int height = resolution.Height;
 
+                    if (Properties.Settings.Default.pr_location == 1)
+                    {
+                        left = 0;
+                        top = Properties.Settings.Default.rtx_height - 50;
+                        width = resolution.Width;
+                        height = resolution.Height - Properties.Settings.Default.rtx_height + 50;
+                    }
+
+                    if (Properties.Settings.Default.pr_location == 2)
+                    {
+                        left = 0;
+                        top = 0;
+                        width = resolution.Width;
+                        height = resolution.Height - Properties.Settings.Default.rtx_height;
+                    }
+
+                    if (Properties.Settings.Default.pr_location == 3)
+                    {
+                        left = Screen.PrimaryScreen.Bounds.Width / 3 + 15;
+                        top = 0;
+                        width = resolution.Width - left;
+                        height = resolution.Height;
+                    }
+                    if (Properties.Settings.Default.pr_location == 4)
+                    {
+                        left = 0;
+                        top = 0;
+                        width = resolution.Width - (Screen.PrimaryScreen.Bounds.Width / 3 + 15);
+                        height = resolution.Height;
+                    }
+
+                    SetWindowPos(proc.MainWindowHandle,
+                            HWND_TOP,
+                            left, top, width, height, 0);                
+                }
+
+                if (plato_saga.Properties.Settings.Default.to_prompt == true)
+                {                    
+                    new System.Threading.Thread(() =>
+                    {
+                        System.Threading.Thread.CurrentThread.IsBackground = true;
+                        Thread.Sleep(1000);
+                        
+                        try
+                        {
+                            frm_tele.Invoke(new MethodInvoker(delegate
+                            {
+                                if (plato_saga.Properties.Settings.Default.rem_lines == false)
+                                {
+                                    frm_tele.rtx1.Text = Environment.NewLine + Environment.NewLine + pr_text;
+                                }
+                                else frm_tele.rtx1.Text = pr_text;
+                                frm_tele.ShowDialog();
+                            }));
+                        }
+                        catch
+                        {
+                            if (plato_saga.Properties.Settings.Default.rem_lines == false)
+                            {
+                                frm_tele.rtx1.Text = Environment.NewLine + Environment.NewLine + pr_text;
+                            }
+                            else frm_tele.rtx1.Text = pr_text;
+
+                            try
+                            {
+                                frm_tele.ShowDialog();
+                            }
+                            catch { }
+                        }
+
+                    }).Start();
+                }
+
+                proc.WaitForExit();
                 Enable_Controls();
+
+                if (plato_saga.Properties.Settings.Default.to_prompt == true)
+                {
+                    try
+                    {
+                        frm_tele.Invoke(new MethodInvoker(delegate
+                        {
+                            frm_tele.Close();
+                        }));
+                    }
+                    catch { }
+                }
+
                 lbl_obs_running.Invoke(new MethodInvoker(delegate
                 {
                     lbl_obs_running.Text = String.Empty;
                 }));
                 this.Invoke(new MethodInvoker(delegate
                 {
-
                     this.TopMost = true;
                     this.TopMost = false;
                 }));
@@ -1910,14 +2102,12 @@ namespace plato_saga
 
             n_delay.Invoke(new MethodInvoker(delegate
             {
-
                 n_delay.Enabled = true;
             }));
 
             lbl_obs_running.Invoke(new MethodInvoker(delegate
             {
                 lbl_obs_running.Enabled = true;
-
             }));
 
             btn_aud_dev.Invoke(new MethodInvoker(delegate
@@ -1966,7 +2156,7 @@ namespace plato_saga
 
         private void btn_start_record_Click(object sender, EventArgs e)
         {
-            aud_match = false;
+            aud_match = false;            
 
             get_device_aud_ID();
             get_real_scene();
@@ -2034,11 +2224,12 @@ namespace plato_saga
 
         private void move_video_discarded()
         {
+            file_n = file_n + 1;
             var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.MyVideos));
             var LastFile = (from f in directory.GetFiles("*.m??")
                             orderby f.LastAccessTime descending
                             select f).First();
-
+                        
             if (language == "es")
             {
                 if (!Directory.Exists(LastFile.DirectoryName + "\\" + "Descartados"))
@@ -2054,7 +2245,8 @@ namespace plato_saga
                 }
                 try
                 {
-                    System.IO.File.Move(LastFile.FullName, LastFile.DirectoryName + "\\" + "Descartados" + "\\" + LastFile);
+                    
+                    System.IO.File.Move(LastFile.FullName, LastFile.DirectoryName + "\\" + "Descartados" + "\\" + LastFile + "_" + file_n.ToString() + LastFile.Extension);
                 }
                 catch (Exception excpt)
                 {
@@ -2081,7 +2273,7 @@ namespace plato_saga
                 }
                 try
                 {
-                    System.IO.File.Move(LastFile.FullName, LastFile.DirectoryName + "\\" + "Discarded" + "\\" + LastFile);
+                    System.IO.File.Move(LastFile.FullName, LastFile.DirectoryName + "\\" + "Discarded" + "\\" + LastFile + "_" + file_n.ToString() + LastFile.Extension);
                 }
                 catch (Exception excpt)
                 {
@@ -2353,14 +2545,28 @@ namespace plato_saga
 
             frmName.StartPosition = FormStartPosition.CenterScreen;
             duplicating = true;
-            frmName.ShowDialog();
+            frmName.ShowDialog();            
             refresh_scenes();
             duplicating = false;
             btn_refresh.Invoke(new MethodInvoker(delegate
             {
                 btn_refresh.PerformClick();
             }));
+            
             combo_scenes.SelectedIndex = combo_scenes.FindString(file_name_clone.Text);
+            
+            if (combo_scenes.SelectedIndex == -1)
+            {
+                combo_scenes.Items.Clear();
+                foreach (String item in Combo_scene.Items)
+                {
+                    if (item.ToLower().Contains(textBox1.Text.ToLower()))
+                    {
+                        combo_scenes.Items.Add(item);
+                    }
+                }
+                if (combo_scenes.Items.Count > 0) combo_scenes.SelectedIndex = 0;
+            }
         }
 
         private void boton_ok_clone_Click(object sender, EventArgs e)
@@ -3095,24 +3301,22 @@ namespace plato_saga
                     Stream stream = client.OpenRead(lang_check_update);
                     StreamReader reader = new StreamReader(stream);
                     String content = reader.ReadToEnd();
-                    content1 = content;
+                    content1 = content;                  
 
                 }
                 catch (Exception excpt)
                 {
                     this.Invoke(new MethodInvoker(delegate
                     {
-                        this.Enabled = false;
+                        this.Enabled = true;
                     }));
+
 
                     if (language == "es") MessageBox.Show("Hubo un error al conectar al servidor de actualizaciones." + Environment.NewLine + Environment.NewLine + excpt.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     if (language == "en") MessageBox.Show("An error occurred conecting to update service." + Environment.NewLine + Environment.NewLine + excpt.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                    frm_11.btn_update.Invoke(new MethodInvoker(delegate
-                    {
-                        frm_11.btn_update.Text = current_ver;
-                    }));
-                    Enable_Controls();
+                    Enable_Controls();                    
+                    
                     return;
                 }
 
@@ -3151,8 +3355,12 @@ namespace plato_saga
                             }));
                             lbl_dowload.Invoke(new MethodInvoker(delegate
                             {
+                                
                                 lbl_dowload.Visible = true;
+                                lbl_down_2.Visible = true;
                                 lbl_dowload.Text = "";
+                                if (language == "es") lbl_down_2.Text = "Actualizando...";
+                                if (language == "en") lbl_down_2.Text = "Updating...";
 
                             }));
 
@@ -3182,11 +3390,14 @@ namespace plato_saga
                     if (language == "en") MessageBox.Show("There was an error checking for updates." + Environment.NewLine + Environment.NewLine + excpt.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 start_up = false;
-                Enable_Controls();
+                
+                Enable_Controls();                
+
                 this.Invoke(new MethodInvoker(delegate
                 {
                     this.Enabled = true;
-                }));                
+                }));               
+                
 
             }).Start();
         }
@@ -3194,7 +3405,7 @@ namespace plato_saga
         private void update_app()
         {         
             String current_ver = "Version " + Application.ProductVersion;
-            String content1 = frm_11.content1;
+            String content1 = frm_11.content1;                    
 
             this.Invoke(new MethodInvoker(delegate
             {
@@ -3231,7 +3442,9 @@ namespace plato_saga
                                 lbl_dowload.Invoke(new MethodInvoker(delegate
                                 {
                                     lbl_dowload.Visible = true;
+                                    lbl_down_2.Visible = true;
                                     lbl_dowload.Text = "";
+                                    lbl_down_2.Text = "";
 
                                 }));
 
@@ -3315,6 +3528,7 @@ namespace plato_saga
             lbl_dowload.Invoke(new MethodInvoker(delegate
             {
                 lbl_dowload.Text = String.Empty;
+                lbl_down_2.Text = String.Empty;
             }));
             pg_download.Invoke(new MethodInvoker(delegate
             {
@@ -3506,7 +3720,6 @@ namespace plato_saga
                 }
             }
             if (combo_scenes.Items.Count > 0) combo_scenes.SelectedIndex = 0;
-
         }
 
         private void chk_validate_CheckedChanged(object sender, EventArgs e)
@@ -3620,9 +3833,9 @@ namespace plato_saga
         }
 
         private void BG_rec_DoWork(object sender, DoWorkEventArgs e)
-        {            
+        {
             loading_obs = true;
-            
+
             int num = 0;
             Process[] localByName = Process.GetProcessesByName("obs64");
             num = localByName.Length;
@@ -3659,43 +3872,44 @@ namespace plato_saga
             }
             combo_scenes.Invoke(new MethodInvoker(delegate
             {
-            if (language == "es")
-            {
-                if (combo_scenes.SelectedItem.ToString().Contains("Comenzar_con_"))
+                if (language == "es")
                 {
-                    MessageBox.Show("Ha seleccionado una colección básica, que no debería ser modificada." + Environment.NewLine + Environment.NewLine + "Para crear y modificar su propia colección de escenas utilice el botón Clonar.", "Colección básica seleccionada", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    if (combo_scenes.SelectedItem.ToString().Contains("Comenzar_con_"))
+                    {
+                        MessageBox.Show("Ha seleccionado una colección básica, que no debería ser modificada." + Environment.NewLine + Environment.NewLine + "Para crear y modificar su propia colección de escenas utilice el botón Clonar.", "Colección básica seleccionada", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+
                 }
-            
-            }
-            if (language == "en")
-            {
-                if (combo_scenes.SelectedItem.ToString().Contains("Start_with_"))
+                if (language == "en")
                 {
-                    MessageBox.Show("A basic collection was selected, which should not be modified." + Environment.NewLine + Environment.NewLine + " In order to use and customize it, please create your own by pressing the button Clone.", "Default collection selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }            
-            }
+                    if (combo_scenes.SelectedItem.ToString().Contains("Start_with_"))
+                    {
+                        MessageBox.Show("A basic collection was selected, which should not be modified." + Environment.NewLine + Environment.NewLine + " In order to use and customize it, please create your own by pressing the button Clone.", "Default collection selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
 
             }));
-            
+
             Form7 frm_load_obs = new Form7();
 
             this.Invoke(new MethodInvoker(delegate
             {
                 previewed_scenes.Add(combo_scenes.SelectedItem.ToString());
-                        
-            if (language == "es")
-            {
-                frm_load_obs.textBox1.Text = "Iniciando grabación";
-                frm_load_obs.label2.Text = combo_scenes.SelectedItem.ToString();
-            }
-            if (language == "en")
-            {
-                frm_load_obs.textBox1.Text = "Starting recording";
-                frm_load_obs.label2.Text = combo_scenes.SelectedItem.ToString();
-            }
+
+                if (language == "es")
+                {
+                    frm_load_obs.textBox1.Text = "Iniciando grabación";
+                    frm_load_obs.label2.Text = combo_scenes.SelectedItem.ToString();
+                }
+                if (language == "en")
+                {
+                    frm_load_obs.textBox1.Text = "Starting recording";
+                    frm_load_obs.label2.Text = combo_scenes.SelectedItem.ToString();
+                }
             }));
 
-            if (frm_11.chk_crono.CheckState == CheckState.Unchecked)
+            
+            if (frm_11.chk_crono.CheckState == CheckState.Checked)
             {
                 new System.Threading.Thread(() =>
                 {
@@ -3705,103 +3919,198 @@ namespace plato_saga
                     frm_timer.Text = "Crono";
                     frm_timer.lbl_elapsed.Text = "00h:00m:00s";
                     frm_timer.timer_recorded.Start();
+                    Thread.Sleep(3000);
                     frm_timer.ShowDialog();
-                    Thread.Sleep(2000);
+                    Thread.Sleep(500);
 
                 }).Start();
             }
 
             //String shortcutAddress = fd1.SelectedPath + @"\Preview_" + scene_global_name + ".lnk";
             proc.StartInfo.FileName = obs_exec;
-                proc.StartInfo.WorkingDirectory = obs_path;
-                proc.StartInfo.Arguments = "--profile Plato --collection " + '\u0022' + scene_global + '\u0022' + " --scene Pre-Intro" + " --startrecording";
-                //proc.StartInfo.WindowStyle = ProcessWindowStyle.Maximized;
-                proc.StartInfo.UseShellExecute = false;
-                proc.StartInfo.RedirectStandardInput = true;
-                obs_launched = true;
-                recording = true;
-                timer2.Start();
-                proc.Start();
+            proc.StartInfo.WorkingDirectory = obs_path;
+            proc.StartInfo.Arguments = "--profile Plato --collection " + '\u0022' + scene_global + '\u0022' + " --scene Pre-Intro" + " --startrecording";
+            
+            if (Properties.Settings.Default.max_obs == true) proc.StartInfo.WindowStyle = ProcessWindowStyle.Maximized;
+            else proc.StartInfo.WindowStyle = ProcessWindowStyle.Normal;
+            
+            obs_launched = true;
+            recording = true;
+            timer2.Start();
+            proc.Start();
 
             new System.Threading.Thread(() =>
             {
                 System.Threading.Thread.CurrentThread.IsBackground = true;
-
-                
                 frm_load_obs.ShowDialog();
-            frm_load_obs.Refresh();            
-            }).Start();                
-         
-            while (string.IsNullOrEmpty(proc.MainWindowTitle))
-                {
-                    System.Threading.Thread.Sleep(150);
-                    proc.Refresh();
-                }
-                Disable_controls();
+                frm_load_obs.Refresh();
 
-                frm_load_obs.Invoke(new MethodInvoker(delegate
-                {
-                    frm_load_obs.Close();
-                    //frm_timer_timer_recorded.Start();
-                }));
+            }).Start();
 
-                lbl_obs_running.Invoke(new MethodInvoker(delegate
+            if (plato_saga.Properties.Settings.Default.to_prompt == true)
+            {
+                new System.Threading.Thread(() =>
                 {
-                    if (language == "es") lbl_obs_running.Text = "Plató en grabación.";
-                    if (language == "en") lbl_obs_running.Text = "Studio is recording.";
-
-                }));
-
-                if (frm_11.chk_crono.CheckState == CheckState.Unchecked)
-                {
-                    frm_timer.Invoke(new MethodInvoker(delegate
+                    System.Threading.Thread.CurrentThread.IsBackground = true;
+                    try
                     {
-                        //frm_timer.Refresh();
-                    }));
-                }
-                loading_obs = false;
+                        frm_tele.Invoke(new MethodInvoker(delegate
+                        {
+                            if (plato_saga.Properties.Settings.Default.rem_lines == false)
+                            {
+                                frm_tele.rtx1.Text = Environment.NewLine + Environment.NewLine + pr_text;
+                            }
+                            else frm_tele.rtx1.Text = pr_text;
+                            if (plato_saga.Properties.Settings.Default.pr_delay == true)
+                            {
+                                Thread.Sleep(plato_saga.Properties.Settings.Default.pr_delay_val * 1000);
+                            }
 
+                            frm_tele.ShowDialog();
+                        }));
+                    }
+                    catch
+                    {
+                        if (plato_saga.Properties.Settings.Default.rem_lines == false)
+                        {
+                            frm_tele.rtx1.Text = Environment.NewLine + Environment.NewLine + pr_text;
+                        }
+                        else frm_tele.rtx1.Text = pr_text;
+                        Thread.Sleep(plato_saga.Properties.Settings.Default.pr_delay_val * 1000);
+                        frm_tele.ShowDialog();
+                    }
+
+                }).Start();
+            }
+
+            while (string.IsNullOrEmpty(proc.MainWindowTitle))
+            {
+                System.Threading.Thread.Sleep(50);
+                proc.Refresh();
+            }
+           
+            Disable_controls();
+
+            frm_load_obs.Invoke(new MethodInvoker(delegate
+            {
+                frm_load_obs.Close();
+                //frm_timer_timer_recorded.Start();
+            }));
+
+            lbl_obs_running.Invoke(new MethodInvoker(delegate
+            {
+                if (language == "es") lbl_obs_running.Text = "Plató en grabación.";
+                if (language == "en") lbl_obs_running.Text = "Studio is recording.";
+
+            }));
+
+
+            loading_obs = false;
+
+            if (Properties.Settings.Default.max_obs == true)
+            {
                 // Detectar tamaño ventana para poner a pantalla completa
                 IntPtr handle = proc.MainWindowHandle;
                 Rect1 mspaintRect = new Rect1();
                 GetWindowRect(handle, ref mspaintRect);
                 if (resolution.Right != mspaintRect.W_Right || resolution.Bottom != mspaintRect.W_Bottom) SendKeys.SendWait("{F11}");
-
-                proc.WaitForExit();
-
-                if (frm_11.chk_crono.CheckState == CheckState.Unchecked)
+            }
+            else
+            {
+                //Tamaño de ventana
+                if (Properties.Settings.Default.max_obs == false)
                 {
-                    frm_timer.Invoke(new MethodInvoker(delegate
+                    int left = 0;
+                    int top = 0;
+                    int width = resolution.Width;
+                    int height = resolution.Height;
+
+                    if (Properties.Settings.Default.pr_location == 1)
                     {
-                        frm_timer.TopMost = false;
-                        frm_timer.Close();
-                        //timer_recorded.Stop();
-                        time_record = 0;
+                        left = 0;
+                        top = Properties.Settings.Default.rtx_height - 50;
+                        width = resolution.Width;
+                        height = resolution.Height - Properties.Settings.Default.rtx_height + 50;
+                    }
+
+                    if (Properties.Settings.Default.pr_location == 2)
+                    {
+                        left = 0;
+                        top = 0;
+                        width = resolution.Width;
+                        height = resolution.Height - Properties.Settings.Default.rtx_height;
+                    }
+
+                    if (Properties.Settings.Default.pr_location == 3)
+                    {
+                        left = Screen.PrimaryScreen.Bounds.Width / 3 + 15;
+                        top = 0;
+                        width = resolution.Width - left;
+                        height = resolution.Height;
+                    }
+                    if (Properties.Settings.Default.pr_location == 4)
+                    {
+                        left = 0;
+                        top = 0;
+                        width = resolution.Width - (Screen.PrimaryScreen.Bounds.Width / 3 + 15);
+                        height = resolution.Height;
+                    }
+
+                    SetWindowPos(proc.MainWindowHandle,
+                            HWND_TOP,
+                            left, top, width, height, 0);
+                }
+            }
+
+            proc.WaitForExit();
+
+            if (frm_11.chk_crono.CheckState == CheckState.Checked)
+            {
+                frm_timer.Invoke(new MethodInvoker(delegate
+                {
+                    frm_timer.TopMost = false;
+                    frm_timer.Close();
+                    //timer_recorded.Stop();
+                    time_record = 0;
+                }));
+            }
+
+            if (plato_saga.Properties.Settings.Default.to_prompt == true)
+            {
+                try
+                {
+                    frm_tele.Invoke(new MethodInvoker(delegate
+                    {
+                        frm_tele.Close();
+
                     }));
                 }
+                catch { }
+            }
 
-                lbl_obs_running.Invoke(new MethodInvoker(delegate
-                {
-                    lbl_obs_running.Text = String.Empty;
-                }));
-                
-                lbl_obs_running.Invoke(new MethodInvoker(delegate
-                {
-                    lbl_obs_running.Text = String.Empty;
-                }));
-                this.Invoke(new MethodInvoker(delegate
-                {
-                    this.TopMost = true;
-                    this.TopMost = false;
-                }));
-                obs_launched = false;                
+            lbl_obs_running.Invoke(new MethodInvoker(delegate
+            {
+                lbl_obs_running.Text = String.Empty;
+            }));
+
+            lbl_obs_running.Invoke(new MethodInvoker(delegate
+            {
+                lbl_obs_running.Text = String.Empty;
+            }));
+            this.Invoke(new MethodInvoker(delegate
+            {
+                this.TopMost = true;
+                this.TopMost = false;
+            }));
+            obs_launched = false;
+
         }
 
         private void BG_rec_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             pic_title.Focus();
 
-            if (closed_ok == true && frm_11.chk_show_keep.CheckState == CheckState.Unchecked)
+            if (closed_ok == true && frm_11.chk_show_keep.CheckState == CheckState.Checked)
             {
                 var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.MyVideos));
                 var LastFile = (from f in directory.GetFiles("*.m??")
@@ -3833,17 +4142,13 @@ namespace plato_saga
             this.Cursor = Cursors.Arrow;
             pic_title.Focus();
         }
-
-        private void btn_joiner_Click(object sender, EventArgs e)
-        {
-            
-        }        
-
+  
         private void btn_set_advanced_Click(object sender, EventArgs e)
         {
             frm_11.ShowDialog();
             if (frm_11.restored == true) btn_refresh.PerformClick();
-            if (frm_11.update_now == true) update_app(); 
+            if (frm_11.update_now == true) update_app();
+            language = plato_saga.Properties.Settings.Default.app_lang;
             if (frm_11.changed_lang == true)
             {
                 Thread.CurrentThread.CurrentUICulture = new CultureInfo(plato_saga.Properties.Settings.Default.app_lang);
@@ -3874,7 +4179,49 @@ namespace plato_saga
 
         private void chk_panel_dev_CheckedChanged(object sender, EventArgs e)
         {
+            if (chk_panel_dev.Checked == false) chk_panel_dev.BackColor = Control.DefaultBackColor;
+            else chk_panel_dev.BackColor = Color.FromArgb(255,255,255);
             show_devs_panel();
-        }   
+        }
+
+        private void btn_joiner_Click_1(object sender, EventArgs e)
+        {
+            String join = Application.StartupPath + "\\" + "FFBatch_UPM" + "\\" + "FFbatch_UPM.exe";
+
+            if (!File.Exists(join))
+            {
+                if (language == "es") MessageBox.Show("No se encontró la aplicación para unir vídeos. Reinstale la aplicatión para solucionar el problema.", "Falta un archivo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (language == "en") MessageBox.Show("Concatenation video application was not found. Please reinstall application.", "File missing", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            else
+            {
+                Process.Start(join);
+            }
+        }
+
+        private void btn_prompter_Click(object sender, EventArgs e)
+        {
+            frm_prompt.chk_rem_lines.Checked = plato_saga.Properties.Settings.Default.rem_lines;
+            frm_prompt.n_rem_timer.Value = plato_saga.Properties.Settings.Default.remove_timer / 1000;
+            frm_prompt.n_rem_timer.Enabled = frm_prompt.chk_rem_lines.Checked;
+            frm_prompt.ShowDialog();
+            plato_saga.Properties.Settings.Default.pr_font = frm_prompt.rtx1.Font;
+            plato_saga.Properties.Settings.Default.pr_color = frm_prompt.rtx1.ForeColor;
+            plato_saga.Properties.Settings.Default.pr_back_color = frm_prompt.rtx1.BackColor;
+            plato_saga.Properties.Settings.Default.to_prompt = frm_prompt.chk_tele.Checked;
+            plato_saga.Properties.Settings.Default.prompt_sp = frm_prompt.tr_speed.Value;
+            plato_saga.Properties.Settings.Default.prompt_txt = frm_prompt.rtx1.Text;
+            plato_saga.Properties.Settings.Default.pr_delay = frm_prompt.chk_delay.Checked;
+            plato_saga.Properties.Settings.Default.pr_delay_val = (int)frm_prompt.num_delay.Value;
+            plato_saga.Properties.Settings.Default.pr_location = frm_prompt.cb_loc.SelectedIndex;
+            plato_saga.Properties.Settings.Default.pr_transp = frm_prompt.chk_trans.Checked;
+            plato_saga.Properties.Settings.Default.rtx_height = (int)frm_prompt.n_h_rtx.Value;
+            plato_saga.Properties.Settings.Default.rem_lines = frm_prompt.chk_rem_lines.Checked;
+            plato_saga.Properties.Settings.Default.Save();
+            pr_text = frm_prompt.prompt_text;
+        }
+
     }
 }
