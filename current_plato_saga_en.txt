@@ -1,0 +1,5 @@
+1.0.8
+Changelog:
+
+- Fixed bug when searching for updates without internet connection.
+- Updated quick guide.

@@ -1,0 +1,5 @@
+﻿1.0.8
+Registro de cambios:
+
+- Resuelto error al buscar actualizaciones sin conexión.
+- Actualizada la guía rápida.
