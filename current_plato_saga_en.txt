@@ -1,5 +1,6 @@
-1.0.8
+1.0.9
 Changelog:
 
-- Fixed bug when searching for updates without internet connection.
+- New Teleprompter feature.
+- Added compatibility with latest OBS Studio 27.
 - Updated quick guide.

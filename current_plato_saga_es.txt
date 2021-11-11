@@ -1,5 +1,6 @@
-﻿1.0.8
+﻿1.0.9
 Registro de cambios:
 
-- Resuelto error al buscar actualizaciones sin conexión.
-- Actualizada la guía rápida.
+- Nueva función Teleprompter.
+- Añadida compatibilidad con la última versión de OBS Studio (27.1).
+- Actualizada guía de usuario.
