@@ -1,6 +1,6 @@
-# AARS System
+# SAGA System
 
-The studio set 'AARS' (Advanced Automated Recording System) allows teachers to record high quality videos for MOOCs, video tutorials, flipped classroom, etc. The teacher can record videos autonomously with no support personnel, once the audiovisual staff configures a custom preset for him. The video at the bottom shows how this process is done. Recorded videos require no post-production and are ready to be uploaded to YouTube, Moodle, etc.
+The studio set 'SAGA' (which stands for Advanced Automated Recording System) allows teachers to record high quality videos for MOOCs, video tutorials, flipped classroom, etc. The teacher can record videos autonomously with no support personnel, once the audiovisual staff configures a custom preset for him. The video at the bottom shows how this process is done. Recorded videos require no post-production and are ready to be uploaded to YouTube, Moodle, etc.
 
 By using custom presets, the studio set integrates the teacher video image together with a laptop screen capture (showing a demo, a PowerPoint presentation, ...), a tablet, a mobile phone, etc. The system can also integrate the initial and final video bumpers.
 
