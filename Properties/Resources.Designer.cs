@@ -88,11 +88,56 @@ namespace plato_saga.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a An error occurred while saving cloned scenes collection..
+        /// </summary>
+        internal static string err_clone {
+            get {
+                return ResourceManager.GetString("err_clone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Press pedal to start preview.
+        /// </summary>
+        internal static string pedal_prev {
+            get {
+                return ResourceManager.GetString("pedal_prev", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Press pedal to start recordig.
+        /// </summary>
+        internal static string pedal_rec {
+            get {
+                return ResourceManager.GetString("pedal_rec", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Startup delay.
         /// </summary>
         internal static string start_delay {
             get {
                 return ResourceManager.GetString("start_delay", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a If you wish to manage  teleprompter, remember to switch to the alternate StreamDeck profile..
+        /// </summary>
+        internal static string stream_prf_pr {
+            get {
+                return ResourceManager.GetString("stream_prf_pr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a The StreamDeck Teleprompter profile has been installed. You can now switch between default and teleprompter profile on StreamDeck application..
+        /// </summary>
+        internal static string tele_prof_ins {
+            get {
+                return ResourceManager.GetString("tele_prof_ins", resourceCulture);
             }
         }
         

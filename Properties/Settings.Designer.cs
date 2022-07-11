@@ -12,7 +12,7 @@ namespace plato_saga.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.7.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.10.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -49,7 +49,7 @@ namespace plato_saga.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
         public bool auto_updates {
             get {
                 return ((bool)(this["auto_updates"]));
@@ -116,6 +116,198 @@ namespace plato_saga.Properties {
             }
             set {
                 this["validate_scene"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool show_panel {
+            get {
+                return ((bool)(this["show_panel"]));
+            }
+            set {
+                this["show_panel"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Microsoft Sans Serif, 20.25pt, style=Bold")]
+        public global::System.Drawing.Font pr_font {
+            get {
+                return ((global::System.Drawing.Font)(this["pr_font"]));
+            }
+            set {
+                this["pr_font"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("White")]
+        public global::System.Drawing.Color pr_color {
+            get {
+                return ((global::System.Drawing.Color)(this["pr_color"]));
+            }
+            set {
+                this["pr_color"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool to_prompt {
+            get {
+                return ((bool)(this["to_prompt"]));
+            }
+            set {
+                this["to_prompt"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("120")]
+        public int prompt_sp {
+            get {
+                return ((int)(this["prompt_sp"]));
+            }
+            set {
+                this["prompt_sp"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string prompt_txt {
+            get {
+                return ((string)(this["prompt_txt"]));
+            }
+            set {
+                this["prompt_txt"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Black")]
+        public global::System.Drawing.Color pr_back_color {
+            get {
+                return ((global::System.Drawing.Color)(this["pr_back_color"]));
+            }
+            set {
+                this["pr_back_color"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool pr_delay {
+            get {
+                return ((bool)(this["pr_delay"]));
+            }
+            set {
+                this["pr_delay"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("2")]
+        public int pr_delay_val {
+            get {
+                return ((int)(this["pr_delay_val"]));
+            }
+            set {
+                this["pr_delay_val"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int pr_location {
+            get {
+                return ((int)(this["pr_location"]));
+            }
+            set {
+                this["pr_location"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool pr_transp {
+            get {
+                return ((bool)(this["pr_transp"]));
+            }
+            set {
+                this["pr_transp"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int rtx_height {
+            get {
+                return ((int)(this["rtx_height"]));
+            }
+            set {
+                this["rtx_height"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool rem_lines {
+            get {
+                return ((bool)(this["rem_lines"]));
+            }
+            set {
+                this["rem_lines"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool max_obs {
+            get {
+                return ((bool)(this["max_obs"]));
+            }
+            set {
+                this["max_obs"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("5000")]
+        public int remove_timer {
+            get {
+                return ((int)(this["remove_timer"]));
+            }
+            set {
+                this["remove_timer"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool tele_prof {
+            get {
+                return ((bool)(this["tele_prof"]));
+            }
+            set {
+                this["tele_prof"] = value;
             }
         }
     }

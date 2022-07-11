@@ -118,33 +118,33 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="add_text" xml:space="preserve">
-    <value>Please add some text before starting a preview.</value>
+    <value>Por favor agregue texto para poder previsualizar.</value>
   </data>
   <data name="close_w" xml:space="preserve">
-    <value>Close window</value>
+    <value>Cerrar ventana</value>
   </data>
   <data name="enable_tel" xml:space="preserve">
-    <value>Enable teleprompter</value>
+    <value>Habilitar teleprompter</value>
   </data>
   <data name="err_clone" xml:space="preserve">
-    <value>An error occurred while saving cloned scenes collection.</value>
+    <value>Error al clonar la colección seleccionada.</value>
   </data>
   <data name="pedal_prev" xml:space="preserve">
-    <value>Press pedal to start preview</value>
+    <value>Presione el pedal para iniciar la previsualización</value>
   </data>
   <data name="pedal_rec" xml:space="preserve">
-    <value>Press pedal to start recordig</value>
+    <value>Presione el pedal para iniciar la grabación</value>
   </data>
   <data name="start_delay" xml:space="preserve">
-    <value>Startup delay</value>
+    <value>Retardo de arranque</value>
   </data>
   <data name="stream_prf_pr" xml:space="preserve">
-    <value>If you wish to manage  teleprompter, remember to switch to the alternate StreamDeck profile.</value>
+    <value>Si desea usar la botonera para controlar el teleprompter, recuerde cambiar al perfil alternativo de StreamDeck.</value>
   </data>
   <data name="tele_prof_ins" xml:space="preserve">
-    <value>The StreamDeck Teleprompter profile has been installed. You can now switch between default and teleprompter profile on StreamDeck application.</value>
+    <value>El perfil de la botonera StreamDeck para teleprompter ha sido instalado. Puede cambiar entre el perfil por defecto y el de teleprompter en la aplicación de StreamDeck.</value>
   </data>
   <data name="txt_filter" xml:space="preserve">
-    <value>Plain text files (*.txt)|*.txt|All files (*.*)|*.*</value>
+    <value>Ficheros de texto (*.txt)|*.txt|Todos los ficheros (*.*)|*.*</value>
   </data>
 </root>
