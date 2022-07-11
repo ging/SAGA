@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Form_saga_main", "WindowsFormsApp2\Form_saga_main.csproj", "{856C1800-9211-4BAC-9BD9-21E6C32C8304}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{856C1800-9211-4BAC-9BD9-21E6C32C8304}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{856C1800-9211-4BAC-9BD9-21E6C32C8304}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{856C1800-9211-4BAC-9BD9-21E6C32C8304}.Debug|x64.ActiveCfg = Debug|x64
+		{856C1800-9211-4BAC-9BD9-21E6C32C8304}.Debug|x64.Build.0 = Debug|x64
+		{856C1800-9211-4BAC-9BD9-21E6C32C8304}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{856C1800-9211-4BAC-9BD9-21E6C32C8304}.Release|Any CPU.Build.0 = Release|Any CPU
+		{856C1800-9211-4BAC-9BD9-21E6C32C8304}.Release|x64.ActiveCfg = Release|x64
+		{856C1800-9211-4BAC-9BD9-21E6C32C8304}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3D05E357-F157-4F39-843A-105EF9B9F773}
+	EndGlobalSection
+EndGlobal
