@@ -48,19 +48,20 @@ namespace plato_saga
             this.rtx1.Size = new System.Drawing.Size(802, 119);
             this.rtx1.TabIndex = 0;
             this.rtx1.Text = "";
+            this.rtx1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.rtx1_KeyDown);
             // 
             // menu
             // 
             this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.close_item});
             this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(181, 48);
+            this.menu.Size = new System.Drawing.Size(149, 26);
             this.menu.Opening += new System.ComponentModel.CancelEventHandler(this.menu_Opening);
             // 
             // close_item
             // 
             this.close_item.Name = "close_item";
-            this.close_item.Size = new System.Drawing.Size(180, 22);
+            this.close_item.Size = new System.Drawing.Size(148, 22);
             this.close_item.Text = "Close window";
             this.close_item.Click += new System.EventHandler(this.close_item_Click);
             // 

@@ -16,13 +16,18 @@ using AForge.Video.DirectShow;
 using System.Runtime.InteropServices;
 using System.Drawing;
 using System.ComponentModel;
+using System.Text.RegularExpressions;
 
 namespace plato_saga
 {
     public partial class Form1 : Form
     {
-        // list of video devices
+
+        private Boolean dont_preview = false;
+        Boolean searching = false;
+        String scene_to_clone = "";
         int file_n = 0;
+        Form frmName = new Form();
         FilterInfoCollection videoDevices;
         // stop watch for measuring fps
         Boolean start_up = true;
@@ -262,8 +267,7 @@ namespace plato_saga
                 frm_timer.timer_recorded.Stop();
 
                 if (testing_pedal == false && loading_obs == false && frm_11.chk_auto_close_obs.CheckState == CheckState.Checked)
-                {
-                    
+                {                    
                     Process[] localByName = Process.GetProcessesByName("obs64");
                     int num = localByName.Length;
 
@@ -282,7 +286,9 @@ namespace plato_saga
 
                         }).Start();
 
-                        lbl_obs_running.Text = "Saliendo de OBS Studio, espere por favor...";
+                        if (language == "es") lbl_obs_running.Text = "Saliendo de OBS Studio, espere por favor...";
+                        if (language == "es") lbl_obs_running.Text = "Closing OBS Studio, please wait...";
+
                         lbl_obs_running.Refresh();
                         foreach (Process p in localByName)
                         {
@@ -376,16 +382,16 @@ namespace plato_saga
                         }
                         else
                         {
-                            Boolean prev = false;
+                            Boolean prev2 = false;
                             foreach (String str in previewed_scenes)
                             {
                                 if (str == combo_scenes.SelectedItem.ToString())
                                 {
-                                    prev = true;
+                                    prev2 = true;
                                     break;
                                 }
                             }
-                            if (prev == true) btn_start_record.PerformClick();
+                            if (prev2 == true) btn_start_record.PerformClick();
                             else btn_preview.PerformClick();
                         }
                     }
@@ -590,114 +596,6 @@ namespace plato_saga
             }
         }
 
-        //private void lock_read_only()
-        //{
-        //    String obs_prof_or = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "obs-studio" + "\\" + "basic" + "\\" + "scenes");
-        //    String obs_prof_or2 = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "obs-studio");
-
-        //    if (!Directory.Exists(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "obs-studio")))
-        //        try
-        //        {
-        //            Directory.CreateDirectory(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "obs-studio"));
-        //        }
-        //        catch
-        //        {
-        //            if (language == "es") MessageBox.Show("No se puede crear la carpeta de la aplicación del plató, contacte con soporte técnico.", "Error fatal", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //            if (language == "en") MessageBox.Show("Studio application folder can't be created, please contact technical support.", "Fatal error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //            return;
-        //        }
-
-        //    System.IO.File.SetAttributes(obs_prof_or2, System.IO.FileAttributes.ReadOnly);
-        //    foreach (String file in Directory.GetFiles(obs_prof_or2, "*.ini", SearchOption.AllDirectories))
-        //    {
-        //        try
-        //        {
-        //            if (Path.GetDirectoryName(file) != obs_prof_or)
-        //            {
-        //                System.IO.File.SetAttributes(file, System.IO.FileAttributes.ReadOnly);
-        //            }
-        //        }
-        //        catch
-        //        {
-        //            MessageBox.Show("Error desconocido");
-        //        }
-        //    }
-
-        //    btn_lock.Image = imgs.Images[0];
-        //    if (language == "es") btn_lock.Text = "Plató está protegido";
-        //    if (language == "en") btn_lock.Text = "Studio is protected";
-        //    locked = true;
-        //}
-
-        //private void unlock_read_only()
-        //{
-        //    String obs_prof_or = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "obs-studio");
-
-        //    if (!Directory.Exists(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "obs-studio")))
-        //        try
-        //        {
-        //            Directory.CreateDirectory(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "obs-studio"));
-        //        }
-        //        catch (Exception excpt)
-        //        {
-        //            if (language == "es") MessageBox.Show("No se puede crear la carpeta de la aplicación del plató, contacte con soporte técnico." + Environment.NewLine + excpt.Message, "Error fatal", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //            if (language == "en") MessageBox.Show("No se puede crear la carpeta de la aplicación del plató, contacte con soporte técnico." + Environment.NewLine + excpt.Message, "Error fatal", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //            return;
-        //        }
-
-        //    btn_lock.Image = imgs.Images[1];
-        //    if (language == "es") btn_lock.Text = "Plató está desbloqueado";
-        //    if (language == "en") btn_lock.Text = "Studio is unprotected";
-
-        //    locked = false;
-        //    foreach (String dir in Directory.GetDirectories(obs_prof_or))
-        //    {
-        //        var di = new DirectoryInfo(dir);
-        //        di.Attributes &= FileAttributes.Normal;
-        //    }
-
-        //    System.IO.File.SetAttributes(obs_prof_or, System.IO.FileAttributes.Normal);
-
-        //    foreach (String file in Directory.GetFiles(obs_prof_or, "*.ini", SearchOption.AllDirectories))
-        //    {
-        //        try
-        //        {
-        //            System.IO.File.SetAttributes(file, System.IO.FileAttributes.Normal);
-        //        }
-        //        catch (Exception excpt)
-        //        {
-        //            btn_lock.Image = imgs.Images[0];
-        //            if (language == "es")
-        //            {
-        //                MessageBox.Show("Error al desbloquear: " + file + Environment.NewLine + Environment.NewLine + excpt.Message);
-        //                btn_lock.Text = "Plató está protegido";
-        //            }
-        //            if (language == "en")
-        //            {
-        //                btn_lock.Text = "Studio is protected";
-        //                MessageBox.Show("Error unlocking: " + file + Environment.NewLine + Environment.NewLine + excpt.Message);
-        //            }
-        //            locked = true;
-        //        }
-        //    }
-
-        //}
-
-        private void create_record()
-        {
-            //WshShell shell2 = new WshShell();
-            //string shortcutAddress2 = Path.Combine(fd1.SelectedPath, scene_global_name) + @"\Record_" + scene_global_name + ".lnk";
-            //IWshShortcut shortcut2 = (IWshShortcut)shell2.CreateShortcut(shortcutAddress2);
-            //if (language == "es") shortcut2.Description = "Grabar escena SAGA";
-            //if (language == "en") shortcut2.Description = "Record SAGA scene";
-            //shortcut2.IconLocation = Application.StartupPath + "\\" + "record-no-intro.ico";
-            //shortcut2.WorkingDirectory = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\\" + "obs-studio" + "\\" + "bin" + "\\" + "64bit";
-            //shortcut2.TargetPath = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\\" + "obs-studio" + "\\" + "bin" + "\\" + "64bit" + "\\" + "obs64.exe";
-
-            //shortcut2.Arguments = "--collection " + '\u0022' + scene_global + '\u0022' + " --scene Pre-Intro" + " --startrecording";
-            //shortcut2.Save();
-        }
-
         private void refresh_scenes()
         {
             combo_scenes.Items.Clear();
@@ -785,6 +683,8 @@ namespace plato_saga
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            lbl_obs_running.Text = Properties.Resources.pedal_prev;
+
             get_obs_path();
             get_cams();
             pic_mute.Image = img_audio_2.Images[1];
@@ -1407,21 +1307,6 @@ namespace plato_saga
             Process.Start("https://www.youtube.com/playlist?list=PLo4CW_btA6oYEjwJyw-Rsc1yr0ATENi56");
         }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-            //pictureBox1.Focus();
-            //check_obs();
-            //if (obs_run == true) return;
-            //if (System.IO.Directory.Exists(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "obs-studio" + "\\" + "basic")) == false)
-            //{
-            //if (language == "es") MessageBox.Show("No se encontró la aplicación de los platós en el equipo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //if (language == "en") MessageBox.Show("Studio application not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //return;
-            //}
-            //Form3 form_accesos = new Form3();
-            //form_accesos.ShowDialog();
-        }
-
         private void button8_Click(object sender, EventArgs e)
         {
             Form2 frm2 = new Form2();
@@ -1441,113 +1326,18 @@ namespace plato_saga
 
             frm_pedal.ShowDialog();
             testing_pedal = false;
-        }
-
-   
-
-        private void btn_lock_Click(object sender, EventArgs e)
-        {
-            //if (locked == false)
-            //{
-            //    DialogResult a = DialogResult.Yes;
-            //    if (language == "es")
-            //    {
-            //        a = MessageBox.Show("Si bloquea el plató no podrá hacer cambios en la configuración sin la contraseña de acceso a la aplicación." + Environment.NewLine + Environment.NewLine + "¿Está seguro?", "Confirmación de bloqueo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
-            //    }
-
-            //    if (language == "en")
-            //    {
-            //        a = MessageBox.Show("You will not be able to change studio settings once locked unless you provide the required password." + Environment.NewLine + Environment.NewLine + "Are you sure?", "Confirmación de bloqueo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
-            //    }
-
-            //    if (a != DialogResult.Yes) return;
-            //    lock_read_only();
-            //    if (language == "es") MessageBox.Show("La configuración general del plató está bloqueada. Solo es posible modificar las escenas.", "Configuración protegida", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //    if (language == "en") MessageBox.Show("Studio configuration is locked. Only scenes configuration can be edited.", "Configuration is locked", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            //    return;
-            //}
-
-            //frmInfo.Name = "Acceso a función protegida";
-            //if (language == "es") frmInfo.Text = "Acceso a función protegida";
-            //if (language == "en") frmInfo.Text = "Access to protected option";
-            //frmInfo.Icon = this.Icon;
-            //frmInfo.Icon = this.Icon;
-            //frmInfo.Height = 120;
-            //frmInfo.Width = 335;
-            //frmInfo.FormBorderStyle = FormBorderStyle.Fixed3D;
-            //frmInfo.MaximizeBox = false;
-            //frmInfo.MinimizeBox = false;
-
-            //Label lbl_titulo = new Label();
-            //lbl_titulo.Parent = frmInfo;
-            //lbl_titulo.Top = 20;
-            //lbl_titulo.Left = 14;
-            //lbl_titulo.Width = 290;
-            //if (language == "es") lbl_titulo.Text = "Introduzca la contraseña de acceso:";
-            //if (language == "en") lbl_titulo.Text = "Please write required password:";
-
-
-            //passwd.Parent = frmInfo;
-            //passwd.Top = 45;
-            //passwd.Left = 14;
-            //passwd.Width = 230;
-            //passwd.TabIndex = 0;
-            //passwd.UseSystemPasswordChar = true;
-            //passwd.BorderStyle = BorderStyle.Fixed3D;
-            //passwd.Text = String.Empty;
-
-            //Button boton_ok = new Button();
-
-            //boton_ok.Parent = frmInfo;
-            //boton_ok.Left = 247;
-            //boton_ok.Top = 44;
-            //boton_ok.Width = 60;
-            //boton_ok.Height = 22;
-            //if (language == "es") boton_ok.Text = "Aceptar";
-            //if (language == "en") boton_ok.Text = "OK";
-
-            //boton_ok.Click += new EventHandler(boton_ok_Click);
-
-            //frmInfo.StartPosition = FormStartPosition.CenterScreen;
-            //frmInfo.ShowDialog();
-
-            //if (bad_pass == true)
-            //{
-            //    return;
-            //}
-
-            //unlock_read_only();
-            //if (!Directory.Exists(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "obs-studio-saved")))
-            //{
-            //    no_default_backup();
-            //}
-        }
-
-        private void button9_MouseEnter(object sender, EventArgs e)
-        {
-        
-        }
-
-        private void btn_lock_MouseHover(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_escenas_Click(object sender, EventArgs e)
-        {
-            //String ruta = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "Escenas");
-            //if (!Directory.Exists(ruta))
-            //{
-            //  MessageBox.Show("No se encontró la carpeta de escenas por defecto en el escritorio (Escenas). Debe crearla para continuar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //return;
-            //}
-            //Process.Start("explorer.exe", ruta);
-        }
+        }    
 
         private void btn_videos_Click(object sender, EventArgs e)
         {
-            Process.Start("explorer.exe", Environment.GetFolderPath(Environment.SpecialFolder.MyVideos));
+            String dest = "";
+            String browse = Environment.GetFolderPath(Environment.SpecialFolder.MyVideos);
+
+            if (combo_scenes.SelectedItem != null) dest = "\\" + combo_scenes.SelectedItem.ToString();
+            
+            if (Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.MyVideos) + dest))
+                browse = Environment.GetFolderPath(Environment.SpecialFolder.MyVideos) + dest;            
+                Process.Start("explorer.exe", browse);
         }
 
         private void Form1_Shown(object sender, EventArgs e)
@@ -1618,7 +1408,7 @@ namespace plato_saga
             }
             show_devs_panel();
             refresh_lang();
-            //refresh_scenes();
+            btn_refresh.PerformClick();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -1639,7 +1429,7 @@ namespace plato_saga
             
             foreach (String file in Directory.GetFiles(obs_prof_or))
             {                
-                if (System.IO.File.ReadAllText(file).Contains('\u0022' + "name" + '\u0022' + ":" + '\u0022' + combo_scenes.SelectedItem.ToString() + '\u0022'))
+                if (File.ReadAllText(file).Contains('\u0022' + "name" + '\u0022' + ":" + '\u0022' + combo_scenes.SelectedItem.ToString() + '\u0022') || File.ReadAllText(file).Contains('\u0022' + "name" + '\u0022' + ": " + '\u0022' + combo_scenes.SelectedItem.ToString() + '\u0022'))
                 {
                     scene_exist = true;
                     scene_global = combo_scenes.SelectedItem.ToString();
@@ -1662,13 +1452,14 @@ namespace plato_saga
                         }
                         else continue;
                     }
-                    
-                    if (Pre_Intro.Contains('\u0022' + "name" + '\u0022' + ":" + '\u0022' + "Pre-Intro" + '\u0022') == false) bad_col = true;
+
+                    if (Pre_Intro.Contains('\u0022' + "name" + '\u0022' + ":" + '\u0022' + "Pre-Intro" + '\u0022') || Pre_Intro.Contains('\u0022' + "name" + '\u0022' + ": " + '\u0022' + "Pre-Intro" + '\u0022')) bad_col = false;
+                    else bad_col = true;
                     
                     break;
                 }
 
-                else if (System.IO.File.ReadAllText(file).Contains('\u0022' + "name" + '\u0022' + ":" + '\u0022' + combo_scenes.SelectedItem.ToString().Replace("_", " ") + '\u0022'))
+                else if (File.ReadAllText(file).Contains('\u0022' + "name" + '\u0022' + ":" + '\u0022' + combo_scenes.SelectedItem.ToString().Replace("_", " ") + '\u0022') || File.ReadAllText(file).Contains('\u0022' + "name" + '\u0022' + ": " + '\u0022' + combo_scenes.SelectedItem.ToString().Replace("_", " ") + '\u0022'))
                 {
                     scene_exist = true;
                     scene_global = combo_scenes.SelectedItem.ToString().Replace("_", " ");
@@ -1693,7 +1484,8 @@ namespace plato_saga
                         else continue;
                     }
 
-                    if (Pre_Intro.Contains('\u0022' + "name" + '\u0022' + ": " + '\u0022' + "Pre-Intro" + '\u0022') == false) bad_col = true;
+                    if (Pre_Intro.Contains('\u0022' + "name" + '\u0022' + ":" + '\u0022' + "Pre-Intro" + '\u0022') || Pre_Intro.Contains('\u0022' + "name" + '\u0022' + ": " + '\u0022' + "Pre-Intro" + '\u0022')) bad_col = false;
+                    else bad_col = true;
                     //if (Pre_Intro.Contains('\u0022' + "device_id" + '\u0022' + ": " + '\u0022' + aud_sel_ID.ToLower() + '\u0022')) aud_match = true;
                     break;
                 }
@@ -1732,7 +1524,8 @@ namespace plato_saga
                                 else continue;
                             }
 
-                            if (Pre_Intro.Contains('\u0022' + "name" + '\u0022' + ": " + '\u0022' + "Pre-Intro" + '\u0022') == false || Pre_Intro.Contains('\u0022' + "name" + '\u0022' + ": " + '\u0022' + "Salida" + '\u0022') == false) bad_col = true;
+                            if (Pre_Intro.Contains('\u0022' + "name" + '\u0022' + ": " + '\u0022' + "Pre-Intro" + '\u0022') || Pre_Intro.Contains('\u0022' + "name" + '\u0022' + ":" + '\u0022' + "Pre-Intro" + '\u0022') || Pre_Intro.Contains('\u0022' + "name" + '\u0022' + ": " + '\u0022' + "Salida" + '\u0022') || Pre_Intro.Contains('\u0022' + "name" + '\u0022' + ": " + '\u0022' + "Salida" + '\u0022')) bad_col = false;
+                            else bad_col = true;
                             //if (Pre_Intro.Contains('\u0022' + "device_id" + '\u0022' + ": " + '\u0022' + aud_sel_ID.ToLower() + '\u0022')) aud_match = true;
 
                             string invalid = new string(Path.GetInvalidFileNameChars()) + new string(Path.GetInvalidPathChars());
@@ -1770,14 +1563,15 @@ namespace plato_saga
             {
                 if (language == "es") MessageBox.Show("Se produjo un error al utilizar la colección de escenas seleccionada." + Environment.NewLine + Environment.NewLine + "Puede solucionarlo clonando la colección de escenas y usando un nombre sin espacios en blanco.", "Nombre de escena incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 if (language == "en") MessageBox.Show("An error occurred using selected collection." + Environment.NewLine + Environment.NewLine + "You may solve it by cloning the scene without blank spaces.", "Nombre de escena incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                dont_preview = true;
                 return;
             }
 
             if (bad_col == true && plato_saga.Properties.Settings.Default.validate_scene == true)
             {
                 DialogResult a = DialogResult.None;
-                if (language == "es") a = MessageBox.Show("La colección seleccionada no contiene una escena requerida. Los resultados pueden ser inesperados.", "Falta la escena requerida", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-                if (language == "en") a = MessageBox.Show("Selected collection lacks a required scene. Results are unpredictible.", "A required scene is missing", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                if (language == "es") a = MessageBox.Show("La colección seleccionada no contiene una escena requerida. Los resultados pueden ser inesperados." + Environment.NewLine + Environment.NewLine + "¿Desea continuar?", "Falta la escena requerida", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                if (language == "en") a = MessageBox.Show("Selected collection lacks a required scene. Results are unpredictible." + "Would you like to proceed anyway?", "A required scene is missing", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
 
                 if (a == DialogResult.OK) bad_col = false;
                 else bad_col = true;
@@ -1818,6 +1612,7 @@ namespace plato_saga
 
         private void btn_preview_Click(object sender, EventArgs e)
         {
+            dont_preview = false;
             if (combo_scenes.SelectedItem == null)
             {
                 if (language == "es") MessageBox.Show("No se ha seleccionado ninguna colección de escenas.", "No hay escena seleccionada", MessageBoxButtons.OK);
@@ -1900,7 +1695,7 @@ namespace plato_saga
                     MessageBox.Show("Ha seleccionado una colección básica, que no debería ser modificada." + Environment.NewLine + Environment.NewLine + "Para crear y modificar su propia colección de escenas utilice el botón Clonar.", "Colección básica seleccionada",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 }
                 frm_load_obs.textBox1.Text = "Iniciando previsualización";
-                frm_load_obs.label2.Text = combo_scenes.SelectedItem.ToString();
+                
             }
             if (language == "en")
             {
@@ -1909,7 +1704,19 @@ namespace plato_saga
                     MessageBox.Show("A basic collection was selected, which should not be modified." + Environment.NewLine + Environment.NewLine + "In order to use and customize it, please create your own by pressing the button Clone.","Default collection selected",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 }
                 frm_load_obs.textBox1.Text = "Starting preview";
-                frm_load_obs.label2.Text = combo_scenes.SelectedItem.ToString();
+                
+            }
+            frm_load_obs.pic_rec.Visible = false;
+            frm_load_obs.pic_prev.Visible = true;
+            frm_load_obs.lbl_col.Text = combo_scenes.SelectedItem.ToString();
+            if (combo_start.SelectedItem != null) frm_load_obs.lbl_scene.Text = combo_start.SelectedItem.ToString();
+
+            if (dont_preview == true)
+            {
+                loading_obs = true;
+                this.Enabled = true;
+                Enable_Controls();
+                return;
             }
             frm_load_obs.Show();
 
@@ -1937,11 +1744,16 @@ namespace plato_saga
                     proc.Refresh();
                 }
                 Thread.Sleep(100);
+                
+                //Check OBS version
+                
                 if (proc.MainWindowTitle.ToLower().Contains("obs 24") == false && proc.MainWindowTitle.ToLower().Contains("obs 25") == false && proc.MainWindowTitle.ToLower().Contains("obs 26") == false && proc.MainWindowTitle.ToLower().Contains("obs 27") == false)
                 {
-                    if (language == "es") MessageBox.Show("Versión de OBS studio no soportada. Pueden producirse comportamientos inesperados. Instale OBS Studio versión 24 ó superior para solucionarlo.");
-                    if (language == "en") MessageBox.Show("Current OBS Studio version is not supported. Some features may not work. Please install OBS Studio 24 or newer for best results.");
+                    if (language == "es") MessageBox.Show("Versión de OBS studio no soportada. Pueden producirse comportamientos inesperados. Instale una versión de OBS compatible (24-27) para solucionarlo.");
+                    if (language == "en") MessageBox.Show("Current OBS Studio version is not supported. Some features may not work. Please install a compatible OBS Studio version (24-27) for best results.");
                 }
+
+                //En check OBS version
 
                 this.Invoke(new MethodInvoker(delegate
                 {
@@ -2044,6 +1856,14 @@ namespace plato_saga
                 }
 
                 proc.WaitForExit();
+                
+                this.Invoke(new MethodInvoker(delegate
+                {
+                    this.TopMost = true;
+                    this.TopMost = false;                
+                    this.Activate();
+                }));
+
                 Enable_Controls();
 
                 if (plato_saga.Properties.Settings.Default.to_prompt == true)
@@ -2061,17 +1881,12 @@ namespace plato_saga
                 lbl_obs_running.Invoke(new MethodInvoker(delegate
                 {
                     lbl_obs_running.Text = String.Empty;
-                }));
-                this.Invoke(new MethodInvoker(delegate
-                {
-                    this.TopMost = true;
-                    this.TopMost = false;
-                }));
+                }));               
                 obs_launched = false;
                 btn_refresh.Invoke(new MethodInvoker(delegate
                 {
                     btn_refresh.PerformClick();
-                }));
+                }));                
 
             }).Start();
         }
@@ -2169,7 +1984,7 @@ namespace plato_saga
                 return;
             }
 
-            if (bad_col == true && frm_11.chk_validate.CheckState == CheckState.Unchecked)
+            if (bad_col == true && frm_11.chk_validate.CheckState == CheckState.Checked)
             {
                 this.Enabled = true;
                 return;
@@ -2218,6 +2033,7 @@ namespace plato_saga
                 }
             }
             pic_title.Focus();
+            
             this.Cursor = Cursors.WaitCursor;
             BG_rec.RunWorkerAsync();
         }
@@ -2269,6 +2085,74 @@ namespace plato_saga
                     catch (Exception excpt)
                     {
                         MessageBox.Show("Discarded folder could not be created. Video file will remain at default location: " + excpt.Message, "Error moving file", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                try
+                {
+                    System.IO.File.Move(LastFile.FullName, LastFile.DirectoryName + "\\" + "Discarded" + "\\" + LastFile + "_" + file_n.ToString() + LastFile.Extension);
+                }
+                catch (Exception excpt)
+                {
+                    this.Invoke(new MethodInvoker(delegate
+                    {
+                        this.Enabled = true;
+                        this.Cursor = Cursors.Arrow;
+                    }));
+                    MessageBox.Show("File could not be moved, it may be locked by another application. " + Environment.NewLine + Environment.NewLine + excpt.Message);
+                }
+            }
+        }
+
+        private void move_video_ok()
+        {
+            file_n = file_n + 1;
+            var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.MyVideos));
+            String dest = "";
+            if (combo_scenes.SelectedItem != null) dest = "\\" + combo_scenes.SelectedItem.ToString();
+
+            var LastFile = (from f in directory.GetFiles("*.m??")
+                            orderby f.LastAccessTime descending
+                            select f).First();
+
+            if (language == "es")
+            {
+                if (!Directory.Exists(LastFile.DirectoryName + dest))
+                {
+                    try
+                    {
+                        Directory.CreateDirectory(LastFile.DirectoryName + dest);
+                    }
+                    catch (Exception excpt)
+                    {
+                        MessageBox.Show("No se pudo crear la carpeta de la escena seleccionada. El fichero seguirá en su ubicación inicial: " + excpt.Message, "Error al mover", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                try
+                {
+
+                    System.IO.File.Move(LastFile.FullName, LastFile.DirectoryName + dest + "\\" + LastFile + "_" + file_n.ToString() + LastFile.Extension);
+                }
+                catch (Exception excpt)
+                {
+                    this.Invoke(new MethodInvoker(delegate
+                    {
+                        this.Enabled = true;
+                        this.Cursor = Cursors.Arrow;
+                    }));
+                    MessageBox.Show("No se pudo borrar el fichero, es posible que esté en uso. " + Environment.NewLine + Environment.NewLine + excpt.Message);
+                }
+            }
+            if (language == "en")
+            {
+                if (!Directory.Exists(LastFile.DirectoryName + dest))
+                {
+                    try
+                    {
+                        Directory.CreateDirectory(LastFile.DirectoryName + dest);
+                    }
+                    catch (Exception excpt)
+                    {
+                        MessageBox.Show("Destination scene folder could not be created. Video file will remain at default location: " + excpt.Message, "Error moving file", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 try
@@ -2367,124 +2251,6 @@ namespace plato_saga
             }
         }
 
-        private void create_icons()
-        {
-            //if (combo_scenes.SelectedIndex == -1)
-            //{
-            //    if (language == "es") MessageBox.Show("No se ha especificado el nombre de la escena.");
-            //    if (language == "en") MessageBox.Show("Scene name is missing.");
-            //    return;
-            //}
-
-            //String obs_prof_or = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "obs-studio");
-            //obs_prof_or = obs_prof_or + "\\" + "basic" + "\\" + "scenes";
-            //Boolean scene_exist = false;
-            //List<string> file_lines = new List<string>();
-            //String name_internal = String.Empty;
-
-            //foreach (String file in Directory.GetFiles(obs_prof_or))
-            //{
-            //    if (System.IO.File.ReadAllText(file).Contains('\u0022' + "name" + '\u0022' + ": " + '\u0022' + combo_scenes.SelectedItem.ToString() + '\u0022'))
-            //    {
-            //        scene_exist = true;
-            //        scene_global = combo_scenes.SelectedItem.ToString();
-            //        scene_global_name = scene_global;
-            //        break;
-            //    }
-
-            //    else if (System.IO.File.ReadAllText(file).Contains('\u0022' + "name" + '\u0022' + ": " + '\u0022' + combo_scenes.SelectedItem.ToString().Replace("_", " ") + '\u0022'))
-            //    {
-            //        scene_exist = true;
-            //        scene_global = combo_scenes.SelectedItem.ToString().Replace("_", " ");
-            //        scene_global_name = scene_global;
-            //        break;
-            //    }
-            //    else
-            //    {
-            //        int i = 0;
-            //        Boolean found_key = false;
-            //        Boolean match = false;
-            //        String name_found = String.Empty;
-            //        foreach (String line in System.IO.File.ReadLines(file))
-            //        {
-            //            if (System.IO.Path.GetFileNameWithoutExtension(file) != combo_scenes.SelectedItem.ToString()) continue;
-            //            if (line.Contains('\u0022' + "name" + '\u0022' + ": ") && found_key == true)
-            //            {
-            //                match = true;
-            //                name_found = line.Substring(13, line.Length - 15);
-            //                scene_global = name_found;
-            //                string invalid = new string(Path.GetInvalidFileNameChars()) + new string(Path.GetInvalidPathChars());
-
-            //                foreach (char c in invalid)
-            //                {
-            //                    name_found = name_found.Replace(c.ToString(), "");
-            //                }
-
-            //                if (System.IO.Path.GetFileNameWithoutExtension(file) == name_found.Replace(" ", "_"))
-            //                {
-            //                    scene_exist = true;
-            //                    scene_global_name = name_found.Replace(" ", "_");
-            //                    break;
-            //                }
-            //            }
-            //            else
-            //            {
-            //                match = false;
-            //            }
-
-            //            if (line.Contains("},"))
-            //            {
-            //                found_key = true;
-            //            }
-            //            else
-            //            {
-            //                found_key = false;
-            //            }
-            //        }
-            //    }
-            //}
-
-            //if (scene_exist == false)
-            //{
-            //    if (language == "es") MessageBox.Show("Se produjo un error al utilizar la colección de escenas seleccionada." + Environment.NewLine + Environment.NewLine + "Puede solucionarlo duplicando la colección de escenas y usando un nombre sin espacios en blanco.", "Nombre de escena incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            //    if (language == "en") MessageBox.Show("There was an error trying to use the selected collection." + Environment.NewLine + Environment.NewLine + "You may solve it by cloning it using a new name without blank spaces.", "Scene name error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            //    return;
-            //}
-
-            //if (fd1.ShowDialog() == DialogResult.OK)
-            //{
-            //    create_preview();
-            //    create_record();
-            //    if (language == "es") MessageBox.Show("Iconos de acceso directo creados correctamente.", "Iconos creados", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //    if (language == "en") MessageBox.Show("Shortcuts succesfully created.", "Shortcuts created", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //    Process.Start("explorer.exe", Path.Combine(fd1.SelectedPath, scene_global_name));
-            //    ActiveForm.Close();
-            //}
-        }
-
-        private void button5_Click_1(object sender, EventArgs e)
-        {
-            create_icons();
-        }
-
-        private void create_preview()
-        {
-            //if (!Directory.Exists(Path.Combine(fd1.SelectedPath, scene_global_name)))
-            //    {
-            //    Directory.CreateDirectory(Path.Combine(fd1.SelectedPath, scene_global_name));
-            //    }
-            //WshShell shell = new WshShell();
-            //string shortcutAddress = Path.Combine(fd1.SelectedPath, scene_global_name) + @"\Preview_" + scene_global_name + ".lnk";
-            //IWshShortcut shortcut = (IWshShortcut)shell.CreateShortcut(shortcutAddress);
-            //shortcut.Description = "Previsualizar escena SAGA";
-            //shortcut.IconLocation = Application.StartupPath + "\\" + "Preview-OBS.ico";
-            //shortcut.WorkingDirectory = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\\" + "obs-studio" + "\\" + "bin" + "\\" + "64bit";
-            //shortcut.TargetPath = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\\" + "obs-studio" + "\\" + "bin" + "\\" + "64bit" + "\\" + "obs64.exe";
-            //shortcut.Arguments = "--profile Plato --collection " + '\u0022' + scene_global + '\u0022' + " --scene Pre-intro";
-            //shortcut.Save();
-        }
-
-
         private void btn_clone_Click(object sender, EventArgs e)
         {
             check_obs_run();
@@ -2494,7 +2260,7 @@ namespace plato_saga
                 if (language == "en") MessageBox.Show("No scene collection was selected.");
                 return;
             }
-            Form frmName = new Form();
+            scene_to_clone = combo_scenes.SelectedItem.ToString();            
 
             if (language == "es")
             {
@@ -2519,8 +2285,7 @@ namespace plato_saga
             lbl_titulo.Parent = frmName;
             lbl_titulo.Top = 20;
             lbl_titulo.Left = 14;
-            lbl_titulo.Width = 290;
-            lbl_titulo.Text = "Seleccione el nombre de la nueva escena";
+            lbl_titulo.Width = 290;            
             if (language == "es") lbl_titulo.Text = "Seleccione el nombre de la nueva escena";
             if (language == "en") lbl_titulo.Text = "Select new scene collection file name";
 
@@ -2531,6 +2296,7 @@ namespace plato_saga
             file_name_clone.TabIndex = 0;
             file_name_clone.BorderStyle = BorderStyle.Fixed3D;
             file_name_clone.Text = combo_scenes.SelectedItem.ToString() + "_2";
+            file_name_clone.KeyPress += file_name_clone_KeyPress;
 
             Button boton_ok_clone = new Button();
 
@@ -2542,9 +2308,10 @@ namespace plato_saga
             if (language == "es") boton_ok_clone.Text = "Aceptar";
             if (language == "en") boton_ok_clone.Text = "OK";
             boton_ok_clone.Click += new EventHandler(boton_ok_clone_Click);
+            
 
             frmName.StartPosition = FormStartPosition.CenterScreen;
-            duplicating = true;
+            duplicating = true;            
             frmName.ShowDialog();            
             refresh_scenes();
             duplicating = false;
@@ -2566,16 +2333,23 @@ namespace plato_saga
                     }
                 }
                 if (combo_scenes.Items.Count > 0) combo_scenes.SelectedIndex = 0;
+                btn_refresh.PerformClick();
             }
         }
-
-        private void boton_ok_clone_Click(object sender, EventArgs e)
+        private void file_name_clone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Return)
+            {
+                clone_scene();
+            }
+        }
+        private void clone_scene()
         {
             scene_clone = file_name_clone.Text;
             if (scene_clone.IndexOfAny(Path.GetInvalidFileNameChars()) >= 0)
             {
                 if (language == "es") MessageBox.Show("El nombre elegido contiene caracteres no válidos. Utilice otro nombre.");
-                if (language == "en") MessageBox.Show("Slected name contains invalid characters. Please use a different name.");
+                if (language == "en") MessageBox.Show("Selected name contains invalid characters. Please use a different name.");
                 return;
             }
 
@@ -2589,12 +2363,22 @@ namespace plato_saga
             try
             {
                 new Microsoft.VisualBasic.Devices.Computer().FileSystem.CopyFile(obs_prof_or, obs_prof_or_dest, false);
+                
             }
             catch
             {
-                if (language == "es") MessageBox.Show("Error al copiar escena. Utilice otro nombre y pruebe de nuevo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); ;
-                if (language == "en") MessageBox.Show("Error copying scene collection. Please use a different name and try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); ;
-                return;
+                if (File.Exists(obs_prof_or_dest))
+                {
+                    if (language == "es") MessageBox.Show("El nombre de escena ya existe. Por favor, seleccione un nombre distinto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (language == "en") MessageBox.Show("The selected filename already exists. Please select another name.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else
+                {
+                    if (language == "es") MessageBox.Show("Error al copiar escena. Utilice otro nombre y pruebe de nuevo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (language == "en") MessageBox.Show("Error copying scene collection. Please use a different name and try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
             }
             if (System.IO.File.Exists(obs_prof_or_dest))
             {
@@ -2602,39 +2386,19 @@ namespace plato_saga
             }
 
             //Set duplicated scene internal name
+            String patron = '\u0022' + "name" + '\u0022' + ":" + '\u0022' + scene_to_clone + '\u0022' + ",";
+            String replace = '\u0022' + "name" + '\u0022' + ":" + '\u0022' + scene_clone + '\u0022' + ",";
 
-            Boolean found_key = false;
-            Boolean match = false;
-            String name_found = String.Empty;
-
-            List<string> list_lines = new List<string>();
-            foreach (String line in System.IO.File.ReadLines(obs_prof_or_dest))
+            String list_lines = File.ReadAllText(obs_prof_or);
+            //if (list_lines.Contains(patron)) MessageBox.Show("Found");            
+            list_lines = list_lines.Replace(patron, replace);
+            try
             {
-                list_lines.Add(line);
+                File.WriteAllText(obs_prof_or_dest, list_lines);
             }
-            StreamWriter SaveFile = new System.IO.StreamWriter(obs_prof_or_dest);
-
-            foreach (String line in list_lines)
+            catch (Exception exc)
             {
-                String to_write = line;
-                if (line.Contains('\u0022' + "name" + '\u0022' + ": ") && found_key == true)
-                {
-                    to_write = '\u0022' + "name" + '\u0022' + ": " + '\u0022' + scene_clone + '\u0022' + ",";
-                }
-                else
-                {
-                    match = false;
-                }
-
-                if (line.Contains("},"))
-                {
-                    found_key = true;
-                }
-                else
-                {
-                    found_key = false;
-                }
-                SaveFile.WriteLine(to_write);
+                MessageBox.Show(Properties.Resources.err_clone + ":" + Environment.NewLine + Environment.NewLine + exc.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             //End set internal scene name
@@ -2644,10 +2408,19 @@ namespace plato_saga
 
             if (System.IO.File.Exists(obs_prof_or_dest))
             {
-                if (locked == true) System.IO.File.SetAttributes(obs_prof_or, System.IO.FileAttributes.ReadOnly);
+                if (locked == true)
+                {
+                    System.IO.File.SetAttributes(obs_prof_or, System.IO.FileAttributes.ReadOnly);
+                    StreamWriter SaveFile = new System.IO.StreamWriter(obs_prof_or_dest);
+                    SaveFile.Close();
+                }
             }
-            SaveFile.Close();
             ActiveForm.Close();
+        }
+
+        private void boton_ok_clone_Click(object sender, EventArgs e)
+        {
+            clone_scene();
         }
 
         private void frmName_FormClosed(object sender, FormClosedEventArgs e)
@@ -2821,7 +2594,7 @@ namespace plato_saga
             }
             //Fin cargar escenas obs      
 
-        Boolean itemExists = false;
+            Boolean itemExists = false;
             foreach (String cbi in combo_scenes.Items)
             {
                 itemExists = cbi.Equals(current_item);
@@ -2841,22 +2614,127 @@ namespace plato_saga
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            try
+            {
+                foreach (String str in previewed_scenes)
+                {
+                    if (combo_scenes.SelectedItem != null)
+                    {
+                        if (str == combo_scenes.SelectedItem.ToString()) lbl_obs_running.Text = Properties.Resources.pedal_rec;
+                        else lbl_obs_running.Text = Properties.Resources.pedal_prev;
+                    }
+                }
+            } catch { lbl_obs_running.Text = ""; }
+
             if (first_run == true)
             {
                 first_run = false;
-                combo_scenes.SelectedIndex = combo_scenes.FindString(System.IO.File.ReadAllText(path_combo));
+                combo_scenes.SelectedIndex = combo_scenes.FindString(System.IO.File.ReadAllText(path_combo));                
                 return;
             }
             else
             {
-
                 if (combo_scenes.SelectedItem == null) return;
+                Boolean w_msg = true;
+
+                foreach (String str in previewed_scenes)
+                {
+                    if (str == combo_scenes.SelectedItem.ToString())
+                    {
+                        w_msg = false;
+                        break;
+                    }
+                }
+
+                if (w_msg == true && searching == false && textBox1.Text.Length != 0)
+                {
+
+                    if (language == "es")
+                    {
+                        if (combo_scenes.SelectedItem.ToString().Contains("Comenzar_con_"))
+                        {
+                            MessageBox.Show("Ha seleccionado una colección básica, que solo debe ser modificada por un administrador." + Environment.NewLine + Environment.NewLine + "Para crear y modificar su propia colección de escenas utilice el botón Clonar.", "Colección básica seleccionada", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+
+                    }
+                    if (language == "en")
+                    {
+                        if (combo_scenes.SelectedItem.ToString().Contains("Start_with_"))
+                        {
+                            MessageBox.Show("A basic collection was selected, which should only be modified by an administrator." + Environment.NewLine + Environment.NewLine + "In order to use and customize it, please create your own by pressing the button Clone.", "Default collection selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
+                }
+                                
                 if (combo_scenes.SelectedItem.ToString().Contains("-----")) combo_scenes.SelectedIndex = combo_scenes.SelectedIndex + 1;
+                
                 try
                 {
                     if (duplicating == false) System.IO.File.WriteAllText(path_combo, combo_scenes.SelectedItem.ToString());
                 }
                 catch { }
+
+                combo_start.Items.Clear();
+
+                if (combo_scenes.Text.Contains("Comenzar_con") || combo_scenes.Text.Contains("Start_with")) return;
+                String obs_prof_or = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "obs-studio" + "\\" + "basic" + "\\" + "scenes");
+                String escena = obs_prof_or + "\\" + combo_scenes.SelectedItem.ToString() + ".json";
+                if (File.Exists(escena))
+                {
+                    //Get current start scene
+                    String json = File.ReadAllText(escena);
+                    String start_trip = "";
+                    int index1 = json.IndexOf("sceneRoundTripScene2");
+                    int index2 = json.IndexOf("sceneRoundTripStr");
+                    if (index1 == -1 || index2 == -1)
+                    {                       
+                            index2 = json.IndexOf("," + '\u0022' + "transition" + '\u0022');
+                            if (index2 != -1 && index1 != -1)
+                            {
+                                start_trip = json.Substring(index1 + 23, index2 - index1 - 24);
+                            }
+                            else
+                            {
+                                if (index2 != -1)
+                                {
+                                    index1 = json.IndexOf('\u0022' + "target" + '\u0022' + ":");
+                                    index2 = json.IndexOf('\u0022' + "targetType" + '\u0022' + ":");
+
+                                    if (index1 == -1 || index2 == -1)
+                                    {
+                                        combo_start.Items.Clear();
+                                        combo_start.SelectedIndex = -1;
+                                        return;
+                                    }
+                                    start_trip = json.Substring(index1 + 10, index2 - index1 - 12);
+                                }
+                            }
+                        
+                    }
+                    else start_trip = json.Substring(index1 + 23, index2 - index1 - 26);
+                    
+
+                    // End get current start scene
+
+                    //Get available scenes
+
+                    index1 = json.IndexOf("scene_order");
+                    index2 = json.IndexOf("sources");
+                    String str_scenes = json.Substring(index1 + 15, index2 - index1 - 16);
+                    
+                    String patron = '\u0022' + "name" + '\u0022' + ":" + '\u0022';
+                    String[] split_scenes = Regex.Split(str_scenes,  patron);
+                    foreach (String str in split_scenes)
+                    {
+                        
+                        if (str.Length > 3 && !str.Contains("Pre-Intro") && !str.Contains("Salida"))
+                        {
+                            combo_start.Items.Add(str.Substring(0, str.Length - 4));
+                        }
+                    }
+                    combo_start.SelectedIndex = combo_start.FindString(start_trip);
+                }
+                //Get available scenes
             }
         }
 
@@ -3296,8 +3174,8 @@ namespace plato_saga
                     if (start_up == true) Thread.Sleep(250);
                     WebClient client = new WebClientWithTimeout();
                     String lang_check_update = "";
-                    if (language == "es") lang_check_update = "https://drive.upm.es/index.php/s/dIfk1LM0rYkVoBF/download";
-                    if (language == "en") lang_check_update = "https://drive.upm.es/index.php/s/BIRLKz7kbLokLqg/download";
+                    if (language == "es") lang_check_update = "https://raw.githubusercontent.com/ging/AARS/main/current_plato_saga_es.txt";
+                    if (language == "en") lang_check_update = "https://raw.githubusercontent.com/ging/AARS/main/current_plato_saga_en.txt";
                     Stream stream = client.OpenRead(lang_check_update);
                     StreamReader reader = new StreamReader(stream);
                     String content = reader.ReadToEnd();
@@ -3311,9 +3189,16 @@ namespace plato_saga
                         this.Enabled = true;
                     }));
 
-
-                    if (language == "es") MessageBox.Show("Hubo un error al conectar al servidor de actualizaciones." + Environment.NewLine + Environment.NewLine + excpt.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    if (language == "en") MessageBox.Show("An error occurred conecting to update service." + Environment.NewLine + Environment.NewLine + excpt.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    DialogResult dg = DialogResult.Yes;
+                    if (language == "es")
+                    {
+                     dg = MessageBox.Show("Hubo un error al conectar al servidor de actualizaciones." + Environment.NewLine + Environment.NewLine + excpt.Message + Environment.NewLine + Environment.NewLine + "¿Desea visitar la página de la aplicación para buscar nuevas versiones manualmente?", "Error", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Error);
+                    }
+                    if (language == "en")
+                    {                     
+                     dg = MessageBox.Show("An error occurred conecting to update service." + Environment.NewLine + Environment.NewLine + excpt.Message + Environment.NewLine + Environment.NewLine + "Would you like to browse the project web to check for new releases?", "Error", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Error);
+                    }
+                    if (dg == DialogResult.Yes) Process.Start("https://github.com/ging/AARS/releases");
 
                     Enable_Controls();                    
                     
@@ -3747,6 +3632,7 @@ namespace plato_saga
                 textBox1.Text = "";
                 textBox1.BackColor = Color.White;
             }
+            searching = true;
         }
 
         private void textBox1_Leave(object sender, EventArgs e)
@@ -3757,6 +3643,7 @@ namespace plato_saga
                 if (language == "en") textBox1.Text = "Search";
                 textBox1.BackColor = Control.DefaultBackColor;
             }
+            searching = false;
         }
         public bool RemoteFileExists(string url)
         {
@@ -3898,14 +3785,16 @@ namespace plato_saga
 
                 if (language == "es")
                 {
-                    frm_load_obs.textBox1.Text = "Iniciando grabación";
-                    frm_load_obs.label2.Text = combo_scenes.SelectedItem.ToString();
+                    frm_load_obs.textBox1.Text = "Iniciando grabación";                    
                 }
                 if (language == "en")
                 {
-                    frm_load_obs.textBox1.Text = "Starting recording";
-                    frm_load_obs.label2.Text = combo_scenes.SelectedItem.ToString();
+                    frm_load_obs.textBox1.Text = "Starting recording";                    
                 }
+                frm_load_obs.lbl_col.Text = combo_scenes.SelectedItem.ToString();
+                if (combo_start.SelectedItem != null) frm_load_obs.lbl_scene.Text = combo_start.SelectedItem.ToString();
+                frm_load_obs.pic_rec.Visible = true;
+                frm_load_obs.pic_prev.Visible = false;
             }));
 
             
@@ -4108,11 +3997,26 @@ namespace plato_saga
 
         private void BG_rec_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            pic_title.Focus();
 
-            if (closed_ok == true && frm_11.chk_show_keep.CheckState == CheckState.Checked)
+            try
             {
-                var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.MyVideos));
+                foreach (String str in previewed_scenes)
+                {
+                    if (combo_scenes.SelectedItem != null)
+                    {
+                        if (str == combo_scenes.SelectedItem.ToString()) lbl_obs_running.Text = Properties.Resources.pedal_rec;
+                        else lbl_obs_running.Text = Properties.Resources.pedal_prev;
+                    }
+                }
+            }
+            catch { lbl_obs_running.Text = ""; }
+
+            pic_title.Focus();
+            var directory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.MyVideos));
+
+            if (closed_ok == true && frm_11.chk_show_keep.CheckState == CheckState.Checked && Directory.GetFiles(Environment.GetFolderPath(Environment.SpecialFolder.MyVideos)).Count() > 0)
+            {               
+                
                 var LastFile = (from f in directory.GetFiles("*.m??")
                                 orderby f.LastAccessTime descending
                                 select f).First();
@@ -4123,12 +4027,14 @@ namespace plato_saga
                     this.Activate();
                     this.Cursor = Cursors.Arrow;
                 }));
+
                 plato_saga.Form9 frm_save = new plato_saga.Form9();
                 frm_save.StartPosition = FormStartPosition.CenterScreen;
                 frm_save.text_filename.Text = LastFile.Name;
 
                 frm_save.ShowDialog();
                 if (frm_save.keep_file_p == false) move_video_discarded();
+                else move_video_ok();
                 this.Invoke(new MethodInvoker(delegate
                 {
                     this.Enabled = true;
@@ -4165,13 +4071,13 @@ namespace plato_saga
             {
                 plato_saga.Properties.Settings.Default.show_panel = true;
                 panel1.Height = 140;                
-                this.Height = 654;
+                this.Height = 644;
             }
             else
             {
                 plato_saga.Properties.Settings.Default.show_panel = false;
                 panel1.Height = 30;                
-                this.Height = 554;
+                this.Height = 544;
             }
             plato_saga.Properties.Settings.Default.Save();
             show_devs = plato_saga.Properties.Settings.Default.show_panel;            
@@ -4179,8 +4085,12 @@ namespace plato_saga
 
         private void chk_panel_dev_CheckedChanged(object sender, EventArgs e)
         {
-            if (chk_panel_dev.Checked == false) chk_panel_dev.BackColor = Control.DefaultBackColor;
-            else chk_panel_dev.BackColor = Color.FromArgb(255,255,255);
+            if (chk_panel_dev.Checked == false)
+            {
+                chk_panel_dev.BackColor = Control.DefaultBackColor;
+                chk_mon_audio.Checked = false;
+            }
+            else chk_panel_dev.BackColor = Color.FromArgb(255, 255, 255);
             show_devs_panel();
         }
 
@@ -4223,5 +4133,62 @@ namespace plato_saga
             pr_text = frm_prompt.prompt_text;
         }
 
+        private void replace_start_scene()
+        {
+            String obs_prof_or = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "obs-studio" + "\\" + "basic" + "\\" + "scenes");
+            String escena = obs_prof_or + "\\" + combo_scenes.SelectedItem.ToString() + ".json";
+            if (File.Exists(escena))
+            {
+                //Get current start scene
+                String json = File.ReadAllText(escena);
+                String start_trip = "";
+                String current_chain = "";
+                String chain_replace = "";
+
+                int index1 = json.IndexOf("sceneRoundTripScene2");
+                int index2 = json.IndexOf("sceneRoundTripStr");
+                if (index1 != -1 && index2 != -1)
+                {
+                    start_trip = json.Substring(index1 + 23, index2 - index1 - 26);
+                    current_chain = '\u0022' + "sceneRoundTripScene2" + '\u0022' + ":" + '\u0022' + start_trip + '\u0022' + "," + '\u0022' + "sceneRoundTripStr" + '\u0022';
+                    chain_replace = '\u0022' + "sceneRoundTripScene2" + '\u0022' + ":" + '\u0022' + combo_start.SelectedItem.ToString() + '\u0022' + "," + '\u0022' + "sceneRoundTripStr" + '\u0022';
+                }
+                else
+                {
+                    index2 = json.IndexOf("," + '\u0022' + "transition" + '\u0022');
+                    if (index2 != -1 && index1 != -1)
+                    {
+                        start_trip = json.Substring(index1 + 23, index2 - index1 - 24);
+                        current_chain = '\u0022' + "sceneRoundTripScene2" + '\u0022' + ":" + '\u0022' + start_trip + '\u0022' + "," + '\u0022' + "transition" + '\u0022';
+                        chain_replace = '\u0022' + "sceneRoundTripScene2" + '\u0022' + ":" + '\u0022' + combo_start.SelectedItem.ToString() + '\u0022' + "," + '\u0022' + "transition" + '\u0022';
+                    }
+                    else
+                    {
+                        index1 = json.IndexOf('\u0022' + "target" + '\u0022' + ":");
+                        index2 = json.IndexOf('\u0022' + "targetType" + '\u0022' + ":");
+                        if (index1 != -1 && index2 != -1)
+                        {
+                            start_trip = json.Substring(index1 + 10, index2 - index1 - 12);
+                            current_chain = '\u0022' + "target" + '\u0022' + ":" + '\u0022' + start_trip + '\u0022' + "," + '\u0022' + "targetType" + '\u0022';
+                            chain_replace = '\u0022' + "target" + '\u0022' + ":" + '\u0022' + combo_start.SelectedItem.ToString() + '\u0022' + "," + '\u0022' + "targetType" + '\u0022'; ;
+                        }
+                        else return;
+                    }
+                }
+                
+                String new_json = json.Replace(current_chain, chain_replace);
+                File.WriteAllText(escena, new_json);
+            }            
+        }      
+
+        private void combo_start_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            replace_start_scene();
+        }
+
+        private void textBox1_Click(object sender, EventArgs e)
+        {
+            searching = true;
+        }
     }
 }

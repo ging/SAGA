@@ -155,7 +155,7 @@
     <value>17, 19</value>
   </data>
   <data name="rtx1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>716, 129</value>
+    <value>762, 129</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="rtx1.TabIndex" type="System.Int32, mscorlib">
@@ -205,7 +205,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;chk_tele.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="tr_speed.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -235,7 +235,7 @@
     <value>Flat</value>
   </data>
   <data name="btn_color.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Microsoft Sans Serif, 9pt</value>
   </data>
   <data name="btn_color.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopCenter</value>
@@ -271,7 +271,7 @@
     <value>Flat</value>
   </data>
   <data name="btn_fuente.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Microsoft Sans Serif, 9pt</value>
   </data>
   <data name="btn_fuente.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -361,7 +361,7 @@
     <value>Flat</value>
   </data>
   <data name="btn_preview.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Microsoft Sans Serif, 9pt</value>
   </data>
   <data name="btn_preview.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -454,7 +454,7 @@
     <value>NoControl</value>
   </data>
   <data name="btn_preview.Location" type="System.Drawing.Point, System.Drawing">
-    <value>594, 164</value>
+    <value>643, 165</value>
   </data>
   <data name="btn_preview.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 95</value>
@@ -514,7 +514,7 @@
     <value>Flat</value>
   </data>
   <data name="btn_clear_text.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Microsoft Sans Serif, 9pt</value>
   </data>
   <data name="btn_clear_text.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -556,7 +556,7 @@
     <value>NoControl</value>
   </data>
   <data name="btn_clear_text.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 166</value>
+    <value>13, 166</value>
   </data>
   <data name="btn_clear_text.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 92</value>
@@ -586,7 +586,7 @@
     <value>Flat</value>
   </data>
   <data name="btn_exit.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Microsoft Sans Serif, 9pt</value>
   </data>
   <data name="btn_exit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -639,7 +639,7 @@
     <value>NoControl</value>
   </data>
   <data name="btn_exit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>664, 168</value>
+    <value>713, 169</value>
   </data>
   <data name="btn_exit.Size" type="System.Drawing.Size, System.Drawing">
     <value>67, 91</value>
@@ -696,7 +696,7 @@
     <value>Flat</value>
   </data>
   <data name="btn_Default.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Microsoft Sans Serif, 9pt</value>
   </data>
   <data name="btn_Default.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -768,7 +768,7 @@
     <value>NoControl</value>
   </data>
   <data name="btn_Default.Location" type="System.Drawing.Point, System.Drawing">
-    <value>510, 167</value>
+    <value>559, 168</value>
   </data>
   <data name="btn_Default.Size" type="System.Drawing.Size, System.Drawing">
     <value>84, 92</value>
@@ -798,7 +798,7 @@
     <value>Flat</value>
   </data>
   <data name="btn_fondo_color.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Microsoft Sans Serif, 9pt</value>
   </data>
   <data name="btn_fondo_color.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopCenter</value>
@@ -861,7 +861,7 @@
     <value>Flat</value>
   </data>
   <data name="btn_load.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Microsoft Sans Serif, 9pt</value>
   </data>
   <data name="btn_load.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -919,7 +919,7 @@
     <value>NoControl</value>
   </data>
   <data name="btn_load.Location" type="System.Drawing.Point, System.Drawing">
-    <value>77, 167</value>
+    <value>73, 167</value>
   </data>
   <data name="btn_load.Size" type="System.Drawing.Size, System.Drawing">
     <value>67, 92</value>
@@ -1111,7 +1111,7 @@
     <value>Derecha</value>
   </data>
   <data name="cb_loc.Location" type="System.Drawing.Point, System.Drawing">
-    <value>130, 26</value>
+    <value>166, 27</value>
   </data>
   <data name="cb_loc.Size" type="System.Drawing.Size, System.Drawing">
     <value>133, 21</value>
@@ -1138,7 +1138,7 @@
     <value>NoControl</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>36, 30</value>
+    <value>72, 31</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>90, 13</value>
@@ -1165,7 +1165,7 @@
     <value>False</value>
   </data>
   <data name="n_h_rtx.Location" type="System.Drawing.Point, System.Drawing">
-    <value>166, 66</value>
+    <value>202, 67</value>
   </data>
   <data name="n_h_rtx.Size" type="System.Drawing.Size, System.Drawing">
     <value>52, 20</value>
@@ -1192,7 +1192,7 @@
     <value>NoControl</value>
   </data>
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>36, 68</value>
+    <value>72, 69</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>124, 13</value>
@@ -1222,7 +1222,7 @@
     <value>NoControl</value>
   </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>222, 69</value>
+    <value>258, 70</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>41, 13</value>
@@ -1252,7 +1252,7 @@
     <value>NoControl</value>
   </data>
   <data name="chk_rem_lines.Location" type="System.Drawing.Point, System.Drawing">
-    <value>39, 104</value>
+    <value>75, 105</value>
   </data>
   <data name="chk_rem_lines.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 17</value>
@@ -1282,7 +1282,7 @@
     <value>False</value>
   </data>
   <data name="n_rem_timer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>166, 102</value>
+    <value>202, 103</value>
   </data>
   <data name="n_rem_timer.Size" type="System.Drawing.Size, System.Drawing">
     <value>52, 20</value>
@@ -1309,7 +1309,7 @@
     <value>NoControl</value>
   </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>222, 105</value>
+    <value>258, 106</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 13</value>
@@ -1378,13 +1378,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
     <value>24, 236</value>
   </data>
   <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>748, 272</value>
+    <value>795, 272</value>
   </data>
   <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
     <value>137</value>
@@ -1399,13 +1399,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="chk_max_obs.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="chk_max_obs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>39, 143</value>
+    <value>75, 144</value>
   </data>
   <data name="chk_max_obs.Size" type="System.Drawing.Size, System.Drawing">
     <value>183, 17</value>
@@ -1432,7 +1432,7 @@
     <value>429, 57</value>
   </data>
   <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>343, 173</value>
+    <value>391, 173</value>
   </data>
   <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
     <value>138</value>
@@ -1447,6 +1447,66 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lbl_deck_prof.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_deck_prof.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_deck_prof.Location" type="System.Drawing.Point, System.Drawing">
+    <value>182, 26</value>
+  </data>
+  <data name="lbl_deck_prof.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 13</value>
+  </data>
+  <data name="lbl_deck_prof.TabIndex" type="System.Int32, mscorlib">
+    <value>139</value>
+  </data>
+  <data name="lbl_deck_prof.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;lbl_deck_prof.Name" xml:space="preserve">
+    <value>lbl_deck_prof</value>
+  </data>
+  <data name="&gt;&gt;lbl_deck_prof.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_deck_prof.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl_deck_prof.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btn_deck.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btn_deck.Location" type="System.Drawing.Point, System.Drawing">
+    <value>718, 21</value>
+  </data>
+  <data name="btn_deck.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 23</value>
+  </data>
+  <data name="btn_deck.TabIndex" type="System.Int32, mscorlib">
+    <value>140</value>
+  </data>
+  <data name="btn_deck.Text" xml:space="preserve">
+    <value>Mostrar</value>
+  </data>
+  <data name="btn_deck.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;btn_deck.Name" xml:space="preserve">
+    <value>btn_deck</value>
+  </data>
+  <data name="&gt;&gt;btn_deck.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_deck.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btn_deck.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -1459,7 +1519,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>794, 521</value>
+    <value>839, 524</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

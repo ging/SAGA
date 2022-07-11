@@ -32,6 +32,7 @@ namespace plato_saga
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form11));
             this.gr_settings = new System.Windows.Forms.GroupBox();
+            this.lbl_obs = new System.Windows.Forms.Label();
             this.chk_max_obs = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.chk_validate = new System.Windows.Forms.CheckBox();
@@ -47,11 +48,14 @@ namespace plato_saga
             this.btn_restore = new System.Windows.Forms.Button();
             this.timer_cam = new System.Windows.Forms.Timer(this.components);
             this.btn_settings = new System.Windows.Forms.Button();
+            this.link_releases = new System.Windows.Forms.LinkLabel();
             this.gr_settings.SuspendLayout();
             this.SuspendLayout();
             // 
             // gr_settings
             // 
+            this.gr_settings.Controls.Add(this.link_releases);
+            this.gr_settings.Controls.Add(this.lbl_obs);
             this.gr_settings.Controls.Add(this.chk_max_obs);
             this.gr_settings.Controls.Add(this.button1);
             this.gr_settings.Controls.Add(this.chk_validate);
@@ -64,6 +68,11 @@ namespace plato_saga
             resources.ApplyResources(this.gr_settings, "gr_settings");
             this.gr_settings.Name = "gr_settings";
             this.gr_settings.TabStop = false;
+            // 
+            // lbl_obs
+            // 
+            resources.ApplyResources(this.lbl_obs, "lbl_obs");
+            this.lbl_obs.Name = "lbl_obs";
             // 
             // chk_max_obs
             // 
@@ -183,6 +192,13 @@ namespace plato_saga
             this.btn_settings.UseVisualStyleBackColor = true;
             this.btn_settings.Click += new System.EventHandler(this.btn_settings_Click);
             // 
+            // link_releases
+            // 
+            resources.ApplyResources(this.link_releases, "link_releases");
+            this.link_releases.Name = "link_releases";
+            this.link_releases.TabStop = true;
+            this.link_releases.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.link_releases_LinkClicked);
+            // 
             // Form11
             // 
             resources.ApplyResources(this, "$this");
@@ -221,5 +237,7 @@ namespace plato_saga
         public System.Windows.Forms.ComboBox combo_lang;
         private System.Windows.Forms.Button button1;
         public System.Windows.Forms.CheckBox chk_max_obs;
+        private System.Windows.Forms.Label lbl_obs;
+        private System.Windows.Forms.LinkLabel link_releases;
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;
 using System.IO;
@@ -142,11 +143,11 @@ namespace plato_saga
             ctrl.ResumeLayout(false);
         }
         private void Form13_Load(object sender, EventArgs e)
-        {
-
+        {            
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(plato_saga.Properties.Settings.Default.app_lang);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form13));
             RefreshResources(this, resources);
+            lbl_deck_prof.Text = Properties.Resources.stream_prf_pr;
     
             //localize();
             openf.Filter = Properties.Resources.txt_filter;
@@ -200,9 +201,7 @@ namespace plato_saga
                 MessageBox.Show(Properties.Resources.add_text);
                 return;
             }
-            new System.Threading.Thread(() =>
-                {
-                    System.Threading.Thread.CurrentThread.IsBackground = true;
+           
                     Form12 frm_tele = new Form12();
 
                     try
@@ -214,7 +213,7 @@ namespace plato_saga
                                 frm_tele.rtx1.Text = Environment.NewLine + Environment.NewLine + rtx1.Text;
                             }
                             else frm_tele.rtx1.Text = rtx1.Text;
-                            frm_tele.ShowDialog();
+                            frm_tele.Show(this);
                         }));
                     }
                     catch
@@ -231,10 +230,9 @@ namespace plato_saga
                             {
                                 frm_tele.rtx1.Text = rtx1.Text;
                             }));
-                            frm_tele.ShowDialog();
-                    }
-                    
-                }).Start();
+                            frm_tele.Show(this);
+                    }                    
+              
          }    
 
         private void t_scroll_Tick(object sender, EventArgs e)
@@ -259,6 +257,8 @@ namespace plato_saga
                 chk_delay.Enabled = true;
                 num_delay.Enabled = true;
                 cb_loc.Enabled = true;
+                lbl_deck_prof.Visible = true;
+                btn_deck.Visible = true;
             }
             else
             {
@@ -269,6 +269,8 @@ namespace plato_saga
                 chk_delay.Enabled = false;
                 num_delay.Enabled = false;
                 cb_loc.Enabled = false;
+                lbl_deck_prof.Visible = false;
+                btn_deck.Visible = false;
             }
         }
 
@@ -376,13 +378,13 @@ namespace plato_saga
 
             if (cb_loc.SelectedIndex == 0 || cb_loc.SelectedIndex == 1 || cb_loc.SelectedIndex == 2)
             {
-                rtx1.Width = 716;
+                rtx1.Width = 760;
                 rtx1.Left = 17;
             }
             if (cb_loc.SelectedIndex == 3 || cb_loc.SelectedIndex == 4)
             {
                 rtx1.Width = 416;
-                rtx1.Left = this.Width / 4 - 55;
+                rtx1.Left = this.Width / 4 - 30;
             }
             plato_saga.Properties.Settings.Default.pr_location = cb_loc.SelectedIndex;
             plato_saga.Properties.Settings.Default.Save();            
@@ -461,6 +463,8 @@ namespace plato_saga
                 chk_delay.Enabled = true;
                 num_delay.Enabled = true;
                 cb_loc.Enabled = true;
+                lbl_deck_prof.Visible = true;
+                btn_deck.Visible = true;
             }
             else
             {
@@ -471,6 +475,44 @@ namespace plato_saga
                 chk_delay.Enabled = false;
                 num_delay.Enabled = false;
                 cb_loc.Enabled = false;
+                lbl_deck_prof.Visible = false;
+                btn_deck.Visible = false;
+            }
+        }
+
+        private void btn_deck_Click(object sender, EventArgs e)
+        {
+            String elgato = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) + "\\"  + "Elgato" + "\\" + "StreamDeck" + "\\" + "StreamDeck.exe";            
+            String tele_profile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "Plato_Teleprompter.streamDeckProfile");
+            
+            if (File.Exists(elgato))
+            {
+                Process proc = new Process();
+                proc.StartInfo.WindowStyle = ProcessWindowStyle.Normal;
+                proc.StartInfo.FileName = elgato;
+                if (File.Exists(tele_profile))
+                {
+                    if (plato_saga.Properties.Settings.Default.tele_prof == false)
+                    {
+                        proc.StartInfo.Arguments = tele_profile;
+                        proc.Start();
+                        plato_saga.Properties.Settings.Default.tele_prof = true;
+                        plato_saga.Properties.Settings.Default.Save();
+                        MessageBox.Show(Properties.Resources.tele_prof_ins);
+                        proc.StartInfo.Arguments = String.Empty;
+                    }
+                }
+                else
+                {
+                    plato_saga.Properties.Settings.Default.tele_prof = false;
+                    plato_saga.Properties.Settings.Default.Save();
+                }
+                proc.Start();
+            }
+            else
+            {
+                Form14 frm14 = new Form14();
+                frm14.ShowDialog();
             }
         }
     }

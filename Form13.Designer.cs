@@ -71,6 +71,8 @@ namespace plato_saga
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.chk_max_obs = new System.Windows.Forms.CheckBox();
+            this.lbl_deck_prof = new System.Windows.Forms.Label();
+            this.btn_deck = new System.Windows.Forms.Button();
             this.rtx_menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tr_speed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_back_color)).BeginInit();
@@ -416,10 +418,24 @@ namespace plato_saga
             this.chk_max_obs.UseVisualStyleBackColor = true;
             this.chk_max_obs.CheckedChanged += new System.EventHandler(this.chk_max_obs_CheckedChanged);
             // 
+            // lbl_deck_prof
+            // 
+            resources.ApplyResources(this.lbl_deck_prof, "lbl_deck_prof");
+            this.lbl_deck_prof.Name = "lbl_deck_prof";
+            // 
+            // btn_deck
+            // 
+            resources.ApplyResources(this.btn_deck, "btn_deck");
+            this.btn_deck.Name = "btn_deck";
+            this.btn_deck.UseVisualStyleBackColor = true;
+            this.btn_deck.Click += new System.EventHandler(this.btn_deck_Click);
+            // 
             // Form13
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btn_deck);
+            this.Controls.Add(this.lbl_deck_prof);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -491,5 +507,7 @@ namespace plato_saga
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.CheckBox chk_max_obs;
         private System.Windows.Forms.Label lbl_sp_sc;
+        private System.Windows.Forms.Label lbl_deck_prof;
+        private System.Windows.Forms.Button btn_deck;
     }
 }

@@ -178,6 +178,17 @@ namespace plato_saga
 
         private void t_scroll_Tick(object sender, EventArgs e)
         {
+            t_scroll.Interval = plato_saga.Properties.Settings.Default.prompt_sp;
+            rtx1.Font = Properties.Settings.Default.pr_font;
+            rtx1.ForeColor = Properties.Settings.Default.pr_color;
+            rtx1.BackColor = Properties.Settings.Default.pr_back_color;
+            if (plato_saga.Properties.Settings.Default.pr_transp == true)
+            {
+                this.AllowTransparency = true;
+                this.TransparencyKey = Properties.Settings.Default.pr_back_color;
+            }
+            else this.AllowTransparency = false;
+
             if (plato_saga.Properties.Settings.Default.rem_lines == false) scroll(rtx1.Handle, 1);
             else
             {
@@ -232,6 +243,11 @@ namespace plato_saga
         private void menu_Opening(object sender, CancelEventArgs e)
         {
             close_item.Text = Properties.Resources.close_w;
+        }
+
+        private void rtx1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape) this.Dispose();
         }
     }
 }

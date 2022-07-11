@@ -35,6 +35,15 @@ namespace plato_saga
 
         private void Form11_Load(object sender, EventArgs e)
         {
+            String obs_ver = "";
+            try
+            {
+                var versionInfo = FileVersionInfo.GetVersionInfo(Properties.Settings.Default.obs_path + "\\" + "obs64.exe");
+                obs_ver = "OBS Studio " + versionInfo.FileVersion;
+                lbl_obs.Text = obs_ver;
+            }
+            catch { lbl_obs.Text = "";  }            
+
             restored = false;
             update_now = false;
             frmInfo.FormClosed += new FormClosedEventHandler(frmInfo_FormClosed);
@@ -60,8 +69,8 @@ namespace plato_saga
                 {                    
                     WebClient client = new WebClientWithTimeout();
                     String lang_check_update = "";
-                    if (language == "es") lang_check_update = "https://drive.upm.es/index.php/s/dIfk1LM0rYkVoBF/download";
-                    if (language == "en") lang_check_update = "https://drive.upm.es/index.php/s/BIRLKz7kbLokLqg/download";
+                    if (language == "es") lang_check_update = "https://raw.githubusercontent.com/ging/AARS/main/current_plato_saga_es.txt";
+                    if (language == "en") lang_check_update = "https://raw.githubusercontent.com/ging/AARS/main/current_plato_saga_en.txt";
                     Stream stream = client.OpenRead(lang_check_update);
                     StreamReader reader = new StreamReader(stream);
                     String content = reader.ReadToEnd();
@@ -70,10 +79,13 @@ namespace plato_saga
                 }
                 catch (Exception excpt)
                 {
-                    this.Invoke(new MethodInvoker(delegate
+                    try
                     {
-                        this.Enabled = false;
-                    }));
+                        this.Invoke(new MethodInvoker(delegate
+                        {
+                            this.Enabled = false;
+                        }));
+                    } catch { }
 
                     if (language == "es") MessageBox.Show("Hubo un error al conectar al servidor de actualizaciones." + Environment.NewLine + Environment.NewLine + excpt.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     if (language == "en") MessageBox.Show("An error occurred conecting to update service." + Environment.NewLine + Environment.NewLine + excpt.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -596,6 +608,11 @@ namespace plato_saga
                 plato_saga.Properties.Settings.Default.max_obs = false;
             }
             plato_saga.Properties.Settings.Default.Save();
+        }
+
+        private void link_releases_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://github.com/ging/AARS/releases");
         }
     }
 }

@@ -105,20 +105,20 @@ namespace plato_saga
             SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
             SmtpServer.SendCompleted += new SendCompletedEventHandler(SendCompletedCallback);
             SmtpServer.Port = 587;
-            SmtpServer.Credentials = new System.Net.NetworkCredential("informesplatos@gmail.com", "isabelenan0");
+            SmtpServer.Credentials = new System.Net.NetworkCredential("informesplatos@gmail.com", "Isabelenan00**");
             SmtpServer.EnableSsl = true;
 
             mail.From = new MailAddress("informesplatos@gmail.com");
             mail.To.Add("abel.carril@upm.es");
             if (language == "es")
             {
-                mail.Subject = "Solicitud de asistencia del plató SAGA UPM " + comboBox2.SelectedItem.ToString();
+                mail.Subject = "Solicitud de asistencia del plató SAGA UPM " + comboBox2.Text;
                 mail.Body = "Solicitud de soporte del plató" + Environment.NewLine + "Enviado por: " + textBox5.Text + Environment.NewLine + Environment.NewLine + textBox1.Text;
                 button7.Text = "Enviando mensaje, espere por favor...";
             }
             if (language == "en")
             {
-                mail.Subject = "Support request for SAGA-UPM " + comboBox2.SelectedItem.ToString();
+                mail.Subject = "Support request for SAGA-UPM " + comboBox2.Text;
                 mail.Body = "Solicitud de soporte del plató" + Environment.NewLine + "Enviado por: " + textBox5.Text + Environment.NewLine + Environment.NewLine + textBox1.Text;
                 button7.Text = "Sending message, please wait...";
             }            
